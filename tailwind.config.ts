@@ -17,7 +17,7 @@ export default {
         },
         primary_secandry: "var(--primary-secandry)",
         secandry: {
-          DEFAULT: "rgb(var(--secandry)/<algha-value>)",
+          DEFAULT: "rgb(var(--secandry)/<alpha-value>)",
         },
         secandry_primary: "var(--secandry-primary)",
         black: "var(--black)",
@@ -31,7 +31,7 @@ export default {
           "80px",
           {
             fontWeight: 700,
-            lineHeight: "80px",
+            lineHeight: "110px",
           },
         ],
         h3_normal: "66px",

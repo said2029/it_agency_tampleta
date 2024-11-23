@@ -1,4 +1,5 @@
 "use client";
+import Button from "@/Components/UI/Button";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +17,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <nav className="px-mobile relative flex w-full items-center justify-between gap-3 bg-white py-3 md:flex-col md:px-spacing xl:flex-row xl:gap-0">
+    <nav className="px-mobile relative z-50 flex w-full items-center shadow-sm justify-between gap-3 bg-white py-3 md:flex-col md:px-spacing xl:flex-row xl:gap-0">
       <Image
         width={183}
         height={45}
@@ -34,10 +35,7 @@ export default function Header({}: Props) {
           Contact
         </Link>
       </ul>
-      <button className="text-nowraps hidden items-center gap-3 rounded-[51px] bg-primary_gradinet px-6 py-4 text-paragraph_b text-white xl:flex">
-        Get Started
-        <FaArrowRight />
-      </button>
+      <Button className="hidden xl:flex" name="Get Started"/>
 
       {/* mobile nav */}
       <MobileNav />
@@ -221,7 +219,7 @@ const ComponentHome = () => {
 const ComponentCompany = () => {
   return (
     <div className="w-full md:px-16">
-      <div className="hover:[&_a]:bg-primary/15 grid w-full gap-10 rounded-md bg-white p-4 md:mt-4 md:grid-cols-3 md:pt-16 xl:grid-cols-4">
+      <div className="hover:[&_a]:bg-primary/15 grid w-full gap-10 rounded-md bg-white shadow-lg p-4 md:mt-4 md:grid-cols-3 md:pt-16 xl:grid-cols-4">
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
           <ul className="flex items-center gap-2">
             <li>
