@@ -1,15 +1,15 @@
 "use client";
-import { animate, AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaArrowRight, FaHospitalUser, FaUsers } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+import { FiUsers } from "react-icons/fi";
 import { GoHome } from "react-icons/go";
+import { GrAccessibility, GrAnalytics, GrArticle, GrCatalog, GrCluster, GrCodeSandbox, GrOverview, GrQr } from "react-icons/gr";
 import { IoIosArrowDown, IoMdClose, IoMdMenu } from "react-icons/io";
-import {
-  MdDesignServices,
-  MdOutlineMiscellaneousServices,
-} from "react-icons/md";
+import { LuUserSquare2 } from "react-icons/lu";
+import { MdDesignServices, MdOutlineCleaningServices } from "react-icons/md";
 import { PiCoinsThin } from "react-icons/pi";
 
 type Props = {};
@@ -45,8 +45,7 @@ export default function Header({}: Props) {
   );
 }
 
-// mobile Nav
-
+// mobile NavBar
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -167,6 +166,7 @@ const Tap = ({
     </li>
   );
 };
+// accardon for mobile navBar
 const Accardon = ({ name, Component }: { name: string; Component: any }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -223,10 +223,10 @@ const ComponentCompany = () => {
     <div className="w-full md:px-16">
       <div className="hover:[&_a]:bg-primary/15 grid w-full gap-10 rounded-md bg-white p-4 md:mt-4 md:grid-cols-3 md:pt-16 xl:grid-cols-4">
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-2">
             <li>
               <span>
-                <GoHome className="rounded-md text-primary" size={35} />
+                <GrAccessibility className="rounded-md text-primary/80" size={35} />
               </span>
             </li>
             <li className="text-h6 font-medium text-black">About Us</li>
@@ -236,10 +236,10 @@ const ComponentCompany = () => {
           </p>
         </Link>
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-2">
             <li>
               <span>
-                <PiCoinsThin className="rounded-md text-primary" size={35} />
+                <GrAnalytics className="rounded-md text-primary/80" size={35} />
               </span>
             </li>
             <li className="text-h6 font-medium text-black">Our Pricing</li>
@@ -248,10 +248,10 @@ const ComponentCompany = () => {
         </Link>
 
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-2">
             <li>
               <span>
-                <GoHome className="rounded-md text-primary" size={35} />
+                <GrArticle className="rounded-md text-primary/80" size={35} />
               </span>
             </li>
             <li className="text-h6 font-medium text-black">Portfolio</li>
@@ -261,10 +261,10 @@ const ComponentCompany = () => {
           </p>
         </Link>
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-2">
             <li>
               <span>
-                <FaHospitalUser className="rounded-md text-primary" size={35} />
+                <GrCatalog className="rounded-md text-primary/80" size={35} />
               </span>
             </li>
             <li className="text-h6 font-medium text-black">
@@ -276,10 +276,10 @@ const ComponentCompany = () => {
           </p>
         </Link>
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-2">
             <li>
               <span>
-                <FaUsers className="rounded-md text-primary" size={35} />
+                <GrCluster className="rounded-md text-primary/80" size={35} />
               </span>
             </li>
             <li className="text-h6 font-medium text-black">Team</li>
@@ -289,10 +289,10 @@ const ComponentCompany = () => {
           </p>
         </Link>
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-2">
             <li>
               <span>
-                <GoHome className="rounded-md text-primary" size={35} />
+                <GrCodeSandbox className="rounded-md text-primary/80" size={35} />
               </span>
             </li>
             <li className="text-h6 font-medium text-black">Team Details</li>
@@ -302,11 +302,11 @@ const ComponentCompany = () => {
           </p>
         </Link>
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-2">
             <li>
               <span>
-                <MdOutlineMiscellaneousServices
-                  className="rounded-md text-primary"
+                <GrOverview 
+                  className="rounded-md text-primary/80"
                   size={35}
                 />
               </span>
@@ -316,11 +316,11 @@ const ComponentCompany = () => {
           <p className="text-paragraph text-black_75">Happy to help you!</p>
         </Link>
         <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-2">
             <li>
               <span>
-                <MdDesignServices
-                  className="rounded-md text-primary"
+                <GrQr
+                  className="rounded-md text-primary/80"
                   size={35}
                 />
               </span>
