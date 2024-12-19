@@ -5,11 +5,11 @@
 :root {
   --background: #73a4ff33;
   --foreground: #171717;
-  --primaty: #185bff;
+  --primaty: 24 91 255;
   --primary-secandry: #4078ff;
   --secandry: #fe7f5e;
   --secandry-primary: #ff3400;
-  --primary-gradinet: linear-gradient(to right, #185bff, #4078ff);
+  --primary-gradinet: linear-gradient(to right, #002684, #163B95);
   --secandry-gradinet: linear-gradient(to right, #ff3400, #fe7f5e);
   --black: #26292f;
   --black-75: #26292ebf;
@@ -18,7 +18,7 @@
   --black-5: hwb(220 15% 82% / 0.050);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #73a4ff33;
     --foreground: #171717;
@@ -34,7 +34,7 @@
     --black-25: hwb(220 15% 82% / 0.250);
     --black-5: hwb(220 15% 82% / 0.050);
   }
-}
+} */
 
 body {
   color: var(--black);
@@ -48,5 +48,5 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
 }

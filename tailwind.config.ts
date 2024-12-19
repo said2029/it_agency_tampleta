@@ -61,8 +61,12 @@ export default {
       padding: {
         spacing: "80px",
         spacing_2: "188px",
-        mobile:"16px"
+        mobile:"16px",
+         top:"120px"
       },
+      margin:{
+        top:"120px"
+      }
     },
   },
   plugins: [],
