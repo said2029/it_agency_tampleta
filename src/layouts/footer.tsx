@@ -1,4 +1,4 @@
-import Button from "@/Components/UI/Button";
+
 import { BiMailSend, BiPhoneCall, BiCurrentLocation } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { VscSend } from "react-icons/vsc";
@@ -8,6 +8,7 @@ import {
   BiLogoLinkedin,
 } from "react-icons/bi";
 import Link from "next/link";
+import ButtonMain from "@/Components/MianButton";
 
 const Links = [
   {
@@ -109,7 +110,7 @@ export default function Footer() {
             Our team of experts is ready to collaborate with you every step of
             the way, from initial consultation to implementation.
           </p>
-          <Button className="z-50" name="Contact Us Today" />
+          <ButtonMain className="z-50" name="Contact Us Today" />
         </div>
       </div>
       <section className="space-y-16 px-mobile md:px-spacing_2 py-16">

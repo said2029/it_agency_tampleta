@@ -1,12 +1,10 @@
 "use client";
-import Button from "@/Components/UI/Button";
+
+import ButtonMain from "@/Components/MianButton";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
-import { GoHome } from "react-icons/go";
 import { GrAccessibility, GrAnalytics, GrArticle, GrCatalog, GrCluster, GrCodeSandbox, GrOverview, GrQr } from "react-icons/gr";
 import { IoIosArrowDown, IoMdClose, IoMdMenu } from "react-icons/io";
 import { LuUserSquare2 } from "react-icons/lu";
@@ -35,7 +33,7 @@ export default function Header({}: Props) {
           Contact
         </Link>
       </ul>
-      <Button className="hidden xl:flex" name="Get Started"/>
+      <ButtonMain className="hidden xl:flex" name="Get Started"/>
 
       {/* mobile nav */}
       <MobileNav />
