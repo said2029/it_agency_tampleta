@@ -102,7 +102,7 @@ const Links = [
 
 export default function Footer() {
   return (
-    <footer className="mt-top relative bg-primary_gradinet text-white">
+    <footer className="relative bg-primary_gradinet text-white">
       <div className="relative h-[303px]">
         <div className="hero-section flex h-full flex-col items-center justify-center gap-6 bg-[url('/assets/images/img/hero_Image.jpg')] text-center text-white">
           <h1 className="z-50 text-h6 md:text-h4">Ready to Work, Let's Chat</h1>

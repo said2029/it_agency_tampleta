@@ -12,6 +12,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdArrowDropright } from "react-icons/io";
+import TeamCard from "./(company)/team_member/_components/TeamCard";
+import Featured_Services from "@/Components/Global/Featured_Services";
 
 export default function Home() {
   return (
@@ -19,7 +21,7 @@ export default function Home() {
       {/* hero */}
       <HeroHomePage />
       {/* Brand Work With */}
-      <Brand_Work_With className="bg-[#F3F3F3] lg:px-spacing"/>
+      <Brand_Work_With className="bg-[#F3F3F3] lg:px-spacing" />
       {/* We are Techco */}
       <section className="md:mt-16 lg:px-spacing">
         <div className="grid w-full grid-cols-1 gap-6 md:h-[405px] md:grid-cols-2">
@@ -139,51 +141,7 @@ export default function Home() {
         </div>
       </section>
       {/* Featured Services */}
-      <section className="flex flex-col items-center gap-16 md:mt-top lg:px-spacing 2xl:px-spacing_2">
-        <h5 className="text-center text-h5">Featured Services</h5>
-        <div className="w-full space-y-11">
-          <div className="grid h-[800px] w-full gap-16 md:h-[394px] md:grid-cols-2">
-            <Featured_Service_Card
-              title="IT Management Services"
-              tags={["Consultation", "Strategy"]}
-              color={["from-[#184A44]", "to-[#99A697]"]}
-              image="/assets/images/elemants/elemants (9).png"
-            />
-            <Featured_Service_Card
-              ImageSize={400}
-              title="Data Tracking and Security"
-              tags={["Consultation", "Strategy"]}
-              color={["from-[#5F1FBE]", "to-[#617DB4]"]}
-              image="/assets/images/elemants/elemants (18).png"
-            />
-          </div>
-          <div className="grid h-[1500px] gap-6 md:h-[394px] md:grid-cols-3">
-            <Featured_Service_Card
-              title="Website Development"
-              tags={["Consultation", "Strategy"]}
-              color={["from-[#CAAA8A]", "to-[#8F6A52]"]}
-              image="/assets/images/elemants/elemants (10).png"
-            />
-            <Featured_Service_Card
-              title="Website Development"
-              tags={["Consultation", "Strategy"]}
-              color={["from-[#4258B1]", "to-[#6A8E52]"]}
-              image="/assets/images/elemants/elemants (1).png"
-            />
-            <Featured_Service_Card
-              title="Website Development"
-              tags={["Consultation", "Strategy"]}
-              color={["from-[#BA8EB1]", "to-[#815D7E]"]}
-              image="/assets/images/elemants/elemants (11).png"
-            />
-          </div>
-        </div>
-        <ButtonMain
-          href="#"
-          className="border border-border bg-transparent font-bold text-black"
-          name="More Servises"
-        />
-      </section>
+      <Featured_Services className="lg:px-spacing 2xl:px-spacing_2"/>
       {/* Our Recent Best Works */}
       <section className="mt-top">
         <div className="text-center md:space-y-2 md:text-start lg:px-spacing">
@@ -250,57 +208,8 @@ export default function Home() {
           <Carousel className="w-full">
             <CarouselContent className="gap-2">
               {Array.from({ length: 10 }).map((item, index) => (
-                <CarouselItem
-                  key={index + "Team Members"}
-                  className="relative h-[468px] basis-96 overflow-hidden rounded-xl bg-red-600 md:basis-1/3 lg:basis-1/5"
-                >
-                  <Image
-                    className="absolute inset-0 h-full w-full object-cover"
-                    width={300}
-                    height={300}
-                    alt=""
-                    src={"/assets/images/img/Rectangle 11.png"}
-                  />
-                  <div className="absolute bottom-0 left-0 bg-primary_gradinet p-3 text-start text-white">
-                    <h5 className="text-h6">August Everest</h5>
-                    <p className="text-paragraph opacity-70">
-                      SYSTEMS ENGINEER
-                    </p>
-                  </div>
-                  <div className="absolute right-2 top-2 flex flex-col gap-2">
-                    <Link href={"/"}>
-                      <Image
-                        width={34}
-                        height={34}
-                        alt=""
-                        src="/assets/images/elemants/elemants (5).png"
-                      />
-                    </Link>
-                    <Link href={"/"}>
-                      <Image
-                        width={34}
-                        height={34}
-                        alt=""
-                        src="/assets/images/elemants/elemants (6).png"
-                      />
-                    </Link>
-                    <Link href={"/"}>
-                      <Image
-                        width={34}
-                        height={34}
-                        alt=""
-                        src="/assets/images/elemants/elemants (7).png"
-                      />
-                    </Link>
-                    <Link href={"/"}>
-                      <Image
-                        width={34}
-                        height={34}
-                        alt=""
-                        src="/assets/images/elemants/elemants (8).png"
-                      />
-                    </Link>
-                  </div>
+                <CarouselItem className="basis-96  md:basis-1/3 lg:basis-1/5" key={index + "Team Members"}>
+                  <TeamCard />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -391,48 +300,4 @@ export default function Home() {
     </div>
   );
 }
-// Featured Services Card Component
-type Props = {
-  image: string;
-  title: string;
-  tags: string[];
-  color: string[];
-  ImageSize?: number;
-};
-const Featured_Service_Card = ({
-  image,
-  title,
-  tags,
-  color,
-  ImageSize = 500,
-}: Props) => {
-  return (
-    <div
-      className={`relative flex h-full items-end rounded-2xl bg-gradient-to-tr ${color[0]} ${color[1]}`}
-    >
-      <div className="z-50 w-full space-y-3 p-6 text-white">
-        <h1 className="text-h5">{title}</h1>
-        <div className="flex w-full items-center justify-between">
-          <span className="size-10 rounded-full bg-white"></span>
-          <div className="space-x-2">
-            {tags.map((tag, index) => (
-              <span
-                key={tag + index}
-                className="rounded-lg border border-white bg-white/20 p-1"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-      <Image
-        className="absolute right-0 top-0 md:-top-10"
-        width={ImageSize}
-        height={ImageSize}
-        alt=""
-        src={image}
-      />
-    </div>
-  );
-};
+

@@ -12,8 +12,8 @@ export default function page() {
         highlightNane="Portfolio"
         subTitle="Our"
       />
-      <section className="md:mt-top px-mobile md:px-spacing_2 [&_p]:text-paragraph">
-        <div className="aspect-video md:h-[634px] bg-red-600">
+      <section className="md:mt-top px-mobile md:px-spacing_2 [&_p]:!text-lg">
+        <div className="aspect-video md:h-[634px] w-full rounded-2xl overflow-hidden">
           <Image
             className="h-full w-full object-cover"
             width={600}
@@ -23,7 +23,7 @@ export default function page() {
           />
         </div>
 
-        <div className="space-y-6 mt-4">
+        <div className="space-y-6 mt-6">
           <div className="space-y-3">
             <h2 className="text-h6 md:text-h5">Network Infrastructure and Design</h2>
             <p>

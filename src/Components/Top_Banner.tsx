@@ -18,7 +18,7 @@ export default function Top_Banner({ className,Title,subTitle,highlightNane }: {
         alt="top_image_benner"
       />
       <div className="text-white text-center px-spacing">
-        <p>{subTitle} <span className="text-secandry_primary">{highlightNane}</span></p>
+        <p>{subTitle} <strong className="text-secandry_primary">{highlightNane}</strong></p>
         <h1 className="text-4xl lg:text-h3">{Title}</h1>
       </div>
     </section>
