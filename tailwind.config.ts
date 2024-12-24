@@ -15,7 +15,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "rgb(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         primary_secandry: "var(--primary-secandry)",
@@ -76,6 +76,7 @@ export default {
           "66px",
           {
             fontWeight: 700,
+            lineHeight: "60px",
           },
         ],
         h4: [
@@ -117,9 +118,11 @@ export default {
         spacing_2: "188px",
         mobile: "16px",
         top: "120px",
+        "15":"60px"
       },
       margin: {
         top: "120px",
+        "60":"60px"
       },
       borderRadius: {
         lg: "var(--radius)",

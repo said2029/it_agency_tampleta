@@ -216,9 +216,9 @@ const ComponentHome = () => {
 // for Company tab
 const ComponentCompany = () => {
   return (
-    <div className="w-full md:px-16">
+    <div className="md:px-16 overflow-hidden w-screen">
       <div className="hover:[&_a]:bg-primary/15 grid w-full gap-10 rounded-md bg-white shadow-lg p-4 md:mt-4 md:grid-cols-3 md:pt-16 xl:grid-cols-4">
-        <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
+        <Link href={"/about"} className="rounded-md px-4 py-3 transition-all">
           <ul className="flex items-center gap-2">
             <li>
               <span>
@@ -231,7 +231,7 @@ const ComponentCompany = () => {
             Lorem ipsum dolor sit ametr
           </p>
         </Link>
-        <Link href={"/"} className="rounded-md px-4 py-3 transition-all">
+        <Link href={"/portfolio"} className="rounded-md px-4 py-3 transition-all">
           <ul className="flex items-center gap-2">
             <li>
               <span>

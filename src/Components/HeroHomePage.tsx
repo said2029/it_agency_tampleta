@@ -5,7 +5,7 @@ import gsap from "gsap";
 import ButtonMain from "./MianButton";
 gsap.registerPlugin(useGSAP);
 
-export default function Hero() {
+export default function HeroHomePage() {
   useGSAP(() => {
     const interTL = gsap.timeline();
     interTL

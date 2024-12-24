@@ -1,6 +1,8 @@
 "use client";
 import Brandes from "@/Components/brandes";
-import Hero from "@/Components/Hero";
+import Brand_Work_With from "@/Components/Global/Brand_Work_With";
+import ClientsSay from "@/Components/Global/ClientsSay";
+import HeroHomePage from "@/Components/HeroHomePage";
 import ButtonMain from "@/Components/MianButton";
 import {
   Carousel,
@@ -15,121 +17,9 @@ export default function Home() {
   return (
     <div className="">
       {/* hero */}
-      <Hero />
+      <HeroHomePage />
       {/* Brand Work With */}
-      <section className="relative overflow-hidden bg-[#F3F3F3] py-16 pt-top lg:px-spacing">
-        <div className="relative z-50">
-          <h2 className="text-center">
-            <span className="rounded-full bg-secandry_primary px-1 text-paragraph_b text-white">
-              Brand
-            </span>{" "}
-            Work With
-          </h2>
-          <Brandes className="z-50 mt-10" />
-          <section className="mt-10 flex flex-col items-center px-mobile md:mt-32 md:flex-row md:gap-20 md:px-0">
-            <div className="grid w-full flex-grow grid-cols-2 gap-4 md:w-auto">
-              <div className="flex h-[210px] flex-col justify-evenly rounded-3xl bg-white px-3 shadow-xl">
-                <div className="w-[110px]">
-                  <Image
-                    width={300}
-                    height={300}
-                    alt=""
-                    src="/assets/images/elemants/fluent-color_people-28.png"
-                    className="h-full w-full"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-h5 text-black">23+</h3>
-                  <p className="to-black_50 text-paragraph">
-                    Years of experience
-                  </p>
-                </div>
-              </div>
-              <div className="flex h-[210px] flex-col justify-evenly rounded-3xl bg-white px-3 shadow-xl">
-                <div className="w-[110px]">
-                  <Image
-                    width={300}
-                    height={300}
-                    alt=""
-                    src="/assets/images/elemants/fluent-color_shield-checkmark-24.png"
-                    className="h-full w-full"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-h5 text-black">230+</h3>
-                  <p className="to-black_50 text-paragraph">Success Stories</p>
-                </div>
-              </div>
-              <div className="flex h-[210px] flex-col justify-evenly rounded-3xl bg-white px-3 shadow-xl">
-                <div className="w-[110px]">
-                  <Image
-                    width={300}
-                    height={300}
-                    alt=""
-                    src="/assets/images/elemants/fluent-color_people-team-20.png"
-                    className="h-full w-full"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-h5 text-black">30k</h3>
-                  <p className="to-black_50 text-paragraph">
-                    Companies Trust Us
-                  </p>
-                </div>
-              </div>
-              <div className="flex h-[210px] flex-col justify-evenly rounded-3xl bg-white px-3 shadow-xl">
-                <div className="w-[110px]">
-                  <Image
-                    width={300}
-                    height={300}
-                    alt=""
-                    src="/assets/images/elemants/fluent-color_pin-48.png"
-                    className="h-full w-full"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-h5 text-black">230+</h3>
-                  <p className="to-black_50 text-paragraph">
-                    Results Guaranteed
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="relative h-full md:w-[400px]">
-              <Image
-                width={400}
-                height={400}
-                className="h-full w-full object-fill"
-                alt=""
-                src="/assets/images/img/Images.png"
-              />
-              <div className="absolute bottom-7 left-2 space-y-0 text-white">
-                <h4 className="text-h4">12000+</h4>
-                <p className="text-paragraph text-sm">
-                  employees in 30 countries in Europe
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <div className="absolute -left-72 -top-72 -z-50 hidden md:block">
-            <Image
-              width={600}
-              height={600}
-              alt=""
-              src="/assets/images/elemants/Star 1.png"
-            />
-          </div>
-          <div className="absolute -bottom-72 -right-72 -z-50 hidden md:block">
-            <Image
-              width={600}
-              height={600}
-              alt=""
-              src="/assets/images/elemants/Star 2.png"
-            />
-          </div>
-        </div>
-      </section>
+      <Brand_Work_With className="bg-[#F3F3F3] lg:px-spacing"/>
       {/* We are Techco */}
       <section className="md:mt-16 lg:px-spacing">
         <div className="grid w-full grid-cols-1 gap-6 md:h-[405px] md:grid-cols-2">
@@ -195,7 +85,7 @@ export default function Home() {
                   width={75}
                   height={75}
                   alt="Expert Team Members"
-                  src="/assets/images/elemants/Group 1.png"
+                  src="/assets/images/elemants/elemants (2).png"
                 />
               </span>
               <div>
@@ -213,7 +103,7 @@ export default function Home() {
                   width={75}
                   height={75}
                   alt="Fastest Customer Service"
-                  src="/assets/images/elemants/Group 2.png"
+                  src="/assets/images/elemants/elemants (3).png"
                 />
               </span>
               <div>
@@ -232,7 +122,7 @@ export default function Home() {
                   width={75}
                   height={75}
                   alt="reasonable Pricing"
-                  src="/assets/images/elemants/Group 3.png"
+                  src="/assets/images/elemants/elemants (4).png"
                 />
               </span>
               <div>
@@ -257,14 +147,14 @@ export default function Home() {
               title="IT Management Services"
               tags={["Consultation", "Strategy"]}
               color={["from-[#184A44]", "to-[#99A697]"]}
-              image="/assets/images/elemants/isometric view of colleagues having meeting.png"
+              image="/assets/images/elemants/elemants (9).png"
             />
             <Featured_Service_Card
               ImageSize={400}
               title="Data Tracking and Security"
               tags={["Consultation", "Strategy"]}
               color={["from-[#5F1FBE]", "to-[#617DB4]"]}
-              image="/assets/images/elemants/young woman working at the table wearing vr glasses.png"
+              image="/assets/images/elemants/elemants (18).png"
             />
           </div>
           <div className="grid h-[1500px] gap-6 md:h-[394px] md:grid-cols-3">
@@ -272,25 +162,25 @@ export default function Home() {
               title="Website Development"
               tags={["Consultation", "Strategy"]}
               color={["from-[#CAAA8A]", "to-[#8F6A52]"]}
-              image="/assets/images/elemants/isometric view of young man working on graphic tablet.png"
+              image="/assets/images/elemants/elemants (10).png"
             />
             <Featured_Service_Card
               title="Website Development"
               tags={["Consultation", "Strategy"]}
               color={["from-[#4258B1]", "to-[#6A8E52]"]}
-              image="/assets/images/elemants/front view of magnifying glass and smartphone standing on abstract figures.png"
+              image="/assets/images/elemants/elemants (1).png"
             />
             <Featured_Service_Card
               title="Website Development"
               tags={["Consultation", "Strategy"]}
               color={["from-[#BA8EB1]", "to-[#815D7E]"]}
-              image="/assets/images/elemants/isometric view of young woman working on graphic tablet.png"
+              image="/assets/images/elemants/elemants (11).png"
             />
           </div>
         </div>
         <ButtonMain
           href="#"
-          className="border-border border bg-transparent font-bold text-black"
+          className="border border-border bg-transparent font-bold text-black"
           name="More Servises"
         />
       </section>
@@ -314,13 +204,12 @@ export default function Home() {
         <div className="mt-16">
           <Carousel
             opts={{
-              loop: true,
               align: "center",
             }}
             className="h-[300px] w-full md:h-[539px]"
           >
             <CarouselContent className="md:space-x-2">
-              {Array.from({ length: 5 }).map((_, index) => (
+              {Array.from({ length: 10 }).map((_, index) => (
                 <CarouselItem
                   key={index}
                   className="relative h-[300px] overflow-hidden rounded-2xl bg-[url(/assets/images/img/hero_Image.jpg)] pl-1 md:h-[539px] md:basis-1/2"
@@ -347,49 +236,9 @@ export default function Home() {
         </div>
       </section>
       {/* What clients say */}
-      <section className="bg-[#F3F3F3] px-mobile py-4 text-center md:mt-top lg:px-spacing_2">
-        <p>
-          <span className="rounded-full bg-secandry_primary px-1 font-bold text-white">
-            Client
-          </span>{" "}
-          Testimonial
-        </p>
-        <h3 className="text-h5 md:text-h4">What clients say</h3>
-        <div className="mt-5 flex flex-wrap justify-center gap-10 md:mt-16">
-          {Array.from({ length: 3 }).map((item, index) => (
-            <div
-              key={index + "What clients say"}
-              className="space- w-[400px] rounded-2xl bg-white px-2 pt-10"
-            >
-              <h6 className="text-h6">“Amazing services”</h6>
-              <p className="mt-6 text-paragraph">
-                As a startup, we needed a technology partner who could help us
-                bring our vision to life. Itsafe exceeded our expectations with
-                their innovative solutions and proactive approach. They guided
-                us through every step of the process, our journey together.
-              </p>
-              <div className="bg-[url(/assets/images/elemants/Star 3.png)] relative mt-7 flex h-52 w-full items-end justify-center">
-                <Image
-                  className="opacity-75"
-                  width={300}
-                  height={300}
-                  alt=""
-                  src={"/assets/images/elemants/Star 3.png"}
-                />
-                <Image
-                  className="absolute"
-                  width={300}
-                  height={300}
-                  alt=""
-                  src={"/assets/images/img/Rectangle 10.png"}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ClientsSay />
       {/* Top Skilled Experts */}
-      <section className="mt-top w-full py-4 text-center relative overflow-hidden">
+      <section className="relative mt-top w-full overflow-hidden py-4 text-center">
         <p>
           <span className="rounded-full bg-secandry_primary px-1 font-bold text-white">
             Our Expert
@@ -424,7 +273,7 @@ export default function Home() {
                         width={34}
                         height={34}
                         alt=""
-                        src="/assets/images/elemants/Group 6.png"
+                        src="/assets/images/elemants/elemants (5).png"
                       />
                     </Link>
                     <Link href={"/"}>
@@ -432,7 +281,7 @@ export default function Home() {
                         width={34}
                         height={34}
                         alt=""
-                        src="/assets/images/elemants/Group 7.png"
+                        src="/assets/images/elemants/elemants (6).png"
                       />
                     </Link>
                     <Link href={"/"}>
@@ -440,7 +289,7 @@ export default function Home() {
                         width={34}
                         height={34}
                         alt=""
-                        src="/assets/images/elemants/Group 8.png"
+                        src="/assets/images/elemants/elemants (7).png"
                       />
                     </Link>
                     <Link href={"/"}>
@@ -448,7 +297,7 @@ export default function Home() {
                         width={34}
                         height={34}
                         alt=""
-                        src="/assets/images/elemants/Group 9.png"
+                        src="/assets/images/elemants/elemants (8).png"
                       />
                     </Link>
                   </div>
@@ -457,15 +306,27 @@ export default function Home() {
             </CarouselContent>
           </Carousel>
         </div>
-        <div className="mt-10 w-full grid place-content-center">
+        <div className="mt-10 grid w-full place-content-center">
           <ButtonMain
             href="#"
-            className="border-border border bg-transparent font-bold text-black w-fit"
+            className="w-fit border border-border bg-transparent font-bold text-black"
             name="OUR ALL EXPERTS"
           />
         </div>
-        <Image className="absolute -top-32 -left-32 -z-40 animate-spin2 hidden md:block" width={600} height={600} alt="" src={"/assets/images/elemants/Star 1.png"} />
-        <Image className="absolute -bottom-32 -right-32 -z-40 animate-spin2 hidden md:block" width={600} height={600} alt="" src={"/assets/images/elemants/Star 2.png"} />
+        <Image
+          className="absolute -left-32 -top-32 -z-40 hidden animate-spin2 md:block"
+          width={600}
+          height={600}
+          alt=""
+          src={"/assets/images/elemants/elemants (13).png"}
+        />
+        <Image
+          className="absolute -bottom-32 -right-32 -z-40 hidden animate-spin2 md:block"
+          width={600}
+          height={600}
+          alt=""
+          src={"/assets/images/elemants/elemants (14).png"}
+        />
       </section>
       {/* blogs latest artical */}
       <section className="w-full py-4 text-center md:mt-top">
@@ -477,8 +338,11 @@ export default function Home() {
         </p>
         <h3 className="text-h5 md:mt-4 md:text-h4">Latest Articles Postss</h3>
         <div className="mt-4 grid grid-cols-1 gap-5 px-mobile md:mt-16 md:grid-cols-3 md:px-spacing">
-          {Array.from({ length: 3 }).map(() => (
-            <div className="over w-full rounded-xl bg-white pb-3 shadow-xl md:w-[420px]">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <div
+              key={i + "blogs latest"}
+              className="over w-full rounded-xl bg-white pb-3 shadow-xl md:w-[420px]"
+            >
               <div className="w-full">
                 <Image
                   className="w-full"
