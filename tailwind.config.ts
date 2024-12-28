@@ -131,6 +131,7 @@ export default {
       },
 	  animation:{
 		spin2: "spin 40s linear infinite",
+    up_down: "up_down 10s linear infinite",
 	  },
       keyframes: {
         span2: {
@@ -138,6 +139,11 @@ export default {
             transform: "rotate(-360deg)",
           },
         },
+        up_down:{
+          "50%":{
+            transform:"translateY(20px)"
+          }
+        }
       },
     },
   },

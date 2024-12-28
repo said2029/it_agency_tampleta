@@ -11,7 +11,7 @@ export default function Featured_Services({
   className?: string;
 }) {
   return (
-    <section className={cn("flex flex-col items-center gap-16 md:mt-top",className)}>
+    <section className={cn("flex flex-col items-center gap-16 md:mt-top ",className)}>
       <h5 className="text-center text-h5">Featured Services</h5>
       <div className="w-full space-y-11">
         <div className="grid h-[800px] w-full gap-16 md:h-[394px] md:grid-cols-2">
@@ -52,7 +52,7 @@ export default function Featured_Services({
       </div>
       <ButtonMain
         href="#"
-        className="border border-border bg-transparent font-bold text-black"
+        className="border border-border bg-transparent font-bold"
         name="More Servises"
       />
     </section>
