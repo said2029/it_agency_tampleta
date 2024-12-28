@@ -3,7 +3,7 @@ import { Button } from "@/Components/UI/Button";
 import Image from "next/image";
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import TeamCard from "./_components/TeamCard";
+import TeamCard from "../../../Components/Cards/TeamCard_1";
 
 export default function page() {
   return (

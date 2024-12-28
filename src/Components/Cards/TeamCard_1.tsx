@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function TeamCard({className}:{className?:string}) {
+export default function TeamCard_1({className}:{className?:string}) {
   return (
     <div className={cn("relative h-[468px] overflow-hidden rounded-xl",className)}>
       <Image

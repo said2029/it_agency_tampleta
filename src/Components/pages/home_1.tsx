@@ -11,7 +11,7 @@ import Image from "next/image";
 import { IoMdArrowDropright } from "react-icons/io";
 
 import Featured_Services from "@/Components/Global/Featured_Services";
-import TeamCard from "@/app/(company)/team_member/_components/TeamCard";
+import TeamCard_1 from "@/Components/Cards/TeamCard_1";
 
 export default function Home_1() {
   return (
@@ -207,7 +207,7 @@ export default function Home_1() {
             <CarouselContent className="gap-2">
               {Array.from({ length: 10 }).map((item, index) => (
                 <CarouselItem className="basis-96  md:basis-1/3 lg:basis-1/5" key={index + "Team Members"}>
-                  <TeamCard />
+                  <TeamCard_1 />
                 </CarouselItem>
               ))}
             </CarouselContent>
