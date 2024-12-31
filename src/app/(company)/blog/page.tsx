@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa6";
 import { MdOutlineDateRange } from "react-icons/md";
@@ -14,8 +15,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/Components/UI/carousel";
+import { SiGoogledisplayandvideo360 } from "react-icons/si";
+import { video_Preview } from "@/Components/Video_Preview";
 
 export default function page() {
+  const { setData }:any = useContext(video_Preview);
   return (
     <main className="bg-primary/10 pb-top">
       <section className="relative grid h-72 w-full place-content-center">
@@ -33,11 +37,11 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section className="relative mt-top grid grid-cols-3 gap-20 px-spacing">
-        <div className="col-span-2 space-y-6 rounded-xl">
+      <section className="relative mt-60 md:mt-top grid grid-cols-1 md:grid-cols-3 gap-10 px-mobile md:px-spacing">
+        <div className="md:col-span-2 space-y-6 rounded-xl">
           {/* blog Card Image*/}
           <div className="w-full rounded-xl bg-white p-8">
-            <div className="h-96 w-full overflow-hidden rounded-xl transition-all hover:scale-105">
+            <div className="h-60 md:h-96 w-full overflow-hidden rounded-xl transition-all hover:scale-105">
               <Image
                 className="h-full w-full object-cover"
                 width={400}
@@ -46,7 +50,7 @@ export default function page() {
                 src={"/assets/images/img/Rectangle_36.png"}
               />
             </div>
-            <div className="mt-4 flex items-center gap-7">
+            <div className="mt-4 flex flex-wrap items-center gap-7">
               <p className="flex items-center gap-3 text-[16px]">
                 <span className="text-primary">
                   <FaRegUser size={16} />
@@ -82,7 +86,7 @@ export default function page() {
             <div className="mt-10">
               <Link
                 className="flex w-fit items-center gap-3 rounded-full bg-primary_gradinet px-8 py-3 text-xl font-bold uppercase text-white shadow-xl [&_svg]:hover:-translate-y-1 [&_svg]:hover:translate-x-1"
-                href={"/"}
+                href={"/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"}
               >
                 <span>read more</span>
                 <FaLocationArrow className="transition-all" />
@@ -92,13 +96,13 @@ export default function page() {
           {/* end blog Card */}
           {/* blog Card slide Image*/}
           <div className="w-full rounded-xl bg-white p-8">
-            <div className="h-96 w-full overflow-hidden rounded-xl transition-all [&_.button-carousel]:hover:flex">
+            <div className="h-60 md:h-96 w-full overflow-hidden rounded-xl transition-all [&_.button-carousel]:hover:flex">
               <Carousel
                 opts={{
                   skipSnaps: true,
                 }}
               >
-                <CarouselContent className="relative h-96">
+                <CarouselContent className="relative h-60 md:h-96">
                   <CarouselItem className="h-full transition-all hover:scale-105">
                     <Image
                       className="h-full w-full object-cover"
@@ -122,7 +126,7 @@ export default function page() {
                 <CarouselPrevious className="button-carousel absolute left-6 hidden size-14 border-none bg-primary_gradinet text-white !opacity-95" />
               </Carousel>
             </div>
-            <div className="mt-4 flex items-center gap-7">
+            <div className="mt-4 flex items-center gap-7 flex-wrap">
               <p className="flex items-center gap-3 text-[16px]">
                 <span className="text-primary">
                   <FaRegUser size={16} />
@@ -158,7 +162,7 @@ export default function page() {
             <div className="mt-10">
               <Link
                 className="flex w-fit items-center gap-3 rounded-full bg-primary_gradinet px-8 py-3 text-xl font-bold uppercase text-white shadow-xl [&_svg]:hover:-translate-y-1 [&_svg]:hover:translate-x-1"
-                href={"/"}
+                href={"/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"}
               >
                 <span>read more</span>
                 <FaLocationArrow className="transition-all" />
@@ -168,19 +172,31 @@ export default function page() {
           {/* end blog Card */}
           {/* blog Card video*/}
           <div className="w-full rounded-xl bg-white p-8">
-            <div className="h-96 w-full overflow-hidden rounded-xl relative">
+            <div className="relative h-60 md:h-96 w-full overflow-hidden rounded-xl">
               <Image
-                className="h-full w-full object-cover transition-all hover:scale-105 -z-50"
+                className="-z-50 h-full w-full object-cover transition-all hover:scale-105"
                 width={400}
                 height={250}
                 alt="blog_image"
                 src={"/assets/images/img/Rectangle_36.png"}
               />
-              <button className="size-28 rounded-full absolute bg-primary z-[200]">
-
+              <div className="absolute bottom-1/2 left-1/2 right-1/2 top-1/2 z-[200] size-32 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-primary"></div>
+              <button
+                onClick={() =>
+                  setData(
+                    (pri: {
+                      open: boolean;
+                      video: string;
+                      iframe: boolean;
+                    }) => ({ ...pri, open: true,video:"https://www.youtube.com/embed/pAeEAfPglWI",iframe:true }),
+                  )
+                }
+                className="absolute bottom-1/2 left-1/2 right-1/2 top-1/2 z-[200] grid size-28 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-primary"
+              >
+                <SiGoogledisplayandvideo360 size={45} className="text-white" />
               </button>
             </div>
-            <div className="mt-4 flex items-center gap-7">
+            <div className="mt-4 flex items-center gap-7 flex-wrap">
               <p className="flex items-center gap-3 text-[16px]">
                 <span className="text-primary">
                   <FaRegUser size={16} />
@@ -216,7 +232,7 @@ export default function page() {
             <div className="mt-10">
               <Link
                 className="flex w-fit items-center gap-3 rounded-full bg-primary_gradinet px-8 py-3 text-xl font-bold uppercase text-white shadow-xl [&_svg]:hover:-translate-y-1 [&_svg]:hover:translate-x-1"
-                href={"/"}
+                href={"/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"}
               >
                 <span>read more</span>
                 <FaLocationArrow className="transition-all" />
@@ -243,9 +259,11 @@ export default function page() {
           <div className="space-y-6">
             <h2 className="text-xl font-semibold">Recent Post</h2>
             <div className="mt-4 flex flex-col gap-3">
-              {Array.from({ length: 4 }).map(() => (
-                <div className="flex gap-3 rounded-lg bg-white p-2">
-                  <div className="size-24 min-w-24 rounded-lg bg-red-500"></div>
+              {Array.from({ length: 4 }).map((_,i) => (
+                <div key={i+"sidbar_cards_blog"} className="flex gap-3 overflow-hidden rounded-lg bg-white p-2">
+                  <div className="size-24 min-w-24 rounded-lg bg-red-500">
+                    <Image className="w-full h-full object-cover" width={300} height={300} alt="" src={"/assets/images/img/Rectangle_37.png"} />
+                  </div>
                   <div>
                     <p className="opacity-75">June 8, 2024</p>
                     <h2 className="line-clamp-2 text-xl font-semibold opacity-90">
@@ -257,7 +275,7 @@ export default function page() {
             </div>
           </div>
           <div className="space-y-6">
-            <h2 className="text-xl font-semibold">Recent Post</h2>
+            <h2 className="text-xl font-semibold">Categories</h2>
             <ul className="divide-black/20 space-y-5 divide-y">
               <li className="flex items-center justify-between py-2">
                 <Link

@@ -40,7 +40,7 @@ export default function Header({}: Props) {
           Contact
         </Link>
       </ul>
-      <ButtonMain className="hidden xl:flex" name="Get Started" />
+      <ButtonMain className="hidden xl:flex !text-white" name="Get Started" />
 
       {/* mobile nav */}
       <MobileNav />

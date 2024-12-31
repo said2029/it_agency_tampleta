@@ -4,11 +4,12 @@ import "./globals.css";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/footer";
 import NextTopLoader from "nextjs-toploader";
+import Video_module from "@/Components/Video_Preview";
 
 // font form goole
 const anaheim = Rubik({
-  weight: ["300","400","500","600","700"],
-  subsets:["latin"]
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
 });
 
 // meta tags for seo
@@ -27,7 +28,7 @@ export default function RootLayout({
       <body className={`${anaheim.className} antialiased`}>
         <NextTopLoader color="#4078ff" zIndex={1600} />
         <Header />
-        {children}
+        <Video_module>{children}</Video_module>
         <Footer />
       </body>
     </html>
