@@ -208,7 +208,6 @@ export default function dsfds() {
                 className="w-full rounded-lg bg-white p-5 focus:outline-none"
                 placeholder="Message*"
                 required
-                maxLength={15}
               />
               <input
                 className="cursor-pointer rounded-full bg-primary px-6 py-3 text-white transition-all hover:scale-105"
