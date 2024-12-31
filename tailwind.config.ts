@@ -23,7 +23,7 @@ export default {
   				DEFAULT: 'rgb(var(--secandry)/<alpha-value>)'
   			},
   			secandry_primary: 'var(--secandry-primary)',
-  			black: 'var(--black)',
+  			black: 'hsl(var(--black))',
   			black_75: 'var(--black-75)',
   			black_50: 'var(--black-50)',
   			black_25: 'var(--black-25)',

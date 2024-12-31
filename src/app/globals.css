@@ -30,7 +30,7 @@ body {
     --secandry-primary: #ff3400;
     --primary-gradinet: linear-gradient(234deg, rgba(64,120,255,1) 0%, rgba(24,91,255,1) 100%);
     --secandry-gradinet: linear-gradient(to right, #ff3400, #fe7f5e);
-    --black: #26292f;
+    --black: 220 11% 17%;
     --black-75: #26292ebf;
     --black-50: hwb(220 15% 82% / 0.500);
     --black-25: hwb(220 15% 82% / 0.250);

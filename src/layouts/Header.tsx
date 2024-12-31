@@ -16,7 +16,6 @@ import {
 } from "react-icons/gr";
 import { IoIosArrowDown, IoMdClose, IoMdMenu } from "react-icons/io";
 
-
 type Props = {};
 
 export default function Header({}: Props) {
@@ -217,9 +216,12 @@ const Accardon = ({ name, Component }: { name: string; Component: any }) => {
 const ComponentHome = () => {
   return (
     <ul className="w-full space-y-2 rounded-md bg-white px-1 py-3 text-navItem font-medium shadow-md md:w-48 [&_li]:cursor-pointer [&_li]:rounded-sm [&_li]:px-3 [&_li]:py-1 hover:[&_li]:bg-primary/20 hover:[&_li]:text-primary/70">
-      <li className="bg-primary/20 text-primary/70"><Link href={"/"}>Home 1</Link> </li>
-      <li><Link href={"/"}>Home 2</Link> </li>
-
+      <li className="bg-primary/20 text-primary/70">
+        <Link href={"/"}>Home 1</Link>{" "}
+      </li>
+      <li>
+        <Link href={"/"}>Home 2</Link>{" "}
+      </li>
     </ul>
   );
 };
@@ -244,10 +246,7 @@ const ComponentCompany = () => {
             Lorem ipsum dolor sit ametr
           </p>
         </Link>
-        <Link
-          href={"/pricing"}
-          className="rounded-md px-4 py-3 transition-all"
-        >
+        <Link href={"/pricing"} className="rounded-md px-4 py-3 transition-all">
           <ul className="flex items-center gap-2">
             <li>
               <span>
@@ -390,8 +389,12 @@ const ComponentServices = () => {
 const ComponentBlogs = () => {
   return (
     <ul className="w-full space-y-2 rounded-md bg-white px-1 py-3 text-navItem font-medium shadow-md md:w-48 [&_li]:cursor-pointer [&_li]:rounded-sm [&_li]:px-3 [&_li]:py-1 hover:[&_li]:bg-primary/20 hover:[&_li]:text-primary/70">
-      <li className="bg-primary/20 text-primary/70"><Link href={"/blog"}>Blog</Link></li>
-      <li><Link href={"/"}>Blog Detals</Link></li>
+      <li className="bg-primary/20 text-primary/70">
+        <Link href={"/blog"}>Blog</Link>
+      </li>
+      <li>
+        <Link href={"/blog/id"}>Blog Detals</Link>
+      </li>
     </ul>
   );
 };
