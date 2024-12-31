@@ -177,8 +177,8 @@ export default function Footer() {
               </span>
             </div>
           </div>
-          {Links.map((link) => (
-            <div key={link.name}>
+          {Links.map((link,i) => (
+            <div key={i+"Footeritem"}>
               <p className="text-paragraph opacity-70">{link.name}</p>
               <div className="flex flex-col gap-2">
                 {link.links.map((item) => (

@@ -47,7 +47,7 @@ export default function page() {
             />
           </div>
         </div>
-        <Featured_Services className="px-0" />
+        <Featured_Services className="px-0 [&_button]:!border-black [&_button]:!text-black" />
         <div className="mt-top flex flex-col items-center justify-center text-center">
           <p>
             <span className="text-secandry_primary">Why Us</span> better

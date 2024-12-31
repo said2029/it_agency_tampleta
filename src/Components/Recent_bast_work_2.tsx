@@ -20,7 +20,7 @@ export default function Recent_bast_work_2() {
             solutions that meet the unique needs and objectives of our
             clients,custom software.
           </p>
-          <ButtonMain href="#" name="All Works" />
+          <ButtonMain className="text-white" href="#" name="All Works" />
         </div>
       </div>
       <div className="mt-16 flex flex-col md:flex-row justify-between gap-4">

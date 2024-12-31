@@ -12,7 +12,7 @@ export default function page() {
         highlightNane="Portfolio"
         subTitle="Our"
       />
-      <section className="md:mt-top px-mobile md:px-spacing_2 [&_p]:!text-lg">
+      <section className="md:mt-top mt-60 px-mobile md:px-spacing [&_p]:!text-lg">
         <div className="aspect-video md:h-[634px] w-full rounded-2xl overflow-hidden">
           <Image
             className="h-full w-full object-cover"

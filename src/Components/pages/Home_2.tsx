@@ -53,7 +53,7 @@ export default function Home_2() {
           </div>
 
           <div className="flex items-center gap-2 mt-5">
-            <ButtonMain name="Get Started" className="w-fit" />
+            <ButtonMain name="Get Started" className="w-fit text-white" />
             <ButtonMain name="Contact Us" className="w-fit !bg-none text-secandry_primary border border-secandry_primary" />
           </div>
         </div>
@@ -130,13 +130,13 @@ export default function Home_2() {
         </div>
       </section>
       <section className="relative mt-60 flex flex-col items-center justify-between gap-3 px-mobile md:mt-top lg:flex-row lg:gap-0 lg:px-spacing">
-        <div className="flex max-w-xl flex-col justify-between overflow-hidden px-0">
+        <div className="flex gap-5 max-w-xl flex-col justify-between overflow-hidden px-0">
           <div>
             <p>
               We are{" "}
               <span className="font-bold text-secandry_primary">Techco</span>
             </p>
-            <h4 className="w-fit text-h6 leading-tight text-black md:text-h4">
+            <h4 className="w-fit text-h6 text-black md:text-h4">
               Our <span className="text-secandry_primary">Commitment</span> to
               Client Satisfaction
             </h4>
@@ -230,20 +230,20 @@ export default function Home_2() {
           </li>
         </ul>
         <ButtonMain
-          className="absolute -bottom-20 left-1/2 right-1/2 mx-auto w-full -translate-x-1/2 justify-center text-nowrap md:w-72"
+          className="absolute -bottom-20 left-1/2 right-1/2 mx-auto w-full -translate-x-1/2 justify-center text-nowrap md:w-72 text-white"
           href="#"
           name="Get Started"
         />
       </section>
       <section className="relative mt-top h-fit">
-        <div className="bg-primary pb-2 md:px-spacing">
+        <div className="bg-primary pb-2 px-mobile md:px-spacing">
           <div
             style={{ clipPath: "polygon(0 0, 100% 0, 98% 100%, 2% 100%)" }}
             className="top-0 h-12 w-full bg-white"
           ></div>
           <Featured_Services className="text-white md:mt-10 lg:px-spacing 2xl:px-spacing_2" />
         </div>
-        <div className="h-20 w-full -translate-y-1">
+        <div className="w-full -translate-y-1">
           <Image
             className="h-full w-full"
             width={300}

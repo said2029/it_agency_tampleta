@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Anaheim } from "next/font/google";
+import { Anaheim, Rubik } from "next/font/google";
 import "./globals.css";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/footer";
+import NextTopLoader from "nextjs-toploader";
 
 // font form goole
-const anaheim = Anaheim({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+const anaheim = Rubik({
+  weight: ["300","400","500","600","700"],
+  subsets:["latin"]
 });
 
 // meta tags for seo
@@ -24,9 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${anaheim.className} antialiased`}>
+        <NextTopLoader color="#4078ff" zIndex={1600} />
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

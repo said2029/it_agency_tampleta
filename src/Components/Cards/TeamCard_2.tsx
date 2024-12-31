@@ -47,8 +47,8 @@ export default function TeamCard_2({ className }: { className?: string }) {
                   y2="51.5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#185BFF" />
-                  <stop offset="1" stop-color="#4078FF" />
+                  <stop stopColor="#185BFF" />
+                  <stop offset="1" stopColor="#4078FF" />
                 </linearGradient>
               </defs>
             </svg>

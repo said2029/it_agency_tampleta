@@ -14,7 +14,7 @@ export default function ButtonMain({
 }) {
   return (
     <Link href={href}
-      className={cn("text-nowraps items-center gap-3 rounded-[51px] bg-primary_gradinet px-6 py-4 text-paragraph_b text-white flex ",className)}
+      className={cn("text-nowraps items-center gap-3 rounded-[51px] bg-primary_gradinet px-6 py-4 text-paragraph_b flex ",className)}
     >
       {name}
       <FaArrowRight />

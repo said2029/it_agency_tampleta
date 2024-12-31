@@ -1,4 +1,10 @@
 import Top_Banner from "@/Components/Top_Banner";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/Components/UI/accordion";
 import Image from "next/image";
 import React from "react";
 import { IoMdArrowDropright } from "react-icons/io";
@@ -11,12 +17,12 @@ export default function page() {
         highlightNane="Portfolio"
         subTitle="Our"
       />
-      <section className="px-mobile md:mt-top md:px-spacing_2 [&_p]:!text-lg">
-        <div className="aspect-video  md:h-[634px] rounded-2xl overflow-hidden w-full">
+      <section className="mt-60 px-mobile md:mt-top md:px-spacing [&_p]:!text-lg">
+        <div className="aspect-video w-full overflow-hidden rounded-2xl md:h-[634px]">
           <Image
             className="h-full w-full object-cover"
-            width={600}
-            height={600}
+            width={1000}
+            height={1000}
             alt=""
             src={"/assets/images/img/portfolioImage.png"}
           />
@@ -48,7 +54,65 @@ export default function page() {
           </div>
           <hr />
           <div>
-          <h2 className="text-h5">Service Process</h2>
+            <h2 className="text-h5">Service Process</h2>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <Accordion
+                  className="h-full space-y-6"
+                  type="single"
+                  collapsible
+                >
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="text-2xl font-bold hover:text-primary hover:no-underline">
+                      01. Listening to Your Needs
+                    </AccordionTrigger>
+                    <AccordionContent className="bg-primary/10 p-3 py-7 text-xl font-semibold opacity-90">
+                      Data - driven diagnostic and predictive app for improving
+                      outcomes Data driven diagnostic and predictive app for
+                      improving.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="text-2xl font-bold hover:text-primary hover:no-underline">
+                      02. Tailored Solutions
+                    </AccordionTrigger>
+                    <AccordionContent className="bg-primary/10 p-3 py-7 text-xl font-semibold opacity-90">
+                      Data - driven diagnostic and predictive app for improving
+                      outcomes Data driven diagnostic and predictive app for
+                      improving.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className="text-2xl font-bold hover:text-primary hover:no-underline">
+                      03. Tactical Alignment
+                    </AccordionTrigger>
+                    <AccordionContent className="bg-primary/10 p-3 py-7 text-xl font-semibold opacity-90">
+                      Data - driven diagnostic and predictive app for improving
+                      outcomes Data driven diagnostic and predictive app for
+                      improving.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-4">
+                    <AccordionTrigger className="text-2xl font-bold hover:text-primary hover:no-underline">
+                      04. Measurable Results
+                    </AccordionTrigger>
+                    <AccordionContent className="bg-primary/10 p-3 py-7 text-xl font-semibold opacity-90">
+                      Data - driven diagnostic and predictive app for improving
+                      outcomes Data driven diagnostic and predictive app for
+                      improving.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+              <div className="grid place-content-center">
+                <Image
+                  width={400}
+                  height={400}
+                  alt=""
+                  src={"/assets/images/elemants/elemants (30).png"}
+                />
+              </div>
+            </div>
           </div>
           <div>
             <h2 className="text-h5">Services Outcome</h2>
@@ -58,7 +122,7 @@ export default function page() {
               Services leader helping Fortune 500 companies on their innovation
               agenda:
             </p>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
               <p className="!text-xl">
                 <IoMdArrowDropright size={20} className="inline text-primary" />{" "}
                 <span>Scalability and Flexibility</span>
@@ -86,14 +150,9 @@ export default function page() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <div>
-                
-            </div>
-            <div>
-
-            </div>
+            <div></div>
+            <div></div>
           </div>
-
         </div>
       </section>
     </article>

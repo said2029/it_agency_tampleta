@@ -52,7 +52,7 @@ export default function Featured_Services({
       </div>
       <ButtonMain
         href="#"
-        className="border border-border bg-transparent font-bold"
+        className="border bg-transparent font-bold"
         name="More Servises"
       />
     </section>
