@@ -5,6 +5,7 @@ import Header from "@/layouts/Header";
 import Footer from "@/layouts/footer";
 import NextTopLoader from "nextjs-toploader";
 import Video_module from "@/Components/Video_Preview";
+import Enter from "@/Provider/Enter";
 
 // font form goole
 const anaheim = Rubik({
@@ -27,9 +28,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${anaheim.className} antialiased`}>
         <NextTopLoader color="#4078ff" zIndex={1600} />
-        <Header />
-        <Video_module>{children}</Video_module>
-        <Footer />
+        <Enter>
+          <Header />
+          <Video_module>{children}</Video_module>
+          <Footer />
+        </Enter>
       </body>
     </html>
   );

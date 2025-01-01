@@ -7,7 +7,7 @@ import { Carousel, CarouselContent, CarouselItem } from "../UI/carousel";
 import TeamCard_2 from "../Cards/TeamCard_2";
 import Link from "next/link";
 import { parseAndStyleText } from "@/utils/parseAndStyleText";
-import { home } from "@/data/data";
+import { Brands, home } from "@/data/data";
 
 export default function Home_2() {
   return (
@@ -81,15 +81,15 @@ export default function Home_2() {
           src={"/assets/images/elemants/elemants (32).png"}
         />
         <div className="z-30 h-fit w-full overflow-hidden bg-primary py-[15px]">
-          <div className="flex h-[68px] w-fit items-center gap-3">
-            {Array.from({ length: 20 }).map((_, index) => (
+          <div className="flex h-[68px] w-fit items-center gap-3 brand-slider">
+            {Brands.map((item, index) => (
               <div
                 key={index}
                 className="grid h-full w-40 place-content-center rounded-lg bg-white p-2"
               >
                 <Image
                   className="w-full"
-                  src={"/assets/images/brandes/brand_1.webp"}
+                  src={item}
                   width={200}
                   height={200}
                   alt="brand"

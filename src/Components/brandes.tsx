@@ -1,25 +1,8 @@
-"use client";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import { Brands } from "@/data/data";
+import Image from "next/image";
 import React from "react";
 
 export default function Brandes({ className }: { className?: String }) {
-  useGSAP(() => {
-    const brandSlider = document.querySelector(".brand-slider");
-    if (brandSlider) {
-      const tl = gsap.timeline({ repeat: -1 });
-      tl.to(brandSlider, {
-        x: "-100%",
-        duration: 30,
-        ease: "linear",
-      });
-      tl.to(brandSlider, {
-        x: "0",
-        duration: 0,
-      });
-    }
-
-  });
   return (
     <div
       className={
@@ -27,13 +10,13 @@ export default function Brandes({ className }: { className?: String }) {
       }
     >
       <div className="flex h-full items-center gap-6 brand-slider">
-        {Array.from({ length: 40 }).map((_, i) => (
+        { Brands.map((item, i) => (
           <div
             key={"brand_" + i}
             className="grid h-full min-w-[159px] place-content-center rounded-lg bg-white p-2"
           >
             <span>
-              <img src="/assets/images/brandes/brand_1.webp" alt="brand1" />
+              <Image width={300} height={200} src={item} alt="brand1" />
             </span>
           </div>
         ))}

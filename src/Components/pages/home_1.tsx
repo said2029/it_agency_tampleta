@@ -1,5 +1,4 @@
 import Brand_Work_With from "@/Components/Global/Brand_Work_With";
-import HeroHomePage from "@/Components/HeroHomePage";
 import ButtonMain from "@/Components/MianButton";
 import {
   Carousel,
@@ -18,7 +17,21 @@ export default function Home_1() {
   return (
     <div className="">
       {/* hero */}
-      <HeroHomePage />
+      <div className="hero-section relative grid h-[923px] place-content-center overflow-hidden bg-primary bg-[url(/assets/images/img/hero_Image.jpg)] text-center text-white">
+        <div className="z-30 flex w-full flex-col items-center justify-center gap-[27px]">
+          <h1 className="text-center text-h5 md:px-spacing_2 md:text-h4 xl:text-h1">
+            {parseAndStyleText(home.hero.title, "!text-secandry_primary")}
+          </h1>
+          <p className="text-paragraph_b text-white/100">
+            {home.hero.description}
+          </p>
+          <ButtonMain
+            href={home.hero.cta.link}
+            className="w-fit bg-secandry_gradinet md:mt-7"
+            name={home.hero.cta.name}
+          />
+        </div>
+      </div>
       {/* Brand Work With */}
       <Brand_Work_With className="bg-[#F3F3F3] lg:px-spacing" />
 
@@ -276,9 +289,7 @@ export default function Home_1() {
                     {item.comments}
                   </p>
                 </div>
-                <h3 className="mt-3 text-start text-h6">
-                  {item.title}
-                </h3>
+                <h3 className="mt-3 text-start text-h6">{item.title}</h3>
               </div>
             </div>
           ))}

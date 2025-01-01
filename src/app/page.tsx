@@ -5,8 +5,8 @@ import React from 'react'
 export default function page() {
   return (
     <>
-    <Home_1/>
-    {/* <Home_2/> */}
+    {/* <Home_1/> */}
+    <Home_2/>
     </>
   )
 }

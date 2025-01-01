@@ -15,22 +15,22 @@ const home = {
       {
         value: "23+",
         name: "Years of experience",
-        image:"/assets/images/elemants/elemants (19).png",
+        image: "/assets/images/elemants/elemants (19).png",
       },
       {
         value: "200+",
         name: "Years of experience",
-        image:"/assets/images/elemants/elemants (22).png"
+        image: "/assets/images/elemants/elemants (22).png",
       },
       {
         value: "50K",
         name: "Years of experience",
-        image:"/assets/images/elemants/elemants (20).png"
+        image: "/assets/images/elemants/elemants (20).png",
       },
       {
         value: "120+",
         name: "Years of experience",
-        image:"/assets/images/elemants/elemants (21).png"
+        image: "/assets/images/elemants/elemants (21).png",
       },
     ],
     image: "/assets/images/elemants/elemants (33).png",
@@ -272,22 +272,188 @@ const home = {
   },
 };
 
+const about = {
+  banner: {
+    Title: "About Us",
+    highlightNane: "Techco",
+    subTitle: "About More",
+  },
+  Top_Banner_Images: [
+    "/assets/images/img/Rectangle 15.png",
+    "/assets/images/img/Rectangle 16.png",
+  ],
+  title: "About Us",
+  subTitle: "About {{Techco}}",
+  description:
+    "At Techco, we pride ourselves on offering dynamic and IT to suit your specific requirements. Our flexible approach means we can adjust our offerings to accommodate your evolving needs, whether you require comprehensive IT infrastructure support, strategic consultancy, software development",
+  cards: [
+    {
+      image: "/assets/images/elemants/elemants (12).png",
+      title: "Our History",
+      description:
+        "Since 1997 we have been a visionary and a reliable software engineering partner for world-class brands. abbreviated as co.",
+    },
+    {
+      image: "/assets/images/elemants/elemants (16).png",
+      title: "Our Mission",
+      description:
+        "A mission statement clarifies what the company wants to achieve, who they want to support, and why they want to support them. On the other hand",
+    },
+    {
+      image: "/assets/images/elemants/elemants (17).png",
+      title: "Our Vision",
+      description:
+        "A vision statement for a company or organization focuses on the potential inherent in the company's future; it's about what they intend to be how you",
+    },
+  ],
+};
+
+// Pricing Plan page
+
+const price = {
+  banner: {
+    Title: "Pricing Plan",
+    highlightNane: "Pricing",
+    subTitle: "Our",
+  },
+  title: "Celebrating Features Discover What Sets Us",
+  subTitle: "Apart From The Competition",
+  description:
+    "We take pride in celebrating the features that set us apart and make us a leader in the IT solutions. What truly distinguishes us is our unwavering commitment to innovation, excellence, and client satisfaction.",
+  cards: [
+    {
+      name: "Rich Documentation",
+      description: "Rich Documentation refers to comprehensive and detailed",
+    },
+    {
+      name: "Fastest Delivery",
+      description:
+        "Fastest Delivery typically refers to service or process that emphasizes",
+    },
+    {
+      name: "Lifetime Support",
+      description:
+        "Lifetime Support refers to a by a product or service provider",
+    },
+  ],
+  section_1: {
+    subTitle: "Our Pricing",
+    title: "Best Plane for Business",
+    offers: [
+      {
+        name: "Billed Monthly",
+        discount: "-10%",
+      },
+      {
+        name: "Billed Yearly",
+        discount: "-30$",
+      },
+    ],
+    plans:[
+        {
+            title:"Pro Package",
+            des:"Make your work easier with an integrated properly together.",
+            price:{
+                month:"$48.6",
+                year:"$453.6"
+            },
+            discount:{
+                month:"$54",
+                year:"$648"
+
+            },
+            save:{
+                month:"$5.4",
+                year:"$194.4"
+
+            },
+            features:[
+                {
+                    name:"Software Development.",
+                },
+                {
+                    name:"Digital Product Design",
+                },
+                {
+                    name:"IT Consulting.",
+                },
+  
+                {
+                    name:"Cybersecurity Services."
+                },
+                {
+                    name:"Cloud Services"
+                },
+            ],
+            cta:{
+                name:"pruchase up",
+                link:"/"
+            }
+        },
+        {
+            title:"Team Package",
+            des:"Make your work easier with an integrated properly together.",
+            price:{
+                month:"$54",
+                year:"$504"
+            },
+            discount:{
+                month:"$60",
+                year:"$720"
+
+            },
+            save:{
+                month:"$6",
+                year:"$216"
+
+            },
+            features:[
+                {
+                    name:"Software Development.",
+                },
+                {
+                    name:"Digital Product Design",
+                },
+                {
+                    name:"IT Consulting.",
+                },
+                {
+                    name:"Website Development.",
+                },
+                {
+                    name:"Cybersecurity Services."
+                },
+                {
+                    name:"Cloud Services"
+                },
+            ],
+            cta:{
+                name:"pruchase up",
+                link:"/"
+            }
+        },
+    ]
+  },
+
+
+};
+
 // list of images
 const Brands = [
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
-  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/brand_1.webp",
 ];
 
-export { home,Brands };
+export { home, Brands, about, price };

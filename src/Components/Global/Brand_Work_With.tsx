@@ -22,7 +22,7 @@ export default function Brand_Work_With({
         </h2>
         <Brandes className="z-50 mt-10" />
         <section className="mt-10 flex flex-col items-center px-mobile md:mt-32 md:flex-row md:gap-20 md:px-0">
-          <div className="grid w-full flex-grow grid-cols-2 gap-4 md:w-auto">
+          <div className="grid w-full flex-grow grid-cols-1 sm:grid-cols-2 gap-4 md:w-auto">
             {home.section_1.cards.map((item, index) => (
               <div
                 key={item.value + index}
