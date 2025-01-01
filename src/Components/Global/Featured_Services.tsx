@@ -4,6 +4,8 @@ import ButtonMain from "../MianButton";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { IoArrowUpOutline } from "react-icons/io5";
+import { parseAndStyleText } from "@/utils/parseAndStyleText";
+import { home } from "@/data/data";
 
 export default function Featured_Services({
   className,
@@ -12,48 +14,49 @@ export default function Featured_Services({
 }) {
   return (
     <section className={cn("flex flex-col items-center gap-16 md:mt-top ",className)}>
-      <h5 className="text-center text-h5">Featured Services</h5>
+      <h5 className="text-center text-h5">{parseAndStyleText(home.section_3.title,"text-primary_secandry")}</h5>
       <div className="w-full space-y-11">
         <div className="grid h-[800px] w-full gap-16 md:h-[394px] md:grid-cols-2">
+
           <Featured_Service_Card
-            title="IT Management Services"
-            tags={["Consultation", "Strategy"]}
-            color={["from-[#184A44]", "to-[#99A697]"]}
-            image="/assets/images/elemants/elemants (9).png"
+            title={home.section_3.cards[0].title}
+            tags={home.section_3.cards[0].tags}
+            color={home.section_3.cards[0].color}
+            image={home.section_3.cards[0].image}
           />
           <Featured_Service_Card
             ImageSize={400}
-            title="Data Tracking and Security"
-            tags={["Consultation", "Strategy"]}
-            color={["from-[#5F1FBE]", "to-[#617DB4]"]}
-            image="/assets/images/elemants/elemants (18).png"
+            title={home.section_3.cards[1].title}
+            tags={home.section_3.cards[1].tags}
+            color={home.section_3.cards[1].color}
+            image={home.section_3.cards[1].image}
           />
         </div>
         <div className="grid h-[1500px] gap-6 md:h-[394px] md:grid-cols-3">
           <Featured_Service_Card
-            title="Website Development"
-            tags={["Consultation", "Strategy"]}
-            color={["from-[#CAAA8A]", "to-[#8F6A52]"]}
-            image="/assets/images/elemants/elemants (10).png"
+            title={home.section_3.cards[2].title}
+            tags={home.section_3.cards[2].tags}
+            color={home.section_3.cards[2].color}
+            image={home.section_3.cards[2].image}
           />
           <Featured_Service_Card
-            title="Website Development"
-            tags={["Consultation", "Strategy"]}
-            color={["from-[#4258B1]", "to-[#6A8E52]"]}
-            image="/assets/images/elemants/elemants (1).png"
+            title={home.section_3.cards[3].title}
+            tags={home.section_3.cards[3].tags}
+            color={home.section_3.cards[3].color}
+            image={home.section_3.cards[3].image}
           />
           <Featured_Service_Card
-            title="Website Development"
-            tags={["Consultation", "Strategy"]}
-            color={["from-[#BA8EB1]", "to-[#815D7E]"]}
-            image="/assets/images/elemants/elemants (11).png"
+            title={home.section_3.cards[4].title}
+            tags={home.section_3.cards[4].tags}
+            color={home.section_3.cards[4].color}
+            image={home.section_3.cards[4].image}
           />
         </div>
       </div>
       <ButtonMain
-        href="#"
+        href={home.section_3.cta.link}
         className="border bg-transparent font-bold"
-        name="More Servises"
+        name={home.section_3.cta.name}
       />
     </section>
   );

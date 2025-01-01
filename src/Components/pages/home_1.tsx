@@ -1,5 +1,4 @@
 import Brand_Work_With from "@/Components/Global/Brand_Work_With";
-import ClientsSay from "@/Components/Global/ClientsSay";
 import HeroHomePage from "@/Components/HeroHomePage";
 import ButtonMain from "@/Components/MianButton";
 import {
@@ -12,6 +11,8 @@ import { IoMdArrowDropright } from "react-icons/io";
 
 import Featured_Services from "@/Components/Global/Featured_Services";
 import TeamCard_1 from "@/Components/Cards/TeamCard_1";
+import { parseAndStyleText } from "@/utils/parseAndStyleText";
+import { home } from "@/data/data";
 
 export default function Home_1() {
   return (
@@ -20,6 +21,7 @@ export default function Home_1() {
       <HeroHomePage />
       {/* Brand Work With */}
       <Brand_Work_With className="bg-[#F3F3F3] lg:px-spacing" />
+
       {/* We are Techco */}
       <section className="md:mt-16 lg:px-spacing">
         <div className="grid w-full grid-cols-1 gap-6 md:h-[405px] md:grid-cols-2">
@@ -29,132 +31,85 @@ export default function Home_1() {
               height={400}
               alt=""
               className="w-full"
-              src="/assets/images/img/Frame 33.png"
+              src={home.section_2.mainImage_2}
             />
           </div>
 
           <div className="space-y-5 px-mobile md:px-0">
             <div>
               <p>
-                We are{" "}
-                <span className="font-bold text-secandry_primary">Techco</span>
+                {parseAndStyleText(
+                  home.section_2.subTitle,
+                  "font-bold text-secandry_primary",
+                )}
               </p>
               <h4 className="text-h6 leading-tight text-black md:text-h4">
-                Our Commitment to Client Satisfaction
+                {parseAndStyleText(home.section_2.title)}
               </h4>
             </div>
-            <p>
-              At Techco, our commitment to client satisfaction is at thecore of
-              everything we do. We understand clients' success.
-            </p>
+            <p>{home.section_2.description}</p>
             <div>
               <ul className="space-y-2">
-                <li className="flex items-center gap-1">
-                  <span className="text-primary">
-                    <IoMdArrowDropright size={24} />
-                  </span>{" "}
-                  <p className="text-paragraph_b">
-                    Grow your business the right way.
-                  </p>
-                </li>
-                <li className="flex items-center gap-1">
-                  <span className="text-primary">
-                    <IoMdArrowDropright size={24} />
-                  </span>{" "}
-                  <p className="text-paragraph_b">
-                    Let business growth help your business grow.
-                  </p>
-                </li>
-                <li className="flex items-center gap-1">
-                  <span className="text-primary">
-                    <IoMdArrowDropright size={24} />
-                  </span>{" "}
-                  <p className="text-paragraph_b">Helping you to get better.</p>
-                </li>
+                {home.section_2.infoList.map((item, index) => (
+                  <li key={index + item} className="flex items-center gap-1">
+                    <span className="text-primary">
+                      <IoMdArrowDropright size={24} />
+                    </span>{" "}
+                    <p className="text-paragraph_b">{item}</p>
+                  </li>
+                ))}
               </ul>
             </div>
-            <ButtonMain className="w-fit" href="#" name="Get Started" />
+            <ButtonMain
+              className="w-fit text-white"
+              href={home.section_2.cta.link}
+              name={home.section_2.cta.name}
+            />
           </div>
         </div>
 
         <div className="mt-16 w-full px-mobile lg:px-spacing">
           <ul className="flex flex-wrap items-center justify-center gap-4 lg:flex-nowrap lg:justify-between">
-            <li className="flex items-center gap-3">
-              <span>
-                <Image
-                  width={75}
-                  height={75}
-                  alt="Expert Team Members"
-                  src="/assets/images/elemants/elemants (2).png"
-                />
-              </span>
-              <div>
-                <h4 className="text-xl font-bold lg:text-h6">
-                  Expert Team Members
-                </h4>
-                <p className="text-paragraph">
-                  We take pride in assembling a diverse and highly skilled.
-                </p>
-              </div>
-            </li>
-            <li className="flex items-center gap-3">
-              <span>
-                <Image
-                  width={75}
-                  height={75}
-                  alt="Fastest Customer Service"
-                  src="/assets/images/elemants/elemants (3).png"
-                />
-              </span>
-              <div>
-                <h4 className="text-xl font-bold lg:text-h6">
-                  Fastest Customer Service
-                </h4>
-                <p className="text-paragraph">
-                  We pride ourselves on providing the fastest customer service
-                  industry.
-                </p>
-              </div>
-            </li>
-            <li className="flex items-center gap-3">
-              <span>
-                <Image
-                  width={75}
-                  height={75}
-                  alt="reasonable Pricing"
-                  src="/assets/images/elemants/elemants (4).png"
-                />
-              </span>
-              <div>
-                <h4 className="text-xl font-bold lg:text-h6">
-                  reasonable Pricing
-                </h4>
-                <p className="text-paragraph">
-                  We believe in providing reasonable pricing that offers
-                  exceptional.
-                </p>
-              </div>
-            </li>
+            {home.section_2.listCard.map((item, index) => (
+              <li key={item.title + index} className="flex items-center gap-3">
+                <span>
+                  <Image
+                    width={75}
+                    height={75}
+                    alt="Expert Team Members"
+                    src={item.image}
+                  />
+                </span>
+                <div>
+                  <h4 className="text-xl font-bold lg:text-h6">{item.title}</h4>
+                  <p className="text-paragraph">{item.description}</p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
       {/* Featured Services */}
-      <Featured_Services className="lg:px-spacing 2xl:px-spacing_2"/>
+      <Featured_Services className="lg:px-spacing 2xl:px-spacing_2" />
       {/* Our Recent Best Works */}
       <section className="mt-top">
         <div className="text-center md:space-y-2 md:text-start lg:px-spacing">
           <p>
-            <span className="font-bold text-secandry_primary">Crafting</span>{" "}
-            Success With Project
+            {parseAndStyleText(
+              home.section_4.subTitle,
+              "font-bold text-secandry_primary",
+            )}
           </p>
-          <h3 className="text-h4 md:text-h3">Our Recent Best Works</h3>
+          <h3 className="text-h4 md:text-h3">{home.section_4.title}</h3>
           <div className="flex flex-col items-center justify-between md:flex-row">
             <p className="max-w-3xl text-paragraph_b opacity-70">
-              Our recent projects highlight our expertise in delivering tailored
-              solutions that meet the unique needs and objectives of our
-              clients,custom software.
+              {home.section_4.description}
             </p>
-            <ButtonMain href="#" name="All Works" />
+            <ButtonMain
+              className="text-white"
+              href={home.section_4.cta_2.link}
+              name={home.section_4.cta_2.name}
+            />
           </div>
         </div>
         <div className="mt-16">
@@ -165,23 +120,26 @@ export default function Home_1() {
             className="h-[300px] w-full md:h-[539px]"
           >
             <CarouselContent className="md:space-x-2">
-              {Array.from({ length: 10 }).map((_, index) => (
+              {home.section_4.cards.map((item, index) => (
                 <CarouselItem
-                  key={index+"Success_With_Project"}
-                  className="relative h-[300px] overflow-hidden rounded-2xl bg-[url(/assets/images/img/hero_Image.jpg)] pl-1 md:h-[539px] md:basis-1/2"
+                  style={{
+                    backgroundImage: `url(${item.image})`,
+                  }}
+                  key={index + "Success_With_Project"}
+                  className="relative h-[300px] overflow-hidden rounded-2xl pl-1 md:h-[539px] md:basis-1/2"
                 >
                   <div className="absolute inset-0 top-0 flex items-end justify-start bg-gradient-to-t from-sky-950 to-transparent text-white">
                     <div className="flex w-full items-center justify-between p-5">
                       <div>
-                        <h1 className="text-h4">Dashboard Design</h1>
+                        <h1 className="text-h4">{item.name}</h1>
                         <p className="text-paragraph opacity-50">
-                          Dashboard Design
+                          {item.subName}
                         </p>
                       </div>
                       <ButtonMain
-                        href="#"
+                        href={home.section_4.cta.link}
                         className="hidden md:flex"
-                        name="Explore More"
+                        name={home.section_4.cta.name}
                       />
                     </div>
                   </div>
@@ -192,22 +150,48 @@ export default function Home_1() {
         </div>
       </section>
       {/* What clients say */}
-      <ClientsSay />
+      <section className="bg-[#F3F3F3] px-mobile py-4 text-center md:mt-top lg:px-spacing_2">
+        <p>
+          {parseAndStyleText(
+            home.section_5.subTitle,
+            "rounded-full bg-secandry_primary px-1 font-bold text-white",
+          )}
+        </p>
+        <h3 className="text-h5 md:text-h4">{home.section_5.title}</h3>
+        <div className="mt-5 flex flex-wrap justify-center gap-10 md:mt-16">
+          {home.section_5.card.map((item, index) => (
+            <div
+              key={index + "What clients say"}
+              className="w-[400px] space-y-3 rounded-2xl bg-white px-2 py-6"
+            >
+              <div className="relative mt-7 flex w-full items-end justify-center">
+                <Image width={200} height={200} alt="" src={item.client.img} />
+              </div>
+              <h6 className="text-h6">“{item.client.name}”</h6>
+              <p className="mt-6 text-paragraph">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Top Skilled Experts */}
       <section className="relative mt-top w-full overflow-hidden py-4 text-center">
         <p>
-          <span className="rounded-full bg-secandry_primary px-1 font-bold text-white">
-            Our Expert
-          </span>{" "}
-          Team Members
+          {parseAndStyleText(
+            home.section_6.subTitle,
+            "rounded-full bg-secandry_primary px-1 font-bold text-white",
+          )}
         </p>
-        <h3 className="text-h5 md:mt-4 md:text-h4">Top Skilled Experts</h3>
+        <h3 className="text-h5 md:mt-4 md:text-h4">{home.section_6.title}</h3>
         <div className="mt-5 w-full md:mt-10">
           <Carousel className="w-full">
             <CarouselContent className="gap-2">
-              {Array.from({ length: 10 }).map((item, index) => (
-                <CarouselItem className="basis-96  md:basis-1/3 lg:basis-1/5" key={index + "Team Members"}>
-                  <TeamCard_1 />
+              {home.section_6.cards.map((item, index) => (
+                <CarouselItem
+                  className="basis-96 md:basis-1/3 lg:basis-1/5"
+                  key={index + "Team Members"}
+                >
+                  <TeamCard_1 data={item} />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -215,9 +199,9 @@ export default function Home_1() {
         </div>
         <div className="mt-10 grid w-full place-content-center">
           <ButtonMain
-            href="#"
+            href={home.section_6.cta.link}
             className="w-fit border border-border bg-transparent font-bold text-black"
-            name="OUR ALL EXPERTS"
+            name={home.section_6.cta.name}
           />
         </div>
         <Image
@@ -238,14 +222,14 @@ export default function Home_1() {
       {/* blogs latest artical */}
       <section className="w-full py-4 text-center md:mt-top">
         <p>
-          <span className="rounded-full bg-secandry_primary px-1 font-bold text-white">
-            Blog
-          </span>{" "}
-          Updates
+          {parseAndStyleText(
+            home.section_7.subTitle,
+            "rounded-full bg-secandry_primary px-1 font-bold text-white",
+          )}
         </p>
-        <h3 className="text-h5 md:mt-4 md:text-h4">Latest Articles Postss</h3>
+        <h3 className="text-h5 md:mt-4 md:text-h4">{home.section_7.title}</h3>
         <div className="mt-4 grid grid-cols-1 gap-5 px-mobile md:mt-16 md:grid-cols-3 md:px-spacing">
-          {Array.from({ length: 3 }).map((_, i) => (
+          {home.section_7.blogs.map((item, i) => (
             <div
               key={i + "blogs latest"}
               className="over w-full rounded-xl bg-white pb-3 shadow-xl md:w-[420px]"
@@ -256,14 +240,19 @@ export default function Home_1() {
                   width={400}
                   height={400}
                   alt=""
-                  src="/assets/images/img/hero_Image.jpg"
+                  src={item.image}
                 />
               </div>
               <div className="p-2">
                 <div className="mt-3 flex items-center gap-3">
-                  <span className="rounded-xl border border-black px-2 py-[1px] opacity-85">
-                    it solution
-                  </span>
+                  {item.category.map((name) => (
+                    <span
+                      key={name + "category"}
+                      className="rounded-xl border border-black px-2 py-[1px] opacity-85"
+                    >
+                      {name}
+                    </span>
+                  ))}
                   <p className="flex">
                     <span>
                       <Image
@@ -273,7 +262,7 @@ export default function Home_1() {
                         src={"/assets/Icons/stash_data-date-duotone.svg"}
                       />
                     </span>
-                    06/08/2024
+                    {item.date}
                   </p>
                   <p className="flex">
                     <span>
@@ -284,11 +273,11 @@ export default function Home_1() {
                         src={"/assets/Icons/lets-icons_comment-duotone.svg"}
                       />
                     </span>
-                    345
+                    {item.comments}
                   </p>
                 </div>
                 <h3 className="mt-3 text-start text-h6">
-                  Leading the Digital Age with Groundbreaking
+                  {item.title}
                 </h3>
               </div>
             </div>
@@ -298,4 +287,3 @@ export default function Home_1() {
     </div>
   );
 }
-
