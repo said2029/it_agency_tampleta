@@ -15,18 +15,22 @@ const home = {
       {
         value: "23+",
         name: "Years of experience",
+        image:"/assets/images/elemants/elemants (19).png",
       },
       {
         value: "200+",
         name: "Years of experience",
+        image:"/assets/images/elemants/elemants (22).png"
       },
       {
         value: "50K",
         name: "Years of experience",
+        image:"/assets/images/elemants/elemants (20).png"
       },
       {
         value: "120+",
         name: "Years of experience",
+        image:"/assets/images/elemants/elemants (21).png"
       },
     ],
     image: "/assets/images/elemants/elemants (33).png",
@@ -268,4 +272,22 @@ const home = {
   },
 };
 
-export { home };
+// list of images
+const Brands = [
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+  "/assets/images/elemants/elemants (19).png",
+];
+
+export { home,Brands };
