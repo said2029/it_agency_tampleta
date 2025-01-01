@@ -1,6 +1,5 @@
 "use client";
 import Top_Banner from "@/Components/Top_Banner";
-import Image from "next/image";
 import React, { useState } from "react";
 import { IoDocument } from "react-icons/io5";
 import { FaShippingFast } from "react-icons/fa";
@@ -149,7 +148,7 @@ export default function page() {
                   ))}
                 </ul>
               </div>
-              <Link href={item.cta.link} className="flex w-fit items-center gap-2 rounded-full bg-primary/10 px-8 py-4 font-bold uppercase transition-all hover:scale-110">
+              <Link href={item?.cta?.link||"/"} className="flex w-fit items-center gap-2 rounded-full bg-primary/10 px-8 py-4 font-bold uppercase transition-all hover:scale-110">
                 <p>{item.cta.name}</p>
                 <IoIosArrowRoundUp className="rotate-45" size={30} />
               </Link>

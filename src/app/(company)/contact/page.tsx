@@ -27,7 +27,7 @@ const contactInfo = [
 export default function page() {
   return (
     <main>
-      <Top_Banner Title="Contact Us" subTitle="Contact" highlightNane="Us 🥰" />
+      <Top_Banner title="Contact Us" subTitle="Contact" highlightName="Us 🥰" />
       <div className="mx-auto bg-blue-50 px-mobile py-12 md:px-spacing 2xl:px-spacing_2">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {contactInfo.map((info, index) => (

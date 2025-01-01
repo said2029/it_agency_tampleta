@@ -26,7 +26,7 @@ export default function Home_1() {
             {home.hero.description}
           </p>
           <ButtonMain
-            href={home.hero.cta.link}
+            href={home?.hero?.cta?.link||"/"}
             className="w-fit bg-secandry_gradinet md:mt-7"
             name={home.hero.cta.name}
           />

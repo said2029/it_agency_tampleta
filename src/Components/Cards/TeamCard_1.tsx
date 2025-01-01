@@ -18,7 +18,7 @@ export default function TeamCard_1({className,data}:{className?:string,data:any}
         <p className="text-paragraph opacity-70">{data?.subName}</p>
       </div>
       <div className="absolute right-2 top-2 flex flex-col gap-2">
-        <Link href={data?.contact?.facebook}>
+        <Link href={data?.contact?.facebook||"/"}>
           <Image
             width={34}
             height={34}
@@ -26,7 +26,7 @@ export default function TeamCard_1({className,data}:{className?:string,data:any}
             src="/assets/images/elemants/elemants (5).png"
           />
         </Link>
-        <Link href={data?.contact?.instagram}>
+        <Link href={data?.contact?.instagram||"/"}>
           <Image
             width={34}
             height={34}
@@ -34,7 +34,7 @@ export default function TeamCard_1({className,data}:{className?:string,data:any}
             src="/assets/images/elemants/elemants (6).png"
           />
         </Link>
-        <Link href={data?.contact?.linked}>
+        <Link href={data?.contact?.linked||"/"}>
           <Image
             width={34}
             height={34}
@@ -42,7 +42,7 @@ export default function TeamCard_1({className,data}:{className?:string,data:any}
             src="/assets/images/elemants/elemants (7).png"
           />
         </Link>
-        <Link href={data?.contact?.twitter}>
+        <Link href={data?.contact?.twitter||"/"}>
           <Image
             width={34}
             height={34}

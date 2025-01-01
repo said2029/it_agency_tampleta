@@ -271,11 +271,11 @@ const home = {
     cta: "read more",
   },
 };
-
+// About Page
 const about = {
   banner: {
-    Title: "About Us",
-    highlightNane: "Techco",
+    title: "About Us",
+    highlightName: "Techco",
     subTitle: "About More",
   },
   Top_Banner_Images: [
@@ -307,13 +307,11 @@ const about = {
     },
   ],
 };
-
 // Pricing Plan page
-
 const price = {
   banner: {
-    Title: "Pricing Plan",
-    highlightNane: "Pricing",
+    title: "Pricing Plan",
+    highlightName: "Pricing",
     subTitle: "Our",
   },
   title: "Celebrating Features Discover What Sets Us",
@@ -349,94 +347,260 @@ const price = {
         discount: "-30$",
       },
     ],
-    plans:[
-        {
-            title:"Pro Package",
-            des:"Make your work easier with an integrated properly together.",
-            price:{
-                month:"$48.6",
-                year:"$453.6"
-            },
-            discount:{
-                month:"$54",
-                year:"$648"
-
-            },
-            save:{
-                month:"$5.4",
-                year:"$194.4"
-
-            },
-            features:[
-                {
-                    name:"Software Development.",
-                },
-                {
-                    name:"Digital Product Design",
-                },
-                {
-                    name:"IT Consulting.",
-                },
-  
-                {
-                    name:"Cybersecurity Services."
-                },
-                {
-                    name:"Cloud Services"
-                },
-            ],
-            cta:{
-                name:"pruchase up",
-                link:"/"
-            }
+    plans: [
+      {
+        title: "Pro Package",
+        des: "Make your work easier with an integrated properly together.",
+        price: {
+          month: "$48.6",
+          year: "$453.6",
         },
-        {
-            title:"Team Package",
-            des:"Make your work easier with an integrated properly together.",
-            price:{
-                month:"$54",
-                year:"$504"
-            },
-            discount:{
-                month:"$60",
-                year:"$720"
-
-            },
-            save:{
-                month:"$6",
-                year:"$216"
-
-            },
-            features:[
-                {
-                    name:"Software Development.",
-                },
-                {
-                    name:"Digital Product Design",
-                },
-                {
-                    name:"IT Consulting.",
-                },
-                {
-                    name:"Website Development.",
-                },
-                {
-                    name:"Cybersecurity Services."
-                },
-                {
-                    name:"Cloud Services"
-                },
-            ],
-            cta:{
-                name:"pruchase up",
-                link:"/"
-            }
+        discount: {
+          month: "$54",
+          year: "$648",
         },
-    ]
+        save: {
+          month: "$5.4",
+          year: "$194.4",
+        },
+        features: [
+          {
+            name: "Software Development.",
+          },
+          {
+            name: "Digital Product Design",
+          },
+          {
+            name: "IT Consulting.",
+          },
+
+          {
+            name: "Cybersecurity Services.",
+          },
+          {
+            name: "Cloud Services",
+          },
+        ],
+        cta: {
+          name: "pruchase up",
+          link: "/",
+        },
+      },
+      {
+        title: "Team Package",
+        des: "Make your work easier with an integrated properly together.",
+        price: {
+          month: "$54",
+          year: "$504",
+        },
+        discount: {
+          month: "$60",
+          year: "$720",
+        },
+        save: {
+          month: "$6",
+          year: "$216",
+        },
+        features: [
+          {
+            name: "Software Development.",
+          },
+          {
+            name: "Digital Product Design",
+          },
+          {
+            name: "IT Consulting.",
+          },
+          {
+            name: "Website Development.",
+          },
+          {
+            name: "Cybersecurity Services.",
+          },
+          {
+            name: "Cloud Services",
+          },
+        ],
+        cta: {
+          name: "pruchase up",
+          link: "/",
+        },
+      },
+    ],
   },
-
-
 };
+// portfoli detald page
+const portfolioData = {
+  banner: {
+    title:
+      "Driving Digital Transformation Explore the Depth of Our IT Projects",
+    highlightName: "Portfolio",
+    subTitle: "Our",
+  },
+  mainImage: {
+    src: "/assets/images/img/portfolioImage.png",
+    alt: "",
+    width: 600,
+    height: 600,
+  },
+  mainContent: {
+    networkInfrastructure: {
+      title: "Network Infrastructure and Design",
+      description: [
+        'The "Cloud Migration and Integration Project" represents a pivotal step for our client\'s digital transformation journey. By transitioning from traditional on-premises infrastructure to cloud-based solutions, we are unlocking a world of possibilities, from scalability and flexibility to enhanced security and cost efficiency. Our meticulous planning and execution ensure a smooth migration process, with minimal disruption to business operations. From assessing the current environment to preparing the infrastructure, migrating data and applications.',
+        "providing comprehensive training and support, we leave no stone unturned in ensuring the success of this project. With our expertise and dedication, we empower our client to embrace the full potential of cloud computing, driving innovation.",
+      ],
+    },
+    projectDetails: {
+      services: "Cloud Migration",
+      client: "Techco",
+      location: "New York,NY,USA",
+      completedDate: "20-12-2024",
+    },
+    projectRequirement: {
+      title: "Project Requirement",
+      description:
+        "In this phase of the Cloud Migration and Integration project, our focus is on executing robust data migration strategies to ensure the seamless transfer of data from on-premises servers to cloud storage solutions. Leveraging advanced techniques and tools,",
+      requirements: Array(6).fill("Comprehensive Assessment Phase"),
+    },
+    solutions: [
+      {
+        title: "Solution & Result",
+        description: [
+          "The successful execution of robust data migration strategies ensures the seamless transfer of data from on-premises servers to cloud storage solutions. Data integrity, security, and regulatory compliance are prioritized throughout the migration process. Rigorous testing and validation verify the accuracy and completeness of data migration, minimizing downtime and data loss risks.",
+          "To achieve successful data migration, our solution includes a comprehensive approach that encompasses meticulous planning, advanced techniques, and thorough testing. We leverage industry-leading tools and expertise.",
+        ],
+      },
+      {
+        title: "Solution & Result",
+        description: [
+          "The successful execution of robust data migration strategies ensures the seamless transfer of data from on-premises servers to cloud storage solutions. Data integrity, security, and regulatory compliance are prioritized throughout the migration process. Rigorous testing and validation verify the accuracy and completeness of data migration, minimizing downtime and data loss risks.",
+          "To achieve successful data migration, our solution includes a comprehensive approach that encompasses meticulous planning, advanced techniques, and thorough testing. We leverage industry-leading tools and expertise.",
+        ],
+      },
+    ],
+    similarProjects: {
+      title: "Our Similar Projects",
+      projects: [
+        { component: "CardPortfolio" },
+        { component: "CardPortfolio" },
+      ],
+    },
+  },
+};
+// servicesData Page
+const servicesData = {
+  banner: {
+    title: "Our Services",
+    highlightName: "Details",
+    subTitle: "Team",
+  },
+  hero: {
+    highlight: "IT Guidance😍",
+    title: "Tailored IT Solutions for Your Success",
+    description:
+      "we understand that every business is unique, with its own set of challenges, goals, and aspirations. That's why we offer tailored IT solutions designed.",
+    mainImage: "/assets/images/elemants/elemants (23).png",
+    bgImage: "/assets/images/elemants/elemants (13).png",
+  },
+  whyUs: {
+    subtitle: "Why Us better",
+    title: "Why Our Services are Better Than Others?",
+    features: [
+      {
+        icon: "/assets/images/elemants/elemants (2).png",
+        title: "Quality Comes First",
+      },
+      {
+        icon: "/assets/images/elemants/elemants (24).png",
+        title: "Flexible Cooperation",
+      },
+      {
+        icon: "/assets/images/elemants/elemants (25).png",
+        title: "On-time Delivery",
+      },
+      {
+        icon: "/assets/images/elemants/elemants (26).png",
+        title: "Transparent Costs",
+      },
+      {
+        icon: "/assets/images/elemants/elemants (27).png",
+        title: "Qualified Developers",
+      },
+      {
+        icon: "/assets/images/elemants/elemants (28).png",
+        title: "Quick Scale-up",
+      },
+    ],
+    bottomImage: "/assets/images/elemants/elemants (14).png",
+  },
+};
+// servicesData Page detals
+const servicesDataDetals = {
+  banner: {
+    title:
+      "Driving Digital Transformation Explore the Depth of Our IT Projects",
+    highlightName: "Portfolio",
+    subTitle: "Our",
+  },
+  mainImage: {
+    src: "/assets/images/img/portfolioImage.png",
+    width: 1000,
+    height: 1000,
+  },
+  content: {
+    title: "Network Infrastructure and Design",
+    description: [
+      "Network infrastructure and design are the backbone of modern businesses, serving as the foundation upon which all digital operations rely. At our IT solution agency, we specialize in crafting robust and reliable network architectures tailored to meet the unique needs of our clients. From small businesses to large enterprises, we understand the critical importance of a well-designed network infrastructure in driving efficiency, security, and scalability. Our team of experienced professionals works closely with clients.",
+      "We take a holistic approach to network design, considering factors such as bandwidth requirements, security protocols, scalability, and future growth potential. By leveraging industry best practices and cutting-edge technologies,",
+    ],
+  },
+  serviceProcess: {
+    title: "Service Process",
+    steps: [
+      {
+        id: "item-1",
+        title: "01. Listening to Your Needs",
+        content:
+          "Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.",
+      },
+      {
+        id: "item-2",
+        title: "02. Tailored Solutions",
+        content:
+          "Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.",
+      },
+      {
+        id: "item-3",
+        title: "03. Tactical Alignment",
+        content:
+          "Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.",
+      },
+      {
+        id: "item-4",
+        title: "04. Measurable Results",
+        content:
+          "Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.",
+      },
+    ],
+    image: "/assets/images/elemants/elemants (30).png",
+  },
+  outcomes: {
+    title: "Services Outcome",
+    description:
+      "Here are six key points that can be associated with a digital Transformation gallery case global Digital Systems Engineer Services leader helping Fortune 500 companies on their innovation agenda:",
+    items: [
+      "Scalability and Flexibility",
+      "User Experience",
+      "Security and Compliance",
+      "Security and Compliance",
+      "Performance Optimization",
+      "Training and Education",
+    ],
+  },
+};
+
+
 
 // list of images
 const Brands = [
@@ -456,4 +620,12 @@ const Brands = [
   "/assets/images/brandes/brand_1.webp",
 ];
 
-export { home, Brands, about, price };
+export {
+  home,
+  Brands,
+  about,
+  price,
+  portfolioData,
+  servicesData,
+  servicesDataDetals,
+};

@@ -64,13 +64,15 @@ export default function TeamCard_2({
           </div>
         </Link>
       </div>
+
+      
       <div className="bottom-0 left-0 p-3 text-center text-black">
-        <h5 className="text-h6">August Everest</h5>
-        <p className="text-paragraph opacity-70">SYSTEMS ENGINEER</p>
+        <h5 className="text-xl">{data.name}</h5>
+        <p className="text-paragraph opacity-70">{data.subName}</p>
       </div>
       <div className="right-2 top-2 flex gap-2">
-        {data?.contact.instagram && (
-          <Link href={data?.contact.instagram}>
+        {data?.contact?.instagram && (
+          <Link href={data?.contact?.instagram ||"/"}>
             <svg
               width="29"
               height="28"
@@ -86,8 +88,8 @@ export default function TeamCard_2({
             </svg>
           </Link>
         )}
-        {data?.contact.instagram && (
-          <Link href={data?.contact.twitter}>
+        {data?.contact?.twitter && (
+          <Link href={data?.contact?.twitter||"/"}>
             <svg
               width="29"
               height="28"
@@ -110,8 +112,8 @@ export default function TeamCard_2({
             </svg>
           </Link>
         )}
-        {data?.contact.instagram && (
-          <Link href={data?.contact.linked}>
+        {data?.contact?.linked && (
+          <Link href={data?.contact?.linked||"/"}>
             <svg
               width="29"
               height="28"
@@ -127,8 +129,8 @@ export default function TeamCard_2({
             </svg>
           </Link>
         )}
-        {data?.contact.instagram && (
-          <Link href={data?.contact.facebook}>
+        {data?.contact?.facebook && (
+          <Link href={data?.contact?.facebook||"/"}>
             <svg
               width="29"
               height="28"

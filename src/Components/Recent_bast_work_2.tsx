@@ -78,9 +78,9 @@ const Works_Card = ({
               <p className="text-paragraph opacity-50">{data?.subName}</p>
             </div>
             <ButtonMain
-              href={home.section_4.cta.link}
+              href={home?.section_4?.cta.link||"/"}
               className="text-nowrap"
-              name={home.section_4.cta.name}
+              name={home?.section_4?.cta.name}
             />
           </div>
         </div>
@@ -104,7 +104,7 @@ const Works_Card = ({
               <p className="text-paragraph opacity-50">{data?.subName}</p>
             </div>
             <ButtonMain
-              href={home.section_4.cta.link}
+              href={home?.section_4?.cta?.link||"/"}
               className=""
               name={home.section_4.cta.name}
             />

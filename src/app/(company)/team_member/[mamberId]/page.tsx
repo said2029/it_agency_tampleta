@@ -7,8 +7,8 @@ export default function page() {
   return (
     <main className="bg-[#74a5ff2d] pb-10">
       <Top_Banner
-        Title="Team Details"
-        highlightNane="Details"
+        title="Team Details"
+        highlightName="Details"
         subTitle="Team"
       />
       <div className="md:px-spacing_2">
@@ -21,7 +21,7 @@ export default function page() {
               src={"/assets/images/img/Rectangle 11.png"}
             />
           </div>
-          <div className="space-y-5">
+          <div className="space-y-5  opacity-75">
             <div className="space-y-5">
               <h2 className="text-h5">August Everest</h2>
               <p className="text-paragraph text-xl">
@@ -55,7 +55,7 @@ export default function page() {
           </div>
         </div>
 
-        <article className="mt-8 [&_p]:text-paragraph space-y-4 px-mobile">
+        <article className="mt-8 [&_p]:text-paragraph space-y-4 px-mobile  opacity-75">
           <h4 className="text-h5">Professional Skills</h4>
           <p>
             Since joining Techco in 1993, Matilda has been instrumental in

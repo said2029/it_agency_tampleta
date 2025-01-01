@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
-export default function Top_Banner({ className,Title,subTitle,highlightNane }: { className?: string,Title:string,subTitle:string,highlightNane:string }) {
+export default function Top_Banner({ className,title,subTitle,highlightName }: { className?: string,title:string,subTitle:string,highlightName:string }) {
   return (
     <section
       className={cn(
@@ -18,8 +18,8 @@ export default function Top_Banner({ className,Title,subTitle,highlightNane }: {
         alt="top_image_benner"
       />
       <div className="text-white text-center px-spacing">
-        <p>{subTitle} <strong className="text-secandry_primary">{highlightNane}</strong></p>
-        <h1 className="text-4xl lg:text-h3">{Title}</h1>
+        <p>{subTitle} <strong className="text-secandry_primary">{highlightName}</strong></p>
+        <h1 className="text-4xl lg:text-h3">{title}</h1>
       </div>
     </section>
   );

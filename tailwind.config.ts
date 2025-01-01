@@ -67,7 +67,7 @@ export default {
   			h1: [
   				'80px',
   				{
-  					fontWeight: 700,
+  					fontWeight: 600,
   					lineHeight: '110px'
   				}
   			],
@@ -75,7 +75,7 @@ export default {
   			h3: [
   				'66px',
   				{
-  					fontWeight: 700,
+  					fontWeight: 600,
   					lineHeight: '60px'
   				}
   			],
@@ -89,13 +89,13 @@ export default {
   			h5: [
   				'37px',
   				{
-  					fontWeight: 700
+  					fontWeight: 600
   				}
   			],
   			h6: [
   				'27px',
   				{
-  					fontWeight: 700,
+  					fontWeight: 600,
   					lineHeight: '45px'
   				}
   			],
@@ -104,7 +104,7 @@ export default {
   			paragraph_b: [
   				'16px',
   				{
-  					fontWeight: 700
+  					fontWeight: 600
   				}
   			],
   			navItem: '21px'

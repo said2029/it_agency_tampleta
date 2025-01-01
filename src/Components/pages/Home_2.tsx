@@ -52,12 +52,12 @@ export default function Home_2() {
 
           <div className="mt-5 flex items-center gap-2">
             <ButtonMain
-              href={home.hero.cta.link}
+              href={home?.hero?.cta?.link||"/"}
               name={home.hero.cta.name}
               className="w-fit text-white"
             />
             <ButtonMain
-              href={home.hero.cta_2.link}
+              href={home?.hero?.cta_2?.link||"/"}
               name={home.hero.cta_2.name}
               className="w-fit border border-secandry_primary !bg-none text-secandry_primary"
             />
@@ -130,7 +130,7 @@ export default function Home_2() {
         </div>
       </section>
 
-      <section className="relative mt-60 flex flex-col items-center justify-between gap-3 px-mobile md:mt-top lg:flex-row lg:gap-0 lg:px-spacing">
+      <section className="relative mt-60 flex flex-col items-center justify-between gap-10 px-mobile md:mt-top lg:flex-row lg:px-spacing">
         <div className="flex max-w-xl flex-col justify-between gap-5 overflow-hidden px-0">
           <div>
             <p>
@@ -158,7 +158,7 @@ export default function Home_2() {
             ))}
           </ul>
         </div>
-        <div className="h-[300px] w-full rounded-xl bg-cover md:w-[266px]">
+        <div className="md:h-[300px]  hidden 2xl:block w-fit rounded-xl bg-cover md:w-[600px]">
           <Image
             alt=""
             width={300}
@@ -186,7 +186,7 @@ export default function Home_2() {
         </ul>
         <ButtonMain
           className="absolute -bottom-20 left-1/2 right-1/2 mx-auto w-full -translate-x-1/2 justify-center text-nowrap text-white md:w-72"
-          href={home.section_2.cta.link}
+          href={home?.section_2?.cta?.link||"/"}
           name={home.section_2.cta.name}
         />
       </section>
@@ -308,7 +308,7 @@ export default function Home_2() {
         </div>
         <div className="mt-10 grid w-full place-content-center">
           <ButtonMain
-            href={home.section_6.cta.link}
+            href={home?.section_6?.cta?.link||"/"}
             className="w-fit border border-border bg-transparent font-bold text-black"
             name={home.section_6.cta.name}
           />

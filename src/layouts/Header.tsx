@@ -36,7 +36,7 @@ export default function Header({}: Props) {
         <Tap name="Porfolio" Component={ComponentPortfilio} />
         <Tap name="Services" Component={ComponentServices} />
         <Tap name="Blogs" Component={ComponentBlogs} />
-        <Link href={"/"} className="text-navItem">
+        <Link href={"/contact"} className="text-navItem">
           Contact
         </Link>
       </ul>

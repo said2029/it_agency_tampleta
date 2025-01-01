@@ -3,15 +3,17 @@ import { Button } from "@/Components/UI/Button";
 import Image from "next/image";
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import TeamCard from "../../../Components/Cards/TeamCard_1";
+import { home } from "@/data/data";
+import TeamCard_2 from "@/Components/Cards/TeamCard_2";
+import TeamCard_1 from "@/Components/Cards/TeamCard_1";
 
 export default function page() {
   return (
-    <main className="overflow-hidden max-w-screen">
-      <Top_Banner Title="Team Member" highlightNane="Members" subTitle="Team" />
+    <main className="max-w-screen overflow-hidden pb-28">
+      <Top_Banner title="Team Member" highlightName="Members" subTitle="Team" />
       <section className="mt-6 px-mobile md:mt-top md:px-spacing_2">
-        <div className="flex flex-col relative items-center justify-center md:flex-row max-w-screen-lg">
-          <div className="max-w-3xl space-y-4 relative">
+        <div className="relative flex max-w-screen-lg flex-col items-center justify-center md:flex-row">
+          <div className="relative max-w-3xl space-y-4">
             <p>
               Our Dedicated <span className="text-secandry_primary">Team </span>
             </p>
@@ -33,7 +35,7 @@ export default function page() {
               src={"/assets/images/elemants/elemants (23).png"}
             />
           </div>
-          <div className="absolute -top-40 -right-[50rem] -z-50 hidden animate-spin2 md:block">
+          <div className="absolute -right-[50rem] -top-40 -z-50 hidden animate-spin2 md:block">
             <Image
               width={600}
               height={600}
@@ -43,12 +45,21 @@ export default function page() {
           </div>
         </div>
         <div className="mt-top text-center">
-          <p className="text-paragraph">Our Expert Team <strong className="bg-secandry_primary text-white rounded-full px-2">Members</strong></p>
+          <p className="text-paragraph">
+            Our Expert Team{" "}
+            <strong className="rounded-full bg-secandry_primary px-2 text-white">
+              Members
+            </strong>
+          </p>
           <h2 className="text-h5">Top Skilled Experts</h2>
         </div>
-        <div className="relative flex-col md:flex-row mt-60 flex flex-wrap gap-2 justify-between">
-          {Array.from({ length: 10 }).map(() => (
-            <TeamCard className="flex-grow h-96 md:w-[260px] md:flex-grow-0" />
+        <div className="relative mt-60 flex flex-col flex-wrap justify-between gap-2 md:flex-row">
+          {home.section_6.cards.map((item, index) => (
+            <TeamCard_2
+              key={item.name + index}
+              data={item}
+              className="flex-grow md:w-[260px] md:flex-grow-0"
+            />
           ))}
           <div className="absolute -bottom-44 -right-80 -z-50 hidden animate-spin2 md:block">
             <Image
@@ -58,7 +69,7 @@ export default function page() {
               src="/assets/images/elemants/elemants (14).png"
             />
           </div>
-          <div className="absolute -top-44 -left-96 -z-50 hidden animate-spin2 md:block">
+          <div className="absolute -left-96 -top-44 -z-50 hidden animate-spin2 md:block">
             <Image
               width={600}
               height={600}
