@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { IoIosArrowRoundUp } from "react-icons/io";
-
-import { CiSearch } from "react-icons/ci";
 import { FaRegComments, FaRegUser } from "react-icons/fa";
 import { MdKeyboardDoubleArrowRight, MdOutlineDateRange } from "react-icons/md";
 import SidbarBlog from "@/Components/SidbarBlog";
+import { blogPostDetails } from "@/data/data";
 const post = {
   title: "Leading the Digital Age with Groundbreaking IT Technologies",
   author: "admin",
@@ -26,97 +24,77 @@ const post = {
   ],
 };
 
-export default function dsfds() {
+export default function page() {
+  const { banner, post, pagination } = blogPostDetails;
   return (
     <main className="bg-primary/10 pb-top">
+      {/* Banner Section */}
       <section className="relative grid h-72 w-full place-content-center">
         <Image
           className="pointer-events-none absolute inset-0 left-0 top-0 -z-40 h-full w-full"
           width={1000}
           height={600}
-          src={"/assets/images/backgrounds/Rectangle 14.png"}
+          src={banner.backgroundImage}
           alt="top_image_benner"
         />
         <div className="px-spacing text-center text-white">
-          <h1 className="text-4xl lg:text-h5">
-            Leading the Digital Age with Groundbreaking IT Technologies
-          </h1>
+          <h1 className="text-4xl lg:text-h5">{banner.title}</h1>
           <div className="mt-5">
-            <Link href={"/"}>Techco</Link> / Blog / Cybersecurity / Leading the
-            Digital Age with Groundbreaking IT Technologies
+            <Link href={"/"}>{banner.breadcrumb.company}</Link> / Blog / {banner.breadcrumb.category} / {banner.title}
           </div>
         </div>
       </section>
+
+      {/* Main Content Section */}
       <section className="relative mt-60 grid grid-cols-1 gap-10 bg-blue-100/50 px-mobile md:mt-top md:grid-cols-3 md:px-spacing">
         <article className="mx-auto max-w-4xl space-y-6 rounded-xl p-6 md:col-span-2">
+          {/* Main Image */}
           <div className="mb-8 md:h-80">
             <Image
               width={500}
               height={350}
-              src="/assets/images/img/Rectangle_37.png"
-              alt="Brain visualization"
+              src={post.mainImage}
+              alt="Blog post main image"
               className="h-full w-full rounded-lg aspect-video"
             />
           </div>
 
+          {/* Post Meta */}
           <div className="mt-4 flex flex-wrap items-center gap-7">
             <p className="flex items-center gap-3 text-[16px]">
-              <span className="text-primary">
-                <FaRegUser size={16} />
-              </span>{" "}
+              <span className="text-primary"><FaRegUser size={16} /></span>
               <span className="opacity-85">{post.author}</span>
             </p>
             <p className="flex items-center gap-3 text-[16px]">
-              <span className="text-primary">
-                <FaRegComments size={16} />
-              </span>{" "}
-              <span className="opacity-85">Comments (0)</span>
+              <span className="text-primary"><FaRegComments size={16} /></span>
+              <span className="opacity-85">Comments ({post.Comments})</span>
             </p>
             <p className="flex items-center gap-3 text-[16px]">
-              <span className="text-primary">
-                <MdOutlineDateRange size={16} />
-              </span>{" "}
+              <span className="text-primary"><MdOutlineDateRange size={16} /></span>
               <span className="opacity-85">{post.date}</span>
             </p>
           </div>
 
+          {/* Post Content */}
           <div className="space-y-6 text-gray-600">
-            <p>
-              Gain exclusive insights into the world of IT solutions with
-              Techco's distinguished thought leaders. With years of experience
-              and a deep understanding of industry trends, our thought leaders
-              offer invaluable perspectives that illuminate the path to
-              technological excellence. From emerging technologies to innovative
-              strategies, they provide unique insights that inform and inspire.
-              Join us as we delve into the inner workings of IT solutions,
-              exploring the challenges.
-            </p>
+            {post.content.introduction.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
 
-            <p>
-              Embark on an illuminating journey into the world of IT solutions
-              with Techco's esteemed thought leaders. Delve deep into the inner
-              workings of technology as our seasoned experts share their wealth
-              of knowledge and experience. With a finger on the pulse of
-              industry trends and a keen eye for innovation, our thought leaders
-              offer unparalleled insights that illuminate
-            </p>
-
+            {/* Feature Section */}
             <div className="my-10 grid gap-8 md:grid-cols-2">
               <div>
                 <Image
                   width={340}
                   height={340}
-                  src="/assets/images/elemants/elemants (16).png"
+                  src={post.content.featureImage}
                   alt="Abstract shapes"
                   className="rounded-lg"
                 />
               </div>
               <div className="space-y-4">
-                {post.listItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 text-gray-700"
-                  >
+                {post.content.listItems.map((item, index) => (
+                  <div key={index} className="flex items-center gap-3 text-gray-700">
                     <div className="h-1.5 w-1.5 rounded-full bg-blue-500" />
                     <span>{item}</span>
                   </div>
@@ -124,56 +102,39 @@ export default function dsfds() {
               </div>
             </div>
 
+            {/* Quote */}
             <div className="my-8 rounded-lg border-s-4 border-primary bg-white p-6">
-              <p className="mb-4 italic text-gray-700">{post.quote.text}</p>
-              <cite className="text-gray-600">— {post.quote.author}</cite>
+              <p className="mb-4 italic text-gray-700">{post.content.quote.text}</p>
+              <cite className="text-gray-600">— {post.content.quote.author}</cite>
             </div>
 
             <h3 className="text-xl font-semibold text-gray-800">
               Exploring the Future with Quantum Computing
             </h3>
 
-            <p>
-              The technological advancements of 2024 offer unprecedented
-              opportunities for businesses to innovate and thrive. By embracing
-              AI and ML, edge computing, advanced cybersecurity, hybrid cloud
-              environments, 5G technology, remote work solutions, and quantum
-              computing, businesses can stay ahead of the curve and drive
-              sustainable growth. Stay informed and be proactive in adopting
-              these technologies to transform your business and achieve.
-            </p>
+            {post.content.conclusion.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
 
-            <p>
-              Though still in its nascent stages, quantum computing holds
-              promise for solving complex problems beyond the capabilities of
-              classical computers. Industries such as pharmaceuticals, finance,
-              and logistics are exploring quantum computing for its potential to
-              accelerate research, optimize processes, and enhance cryptographic
-              security.
-            </p>
-
+            {/* Tags */}
             <div className="mt-8 flex items-center gap-4 border-t border-gray-200 pt-6">
               <span className="text-gray-700">Tags:</span>
               <div className="flex gap-2">
                 {post.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="rounded-full bg-white px-3 py-1 text-sm text-gray-600"
-                  >
+                  <span key={index} className="rounded-full bg-white px-3 py-1 text-sm text-gray-600">
                     {tag}
                   </span>
                 ))}
               </div>
             </div>
           </div>
+
           <hr />
 
-          {/* Leave A Comment */}
+          {/* Comment Form */}
           <div className="mt-10">
             <h2 className="text-2xl font-semibold">Leave A Comment</h2>
-            <p className="mt-3 opacity-85">
-              All fields marked with an asterisk (*) are required
-            </p>
+            <p className="mt-3 opacity-85">All fields marked with an asterisk (*) are required</p>
             <form action="" className="mt-7 space-y-8">
               <div className="flex items-center gap-4">
                 <input
@@ -199,10 +160,7 @@ export default function dsfds() {
               />
               <label className="flex items-center gap-2">
                 <input className="size-4" type="checkbox" />
-                <p>
-                  Save my name, email, and website in this browser for the next
-                  time I comment.
-                </p>
+                <p>Save my name, email, and website in this browser for the next time I comment.</p>
               </label>
               <textarea
                 rows={10}
@@ -219,17 +177,23 @@ export default function dsfds() {
           </div>
         </article>
 
-        {/* sidbar */}
-        <SidbarBlog/>
+        {/* Sidebar */}
+        <SidbarBlog />
       </section>
-      {/* pagination */}
+
+      {/* Pagination */}
       <section className="mt-top grid place-content-center">
         <div className="flex items-center gap-4">
-          <button className="size-12 rounded-xl bg-white text-xl">1</button>
-          <button className="size-12 rounded-xl bg-primary text-xl text-white">
-            2
-          </button>
-          <button className="size-12 rounded-xl bg-white text-xl">3</button>
+          {Array.from({ length: pagination.totalPages }).map((_, index) => (
+            <button
+              key={index}
+              className={`size-12 rounded-xl ${
+                index + 1 === pagination.currentPage ? 'bg-primary text-white' : 'bg-white'
+              } text-xl`}
+            >
+              {index + 1}
+            </button>
+          ))}
           <button className="grid size-12 place-content-center rounded-xl bg-white text-xl">
             <MdKeyboardDoubleArrowRight size={30} />
           </button>

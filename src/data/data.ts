@@ -1,3 +1,5 @@
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 const home = {
   hero: {
     title: "Empowering {{Businesses}} with Cutting-Edge IT Solutions.",
@@ -600,7 +602,184 @@ const servicesDataDetals = {
   },
 };
 
+// blog detals page
+const blogPostDetals = {
+  banner: {
+    title: "Leading the Digital Age with Groundbreaking IT Technologies",
+    backgroundImage: "/assets/images/backgrounds/Rectangle 14.png",
+    breadcrumb: {
+      company: "Techco",
+      category: "Cybersecurity",
+    },
+  },
+  post: {
+    mainImage: "/assets/images/img/Rectangle_37.png",
+    author: "John Doe", // Replace with actual author
+    date: "January 2, 2025", // Replace with actual date
+    Comments: 3,
+    content: {
+      introduction: [
+        "Gain exclusive insights into the world of IT solutions with Techco's distinguished thought leaders. With years of experience and a deep understanding of industry trends, our thought leaders offer invaluable perspectives that illuminate the path to technological excellence. From emerging technologies to innovative strategies, they provide unique insights that inform and inspire. Join us as we delve into the inner workings of IT solutions, exploring the challenges.",
+        "Embark on an illuminating journey into the world of IT solutions with Techco's esteemed thought leaders. Delve deep into the inner workings of technology as our seasoned experts share their wealth of knowledge and experience. With a finger on the pulse of industry trends and a keen eye for innovation, our thought leaders offer unparalleled insights that illuminate",
+      ],
+      featureImage: "/assets/images/elemants/elemants (16).png",
+      listItems: [
+        "Item 1", // Replace with actual items
+        "Item 2",
+        "Item 3",
+        "Item 4",
+      ],
+      quote: {
+        text: "Your quote text here", // Replace with actual quote
+        author: "Quote Author",
+      },
+      conclusion: [
+        "The technological advancements of 2024 offer unprecedented opportunities for businesses to innovate and thrive. By embracing AI and ML, edge computing, advanced cybersecurity, hybrid cloud environments, 5G technology, remote work solutions, and quantum computing, businesses can stay ahead of the curve and drive sustainable growth. Stay informed and be proactive in adopting these technologies to transform your business and achieve.",
+        "Though still in its nascent stages, quantum computing holds promise for solving complex problems beyond the capabilities of classical computers. Industries such as pharmaceuticals, finance, and logistics are exploring quantum computing for its potential to accelerate research, optimize processes, and enhance cryptographic security.",
+      ],
+    },
+    tags: ["Technology", "Innovation", "Digital"], // Replace with actual tags
+  },
+  pagination: {
+    currentPage: 2,
+    totalPages: 3,
+  },
+};
+// Team Page
+const teamPageData = {
+  banner: {
+    title: "Team Member",
+    highlightName: "Members",
+    subTitle: "Team",
+  },
+  intro: {
+    mainText: "Our Dedicated Team",
+    highlightedText: "Team",
+    heading: "Get to Know Our Expert Techco Team",
+    description:
+      "Get acquainted with the powerhouse behind Techco – our expert team of professionals dedicated to revolutionizing the IT landscape.",
+    buttonText: "Talk to an Expert",
+    buttonIcon: IoIosArrowRoundForward,
+    introImage: "/assets/images/elemants/elemants (23).png",
+    animatedBackgroundImage: "/assets/images/elemants/elemants (13).png",
+  },
+  section: {
+    subHeading: "Our Expert Team",
+    highlightedSubHeading: "Members",
+    heading: "Top Skilled Experts",
+    teamCards: home.section_6.cards, // Assuming this is pre-defined in your code
+    animatedBackgroundImages: [
+      "/assets/images/elemants/elemants (14).png",
+      "/assets/images/elemants/elemants (13).png",
+    ],
+  },
+};
 
+// team details page
+const teamDetails = {
+  banner: {
+    title: "Team Details",
+    highlightName: "Details",
+    subTitle: "Team",
+  },
+  personalInfo: {
+    image: "/assets/images/img/Rectangle 11.png",
+    name: "August Everest",
+    details: {
+      responsibility: "Systems Engineer",
+      experience: "18 Years",
+      email: "August@example.com",
+      phone: "+91590 0574 258",
+    },
+    skills: [
+      { name: "Product Development", value: "98%" },
+      { name: "Problem-Solving", value: "98%" },
+      { name: "Communication Skills", value: "98%" },
+      { name: "Passion for Helping", value: "98%" },
+    ],
+  },
+  professionalSkills: {
+    title: "Professional Skills",
+    description: `
+      Since joining Techco in 1993, Matilda has been instrumental in transforming the company 
+      into a world-renowned leader in Digital Systems Engineering Services, catering to Fortune 500 enterprises. 
+    `,
+  },
+  educationalExperience: {
+    title: "Educational Experience",
+    degrees: [
+      {
+        level: "Bachelor's",
+        field: "Computer Science",
+        university: "University of XYZ",
+        specialization: ["Data Structures", "Algorithms", "Networks"],
+      },
+      {
+        level: "Master's",
+        field: "Information Technology Management",
+        university: "ABC University",
+      },
+    ],
+    highlights: [
+      "Proficiency in systems analysis, design, implementation, and maintenance.",
+      "Strong knowledge of network protocols, hardware, and software components.",
+      "Experience with virtualization technologies (VMware, Hyper-V).",
+      "Skilled in cloud computing platforms (AWS, Azure, Google Cloud).",
+      "Proficient in scripting languages (Python, PowerShell).",
+      "Experience in system security and disaster recovery planning.",
+    ],
+  },
+};
+
+// Contact Page
+const contactPageData = {
+  banner: {
+    title: "Contact Us",
+    subTitle: "Contact",
+    highlightName: "Us 🥰",
+  },
+  contactInfo: [
+    {
+      icon: MapPin ,
+      title: "Location",
+      details: ["Sunshine Business Park Sector-94, Poland"],
+    },
+    {
+      icon: Phone,
+      title: "Contact",
+      details: ["+88(0) 555-0108", "+88(0) 555-01117"],
+    },
+    {
+      icon:Mail ,
+      title: "Email",
+      details: ["Techco@example.com", "gmail.@example.com"],
+    },
+    {
+      icon: Clock,
+      title: "Visit Between",
+      details: ["Mon - Sat: 8.00-5.00", "Sunday: Closed"],
+    },
+  ],
+  form: {
+    heading: "Send Us A Message",
+    description: "Give us chance to serve and bring magic to your brand.",
+    placeholders: {
+      name: "Full Name*",
+      email: "Your Email*",
+      phone: "Your Phone*",
+      message: "Message*",
+    },
+    button: {
+      text: "SEND MESSAGE",
+      className:
+        "rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700",
+    },
+  },
+  map: {
+    src: "https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed",
+    className: "h-full w-full",
+  },
+};
 
 // list of images
 const Brands = [
@@ -628,4 +807,8 @@ export {
   portfolioData,
   servicesData,
   servicesDataDetals,
+  blogPostDetals as blogPostDetails,
+  teamDetails,
+  teamPageData,
+  contactPageData
 };
