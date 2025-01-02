@@ -12,7 +12,7 @@ export default function page() {
         {...about.banner}
         className="flex h-[400px] justify-center pt-14"
       />
-      <section className="px-mobile md:px-spacing_2 lg:-translate-y-40">
+      <section className="px-mobile md:px-spacing 2xl:px-spacing_2 lg:-translate-y-40">
         <div className="hidden grid-cols-1 gap-10 md:grid-cols-3 lg:grid">
           <div className="col-span-2 h-[506px] overflow-hidden rounded-xl shadow-xl">
             <Image
@@ -47,7 +47,7 @@ export default function page() {
           <p className="max-w-xl text-paragraph_b">{about.description}</p>
         </div>
 
-        <div className="relative mt-60 flex flex-wrap items-center justify-between gap-3 lg:h-[400px] lg:[&_div]:w-[300px]">
+        <div className="relative mt-60 grid grid-cols-1 md:grid-cols-3 gap-3 lg:h-[400px]">
           {about.cards.map((item) => (
             <div key={item.title} className="h-full rounded-xl bg-white p-2">
               <Image width={300} height={300} alt="" src={item.image} />

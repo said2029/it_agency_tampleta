@@ -1,5 +1,18 @@
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { BiPhoneCall, BiCurrentLocation } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
+import {
+  BiLogoFacebook,
+  BiLogoInstagram,
+  BiLogoLinkedin,
+} from "react-icons/bi";
+
+const Settings = {
+  // add nomber between 1 -2 to chagne home page
+  homePage: 2,
+};
+
 const home = {
   hero: {
     title: "Empowering {{Businesses}} with Cutting-Edge IT Solutions.",
@@ -674,7 +687,6 @@ const teamPageData = {
     ],
   },
 };
-
 // team details page
 const teamDetails = {
   banner: {
@@ -730,7 +742,6 @@ const teamDetails = {
     ],
   },
 };
-
 // Contact Page
 const contactPageData = {
   banner: {
@@ -740,7 +751,7 @@ const contactPageData = {
   },
   contactInfo: [
     {
-      icon: MapPin ,
+      icon: MapPin,
       title: "Location",
       details: ["Sunshine Business Park Sector-94, Poland"],
     },
@@ -750,7 +761,7 @@ const contactPageData = {
       details: ["+88(0) 555-0108", "+88(0) 555-01117"],
     },
     {
-      icon:Mail ,
+      icon: Mail,
       title: "Email",
       details: ["Techco@example.com", "gmail.@example.com"],
     },
@@ -778,6 +789,139 @@ const contactPageData = {
   map: {
     src: "https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed",
     className: "h-full w-full",
+  },
+};
+
+// footer
+const footerData = {
+  heroSection: {
+    heading: "Ready to Work, Let's Chat",
+    description:
+      "Our team of experts is ready to collaborate with you every step of the way, from initial consultation to implementation.",
+    buttonText: "Contact Us Today",
+  },
+  contactInfo: [
+    {
+      icon: MdEmail,
+      title: "Write to us",
+      content: "Techco@gmail.com",
+    },
+    {
+      icon: BiPhoneCall,
+      title: "Call Us (USA)",
+      content: "+(1) 1230 452 8597",
+    },
+    {
+      icon: BiCurrentLocation,
+      title: "Our Office",
+      content: "Waterloo, Park, Australia",
+    },
+  ],
+  socialIcons: [
+    { icon: BiLogoFacebook, link: "#" },
+    { icon: BiLogoInstagram, link: "#" },
+    { icon: BiLogoLinkedin, link: "#" },
+  ],
+  links: [
+    {
+      name: "Services",
+      links: [
+        {
+          name: "It Consultation",
+          link: "/",
+        },
+        {
+          name: "Cloud Services",
+          link: "/",
+        },
+        {
+          name: "AI Machine Learning",
+          link: "/",
+        },
+        {
+          name: "Data Security",
+          link: "/",
+        },
+        {
+          name: "Software Development",
+          link: "/",
+        },
+        {
+          name: "Cyber Security",
+          link: "/",
+        },
+      ],
+    },
+    {
+      name: "Information",
+      links: [
+        {
+          name: "About Techco",
+          link: "/",
+        },
+        {
+          name: "Investors",
+          link: "/",
+        },
+        {
+          name: "Contact",
+          link: "/",
+        },
+        {
+          name: "Affiliate Program",
+          link: "/",
+        },
+        {
+          name: "Career",
+          link: "/",
+        },
+        {
+          name: "Pricing Plan",
+          link: "/",
+        },
+      ],
+    },
+    {
+      name: "Product",
+      links: [
+        {
+          name: "Case Studies",
+          link: "/",
+        },
+        {
+          name: "Our Pricing",
+          link: "/",
+        },
+        {
+          name: "Features",
+          link: "/",
+        },
+        {
+          name: "Overview",
+          link: "/",
+        },
+        {
+          name: "New Releases",
+          link: "/",
+        },
+        {
+          name: "Solutions",
+          link: "/",
+        },
+      ],
+    },
+  ],
+  newsletter: {
+    title: "Newsletter",
+    description:
+      "Sign up to Techco weekly newsletter to get the latest updates.",
+    placeholder: "Enter your Email",
+  },
+  footerBottom: {
+    copyright: "Copyright © 2024",
+    companyName: "Techco",
+    developedBy: "Developed by VixelWeb",
+    developerLink: "/",
   },
 };
 
@@ -810,5 +954,7 @@ export {
   blogPostDetals as blogPostDetails,
   teamDetails,
   teamPageData,
-  contactPageData
+  contactPageData,
+  footerData,
+  Settings
 };

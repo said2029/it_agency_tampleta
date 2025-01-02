@@ -9,6 +9,7 @@ import {
 } from "react-icons/bi";
 import Link from "next/link";
 import ButtonMain from "@/Components/MianButton";
+import { footerData } from "@/data/data";
 
 const Links = [
   {
@@ -102,99 +103,98 @@ const Links = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-primary_gradinet text-white">
-      <div className="relative h-[303px]">
-        <div className="hero-section flex h-full flex-col items-center justify-center gap-6 bg-[url('/assets/images/img/hero_Image.jpg')] text-center text-white">
-          <h1 className="z-50 text-h6 md:text-h4">Ready to Work, Let's Chat</h1>
-          <p className="z-50">
-            Our team of experts is ready to collaborate with you every step of
-            the way, from initial consultation to implementation.
-          </p>
-          <ButtonMain className="z-50" name="Contact Us Today" />
-        </div>
-      </div>
-      <section className="space-y-16 px-mobile md:px-spacing_2 py-16">
-        {/* info */}
-        <div className="flex flex-wrap gap-3 items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="grid h-14 w-14 place-content-center rounded-full bg-black_25">
-              <MdEmail size={30} />
-            </span>
-            <div>
-              <p className="text-paragraph">Write to us</p>
-              <h3 className="text-h6">Techco@gmail.com</h3>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="grid h-14 w-14 place-content-center rounded-full bg-black_25">
-              <BiPhoneCall size={30} />
-            </span>
-            <div>
-              <p className="text-paragraph">Call Us (USA)</p>
-              <h3 className="text-h6">+(1) 1230 452 8597</h3>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="grid h-14 w-14 place-content-center rounded-full bg-black_25">
-              <BiCurrentLocation size={30} />
-            </span>
-            <div>
-              <p className="text-paragraph">Our Office</p>
-              <h3 className="text-h6">Waterloo, Park, Australia</h3>
-            </div>
+<footer className="relative bg-primary_gradinet text-white">
+  {/* Hero Section */}
+  <div className="relative h-[303px]">
+    <div className="hero-section flex h-full flex-col items-center justify-center gap-6 bg-[url('/assets/images/img/hero_Image.jpg')] text-center text-white">
+      <h1 className="z-50 text-h6 md:text-h4">{footerData.heroSection.heading}</h1>
+      <p className="z-50">{footerData.heroSection.description}</p>
+      <ButtonMain className="z-50" name={footerData.heroSection.buttonText} />
+    </div>
+  </div>
+
+  {/* Info & Links Section */}
+  <section className="space-y-16 px-mobile md:px-spacing py-16">
+    {/* Contact Info */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {footerData.contactInfo.map((info, index) => (
+        <div key={index} className="flex items-center gap-3">
+          <span className="grid size-16 min-w-16 place-content-center rounded-full bg-black_25">
+            <info.icon size={30}/>
+          </span>
+          <div>
+            <p className="text-paragraph">{info.title}</p>
+            <h3 className="text-2xl">{info.content}</h3>
           </div>
         </div>
-        <hr className="border-primary/80" />
-        <div className="flex items-center gap-10 justify-between flex-wrap">
-          <div className="space-y-5 md:w-1/4">
-            <p>Newsletter</p>
-            <p className="text-white/70">
-              Sign up to Techco weekly newsletter to get the latest updates.
-            </p>
-            <div className="flex items-center justify-between gap-3">
-              <span>
-                <BiMailSend size={24} />
-              </span>
-              <input
-                className="appearance-none w-full border-none bg-transparent bg-opacity-0 outline-none"
-                type="text"
-                placeholder="Enter your Email"
-              />
-              <span>
-                <VscSend size={20} className="-rotate-45" />
-              </span>
-            </div>
-            <hr />
-            <div className="flex items-center gap-2">
-              <span className="rounded-xl border p-1">
-                <BiLogoFacebook size={25} />
-              </span>
-              <span className="rounded-xl border p-1">
-                <BiLogoInstagram size={25} />
-              </span>
-              <span className="rounded-xl border p-1">
-                <BiLogoLinkedin size={25} />
-              </span>
-            </div>
-          </div>
-          {Links.map((link,i) => (
-            <div key={i+"Footeritem"}>
-              <p className="text-paragraph opacity-70">{link.name}</p>
-              <div className="flex flex-col gap-2">
-                {link.links.map((item) => (
-                  <Link className="hover:opacity-70 hover:underline" href={item.link}>{item.name}</Link>
-                ))}
-              </div>
-            </div>
+      ))}
+    </div>
+
+    <hr className="border-primary/80" />
+
+    {/* Newsletter & Links */}
+    <div className="flex items-center gap-10 justify-between flex-wrap">
+      {/* Newsletter Section */}
+      <div className="space-y-5 md:w-1/4">
+        <p>{footerData.newsletter.title}</p>
+        <p className="text-white/70">{footerData.newsletter.description}</p>
+        <div className="flex items-center justify-between gap-3">
+          <span>
+            <BiMailSend size={24} />
+          </span>
+          <input
+            className="appearance-none w-full border-none bg-transparent bg-opacity-0 outline-none"
+            type="text"
+            placeholder={footerData.newsletter.placeholder}
+          />
+          <span>
+            <VscSend size={20} className="-rotate-45" />
+          </span>
+        </div>
+        <hr />
+        <div className="flex items-center gap-2">
+          {footerData.socialIcons.map((icon, index) => (
+            <a key={index} href={icon.link} className="rounded-xl border p-1">
+              <icon.icon size={30}/>
+            </a>
           ))}
         </div>
-        <div className="text-paragraph_b flex items-center justify-between">
-          <p className="text-center text-paragraph">
-          Copyright © 2024 <span className="text-secandry_primary">Techco</span>, All rights reserved.
-          </p>
-          <p>Developed by <span className="text-secandry_primary">Vexial</span></p>
+      </div>
+
+      {/* Links Section */}
+      {footerData.links.map((link, i) => (
+        <div key={i + "FooterItem"}>
+          <p className="text-paragraph opacity-70">{link.name}</p>
+          <div className="flex flex-col gap-2">
+            {link.links.map((item, index) => (
+              <Link
+                key={index}
+                className="hover:opacity-70 hover:underline"
+                href={item.link}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
         </div>
-      </section>
-    </footer>
+      ))}
+    </div>
+
+    {/* Footer Bottom */}
+    <div className="text-paragraph_b flex items-center flex-wrap justify-between">
+      <p className="text-center text-paragraph">
+        {footerData.footerBottom.copyright}
+        <span className="text-secandry_primary">
+          {footerData.footerBottom.companyName}
+        </span>
+        , All rights reserved.
+      </p>
+      <Link target="_blank" className="underline hover:opacity-85" href={footerData.footerBottom.developerLink}>
+        {footerData.footerBottom.developedBy}
+      </Link>
+    </div>
+  </section>
+</footer>
+
   );
 }

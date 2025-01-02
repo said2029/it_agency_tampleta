@@ -18,7 +18,7 @@ export default function page() {
     <main>
       <Top_Banner {...price.banner} />
 
-      <section className="mt-top px-mobile md:px-spacing_2">
+      <section className="mt-top px-mobile md:px-spacing 2xl:px-spacing_2">
         <div className="grid grid-cols-1 text-center md:grid-cols-2 md:text-start">
           <h2 className="text-h4 leading-tight">{price.title}</h2>
           <p className="text-2xl">{price.description}</p>
@@ -96,7 +96,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2 md:px-spacing_2">
+        <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2 md:px-spacing 2xl:px-spacing_2">
           {price.section_1.plans.map((item, index) => (
             <div
               key={item.title}

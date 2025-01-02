@@ -52,12 +52,12 @@ export default function Home_2() {
 
           <div className="mt-5 flex items-center gap-2">
             <ButtonMain
-              href={home?.hero?.cta?.link||"/"}
+              href={home?.hero?.cta?.link || "/"}
               name={home.hero.cta.name}
               className="w-fit text-white"
             />
             <ButtonMain
-              href={home?.hero?.cta_2?.link||"/"}
+              href={home?.hero?.cta_2?.link || "/"}
               name={home.hero.cta_2.name}
               className="w-fit border border-secandry_primary !bg-none text-secandry_primary"
             />
@@ -81,7 +81,7 @@ export default function Home_2() {
           src={"/assets/images/elemants/elemants (32).png"}
         />
         <div className="z-30 h-fit w-full overflow-hidden bg-primary py-[15px]">
-          <div className="flex h-[68px] w-fit items-center gap-3 brand-slider">
+          <div className="brand-slider flex h-[68px] w-fit items-center gap-3">
             {Brands.map((item, index) => (
               <div
                 key={index}
@@ -158,7 +158,7 @@ export default function Home_2() {
             ))}
           </ul>
         </div>
-        <div className="md:h-[300px]  hidden 2xl:block w-fit rounded-xl bg-cover md:w-[600px]">
+        <div className="hidden w-fit rounded-xl bg-cover md:h-[300px] md:w-[600px] 2xl:block">
           <Image
             alt=""
             width={300}
@@ -186,7 +186,7 @@ export default function Home_2() {
         </ul>
         <ButtonMain
           className="absolute -bottom-20 left-1/2 right-1/2 mx-auto w-full -translate-x-1/2 justify-center text-nowrap text-white md:w-72"
-          href={home?.section_2?.cta?.link||"/"}
+          href={home?.section_2?.cta?.link || "/"}
           name={home.section_2.cta.name}
         />
       </section>
@@ -308,7 +308,7 @@ export default function Home_2() {
         </div>
         <div className="mt-10 grid w-full place-content-center">
           <ButtonMain
-            href={home?.section_6?.cta?.link||"/"}
+            href={home?.section_6?.cta?.link || "/"}
             className="w-fit border border-border bg-transparent font-bold text-black"
             name={home.section_6.cta.name}
           />
@@ -342,7 +342,7 @@ export default function Home_2() {
           {home.section_7.blogs.map((blog, i) => (
             <div
               key={i + "blogs latest"}
-              className="over w-full rounded-xl bg-white pb-3 shadow-xl md:w-[420px]"
+              className="relative w-full rounded-xl bg-white pb-3 shadow-xl"
             >
               <div className="w-full">
                 <Image
@@ -355,14 +355,16 @@ export default function Home_2() {
               </div>
               <div className="mt-4 space-y-4 p-2">
                 <div className="flex items-center gap-3 opacity-70">
-                  {blog.category.map((category, i) => (
-                    <span
-                      key={category + i}
-                      className="rounded-xl border border-black px-2 py-[1px] opacity-85"
-                    >
-                      {category}
-                    </span>
-                  ))}
+                  <div className="absolute top-3 left-2 space-x-2">
+                    {blog.category.map((category, i) => (
+                      <span
+                        key={category + i}
+                        className="rounded-xl border border-black px-2 py-[1px] bg-white/35 opacity-85 backdrop-blur-3xl"
+                      >
+                        {category}
+                      </span>
+                    ))}
+                  </div>
                   <p className="flex">
                     <span>
                       <Image
@@ -372,7 +374,7 @@ export default function Home_2() {
                         src={"/assets/Icons/stash_data-date-duotone.svg"}
                       />
                     </span>
-                   {blog.date}
+                    {blog.date}
                   </p>
                   <p className="flex">
                     <span>
@@ -406,7 +408,7 @@ export default function Home_2() {
                       />
                     </svg>
                   </Link>
-                  <h4 className="text-xl">{home.section_7.cta}</h4>
+                  <h4 className="text-xl uppercase">{home.section_7.cta}</h4>
                 </div>
               </div>
             </div>

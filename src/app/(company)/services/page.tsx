@@ -11,7 +11,7 @@ export default function page() {
   return (
     <main className="relative overflow-hidden bg-[#74a5ff2d] pb-28">
       <Top_Banner {...banner} />
-      <div className="mt-top md:px-spacing_2">
+      <div className="mt-60 md:mt-top px-mobile md:px-spacing_2">
         <div className="relative flex max-w-screen-lg flex-col items-center justify-center md:flex-row">
           <div className="relative max-w-3xl space-y-10">
             <p>
@@ -40,14 +40,14 @@ export default function page() {
 
         <Featured_Services className="px-0 [&_button]:!border-black [&_button]:!text-black" />
 
-        <div className="mt-top flex flex-col items-center justify-center text-center">
+        <div className="mt-top flex flex-col items-center justify-center md:text-center">
           <p>
             <span className="text-secandry_primary">{whyUs.subtitle}</span>{" "}
             better
           </p>
           <h5 className="max-w-xl text-center text-h5">{whyUs.title}</h5>
           <div className="flex w-full justify-center">
-            <div className="mt-60 grid grid-cols-2 gap-x-20 gap-y-9">
+            <div className="mt-60 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-9">
               {whyUs.features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <Image width={60} height={60} alt="" src={feature.icon} />
