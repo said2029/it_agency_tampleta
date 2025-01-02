@@ -17,7 +17,7 @@ export default function Header_2({}: Props) {
         <Image
           width={183}
           height={45}
-          src={"/assets/images/logo/logo.png"}
+          src={"/assets/images/logo/TechFlow.svg"}
           alt="logo"
           priority
         />
@@ -86,7 +86,7 @@ const MobileNav = () => {
               <Image
                 width={183}
                 height={45}
-                src={"/assets/images/logo/logo.png"}
+                src={"/assets/images/logo/TechFlow.svg"}
                 alt="logo"
                 priority
                 className="mt-14"

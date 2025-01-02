@@ -12,7 +12,7 @@ const Settings = {
   // add nomber between 1 -2 to chagne home page
   homePage: 2,
   // 1 - 2
-  header: 2,
+  header: 1,
 };
 
 const home = {

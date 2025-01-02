@@ -25,7 +25,7 @@ export default function Header_1({}: Props) {
         <Image
           width={183}
           height={45}
-          src={"/assets/images/logo/logo.png"}
+          src={"/assets/images/logo/TechFlow.svg"}
           alt="logo"
           priority
         />
@@ -36,7 +36,7 @@ export default function Header_1({}: Props) {
         <Tap name="Porfolio" Component={ComponentPortfilio} />
         <Tap name="Services" Component={ComponentServices} />
         <Tap name="Blogs" Component={ComponentBlogs} />
-        <Link href={"/contact"} className="text-navItem">
+        <Link href={"/contact"} className="text-navItem opacity-70">
           Contact
         </Link>
       </ul>
@@ -87,7 +87,7 @@ const MobileNav = () => {
               <Image
                 width={183}
                 height={45}
-                src={"/assets/images/logo/logo.png"}
+                src={"/assets/images/logo/TechFlow.svg"}
                 alt="logo"
                 priority
                 className="mt-14"
@@ -130,7 +130,7 @@ const Tap = ({
       className={`${inCenter && "relative"}`}
     >
       <Link href={"#"} className="flex items-center gap-2">
-        <span className="text-navItem">{name}</span>
+        <span className="text-navItem opacity-70">{name}</span>
         <motion.span
           variants={{
             inital: {
@@ -217,10 +217,10 @@ const ComponentHome = () => {
   return (
     <ul className="w-full space-y-2 rounded-md bg-white px-1 py-3 text-navItem font-medium shadow-md md:w-48 [&_li]:cursor-pointer [&_li]:rounded-sm [&_li]:px-3 [&_li]:py-1 hover:[&_li]:bg-primary/20 hover:[&_li]:text-primary/70">
       <li className="bg-primary/20 text-primary/70">
-        <Link href={"/"}>Home 1</Link>{" "}
+        <Link href={"/?page=1"}>Home 1</Link>{" "}
       </li>
       <li>
-        <Link href={"/"}>Home 2</Link>{" "}
+        <Link href={"/?page=2"}>Home 2</Link>{" "}
       </li>
     </ul>
   );
