@@ -11,6 +11,8 @@ import {
 const Settings = {
   // add nomber between 1 -2 to chagne home page
   homePage: 2,
+  // 1 - 2
+  header: 2,
 };
 
 const home = {
@@ -956,5 +958,5 @@ export {
   teamPageData,
   contactPageData,
   footerData,
-  Settings
+  Settings,
 };

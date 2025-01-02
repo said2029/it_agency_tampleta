@@ -18,7 +18,7 @@ import { IoIosArrowDown, IoMdClose, IoMdMenu } from "react-icons/io";
 
 type Props = {};
 
-export default function Header({}: Props) {
+export default function Header_1({}: Props) {
   return (
     <nav className="relative z-50 flex w-full items-center justify-between gap-3 bg-white px-mobile py-3 shadow-sm md:flex-col md:px-spacing xl:flex-row xl:gap-0">
       <Link href={"/"}>
