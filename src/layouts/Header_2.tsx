@@ -6,6 +6,7 @@ import Link from "next/link";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import {motion} from "framer-motion";
 import { useState } from "react";
+import { Settings } from "@/data/data";
 
 
 type Props = {};
@@ -17,7 +18,7 @@ export default function Header_2({}: Props) {
         <Image
           width={183}
           height={45}
-          src={"/assets/images/logo/TechFlow.svg"}
+          src={Settings.logo}
           alt="logo"
           priority
         />
@@ -86,7 +87,7 @@ const MobileNav = () => {
               <Image
                 width={183}
                 height={45}
-                src={"/assets/images/logo/TechFlow.svg"}
+                src={Settings.logo}
                 alt="logo"
                 priority
                 className="mt-14"

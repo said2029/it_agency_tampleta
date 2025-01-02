@@ -13,6 +13,15 @@ const Settings = {
   homePage: 2,
   // 1 - 2
   header: 1,
+  // logo
+  logo: "/assets/images/logo/TechFlow.svg",
+  // meta
+  title: "TechFlow",
+  description: "TechFlow is a leading IT solutions provider.",
+  favorit:"/assets/images/logo/TechFlow.svg",
+  // keywords
+  keywords: ["TechFlow", "IT Solutions", "Techco"],
+  
 };
 
 const home = {
@@ -795,6 +804,7 @@ const contactPageData = {
 };
 
 // footer
+
 const footerData = {
   heroSection: {
     heading: "Ready to Work, Let's Chat",
@@ -802,6 +812,11 @@ const footerData = {
       "Our team of experts is ready to collaborate with you every step of the way, from initial consultation to implementation.",
     buttonText: "Contact Us Today",
   },
+  socialIcons: [
+    { icon: BiLogoFacebook, link: "#" },
+    { icon: BiLogoInstagram, link: "#" },
+    { icon: BiLogoLinkedin, link: "#" },
+  ],
   contactInfo: [
     {
       icon: MdEmail,
@@ -818,11 +833,6 @@ const footerData = {
       title: "Our Office",
       content: "Waterloo, Park, Australia",
     },
-  ],
-  socialIcons: [
-    { icon: BiLogoFacebook, link: "#" },
-    { icon: BiLogoInstagram, link: "#" },
-    { icon: BiLogoLinkedin, link: "#" },
   ],
   links: [
     {

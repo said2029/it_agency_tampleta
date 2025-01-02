@@ -1,5 +1,6 @@
 "use client";
 import ButtonMain from "@/Components/MianButton";
+import { Settings } from "@/data/data";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +26,7 @@ export default function Header_1({}: Props) {
         <Image
           width={183}
           height={45}
-          src={"/assets/images/logo/TechFlow.svg"}
+          src={Settings.logo}
           alt="logo"
           priority
         />
@@ -87,7 +88,7 @@ const MobileNav = () => {
               <Image
                 width={183}
                 height={45}
-                src={"/assets/images/logo/TechFlow.svg"}
+                src={Settings.logo}
                 alt="logo"
                 priority
                 className="mt-14"
@@ -111,7 +112,6 @@ const MobileNav = () => {
     </div>
   );
 };
-
 // tab
 const Tap = ({
   name,
@@ -210,7 +210,6 @@ const Accardon = ({ name, Component }: { name: string; Component: any }) => {
     </li>
   );
 };
-
 //  Components for navBar taps as content
 // for home Tab
 const ComponentHome = () => {
