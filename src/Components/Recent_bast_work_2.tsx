@@ -81,7 +81,7 @@ const Works_Card = ({
           initial="_initial"
           animate={active ? "animate" : "_initial"}
           transition={{ duration: 0.6 }}
-          className="absolute inset-0 top-0 flex items-end justify-start bg-red-600 text-white"
+          className="absolute inset-0 top-0 flex items-end justify-start text-white"
         >
           <div className="z-50 flex w-full items-center justify-between bg-gradient-to-t from-black to-transparent p-5">
             <div>
