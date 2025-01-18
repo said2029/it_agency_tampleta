@@ -10,10 +10,10 @@ export default function page() {
     <div className="relative overflow-hidden bg-primary/10">
       <Top_Banner
         {...about.banner}
-        className="flex h-[400px] justify-center pt-14"
+        className="md:flex md:h-[400px] md:justify-center md:pt-14"
       />
       <section className="px-mobile md:px-spacing 2xl:px-spacing_2 lg:-translate-y-40">
-        <div className="hidden grid-cols-1 gap-10 md:grid-cols-3 lg:grid">
+        <div className="hidden grid-cols-1 gap-10 md:grid-cols-3 lg:grid ">
           <div className="col-span-2 h-[506px] overflow-hidden rounded-xl shadow-xl">
             <Image
               className="h-full w-full object-cover"

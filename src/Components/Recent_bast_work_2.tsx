@@ -69,13 +69,19 @@ const Works_Card = ({
           alt=""
           src={data?.image}
         />
-        <div
-          className={clsx(
-            "absolute inset-0 top-0 hidden !min-w-[300px] items-end justify-start text-white",
-            {
-              flex: active == true,
+        <motion.div
+          variants={{
+            _initial: {
+              y: "100%",
             },
-          )}
+            animate: {
+              y: "0%",
+            },
+          }}
+          initial="_initial"
+          animate={active ? "animate" : "_initial"}
+          transition={{ duration: 0.6 }}
+          className="absolute inset-0 top-0 flex items-end justify-start bg-red-600 text-white"
         >
           <div className="z-50 flex w-full items-center justify-between bg-gradient-to-t from-black to-transparent p-5">
             <div>
@@ -88,7 +94,7 @@ const Works_Card = ({
               name={home?.section_4?.cta.name}
             />
           </div>
-        </div>
+        </motion.div>
       </motion.div>
 
       {/* mobile */}

@@ -24,8 +24,8 @@ export default function Brandes_2({ className }: { className?: String }) {
     }
   });
   return (
-    <div className="z-30 h-fit w-full overflow-hidden bg-primary py-[15px]">
-    <div className="brand-slider flex h-[68px] w-fit items-center gap-3">
+    <div className="z-30 h-fit w-full overflow-hidden bg-primary py-[10px]">
+    <div className="brand-slider translate-x-1/2 flex h-[80px] w-fit items-center gap-3">
       {Brands.map((item, index) => (
         <div
           key={index}

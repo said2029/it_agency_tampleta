@@ -6,7 +6,7 @@ export default function Top_Banner({ className,title,subTitle,highlightName }: {
   return (
     <section
       className={cn(
-        "relative grid h-72 w-full place-content-center z-50",
+        "relative grid h-72 w-full place-content-center",
         className,
       )}
     >

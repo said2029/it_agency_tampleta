@@ -31,10 +31,10 @@ export default function Header_1({}: Props) {
   return (
     <nav className="relative z-50 flex w-full items-center justify-between gap-3 bg-white px-mobile py-3 shadow-sm md:flex-col md:px-spacing xl:flex-row xl:gap-0">
       <Link href={"/"}>
-        <div className="h-10 w-4 overflow-hidden">
+        <div className="h-16 w-fit overflow-hidden">
           <Image
-            width={150}
-            height={45}
+            width={400}
+            height={400}
             className="h-full w-full object-fill"
             src={Settings.logo}
             alt="logo"
@@ -74,19 +74,8 @@ const MobileNav = () => {
               {Settings.title}
             </SheetTitle>
           </SheetHeader>
-          <div className="flex flex-col">
-            {/* logo */}
-            <Link href={"/"}>
-              <Image
-                width={183}
-                height={45}
-                src={Settings.logo}
-                alt="logo"
-                priority
-                className="mt-14"
-              />
-            </Link>
-            <ul className="w-full space-y-9">
+          <div className="flex flex-col mt-14">
+            <ul className="w-full">
               <Accardon name="Home" Component={ComponentHome} />
               <Accardon name="Company" Component={ComponentCompany} />
               <Accardon name="Porfolio" Component={ComponentPortfilio} />

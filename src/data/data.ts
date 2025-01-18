@@ -296,8 +296,6 @@ const home = {
     ],
     cta: "read more",
   },
-
-
 };
 // About Page
 const about = {
@@ -972,20 +970,15 @@ const footerData = {
 };
 // list of images
 const Brands = [
+  "/assets/images/brandes/client_logo_1.webp",
   "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
-  "/assets/images/brandes/brand_1.webp",
+  "/assets/images/brandes/client_logo_1.webp",
+  "/assets/images/brandes/client_logo_2.webp",
+  "/assets/images/brandes/client_logo_3.webp",
+  "/assets/images/brandes/client_logo_4.webp",
+  "/assets/images/brandes/client_logo_9.webp",
+  "/assets/images/brandes/client_logo_2.webp",
+  "/assets/images/brandes/client_logo_4.webp",
 ];
 
 export {

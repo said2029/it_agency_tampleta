@@ -334,16 +334,16 @@ export default function Home_1() {
               key={i + "blogs latest"}
               className="relative w-full rounded-xl bg-white pb-3 shadow-xl"
             >
-              <div
-                className="max-h-[300px] md:min-h-[300px] w-full overflow-hidden rounded-t-lg"
-              >
-                <Image
-                  className="h-full w-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={blog.title}
-                  src={blog.image}
-                />
+              <div className="max-h-[300px] w-full overflow-hidden rounded-t-lg md:min-h-[300px]">
+                <Link href={"/"}>
+                  <Image
+                    className="h-full w-full object-cover transition-all hover:scale-125"
+                    width={400}
+                    height={400}
+                    alt={blog.title}
+                    src={blog.image}
+                  />
+                </Link>
               </div>
 
               <div className="mt-4 space-y-4 p-2">

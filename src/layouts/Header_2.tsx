@@ -19,13 +19,16 @@ export default function Header_2({}: Props) {
   return (
     <nav className="relative z-50 flex w-full items-center justify-between gap-3 bg-white px-mobile py-3 shadow-sm md:flex-col md:px-spacing xl:flex-row xl:gap-0">
       <Link href={"/"}>
-        <Image
-          width={183}
-          height={45}
-          src={Settings.logo}
-          alt="logo"
-          priority
-        />
+        <div className="h-16 w-fit overflow-hidden">
+          <Image
+            width={300}
+            height={200}
+            className="h-full w-full object-fill"
+            src={Settings.logo}
+            alt="logo"
+            priority
+          />
+        </div>
       </Link>
       <ul className="hidden items-center justify-between gap-7 opacity-70 md:flex">
         <Link href={"/"} className="text-navItem">
@@ -61,24 +64,15 @@ const MobileNav = () => {
   return (
     <div className="blocks md:hidden">
       <Sheet>
-        <SheetTrigger><Menu size={30}/></SheetTrigger>
+        <SheetTrigger>
+          <Menu size={30} />
+        </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>
-              {Settings.title}
-            </SheetTitle>
+            <SheetTitle>{Settings.title}</SheetTitle>
           </SheetHeader>
-          <div className="flex flex-col overflow-y-scroll">
-            <Link href={"/"}>
-              <Image
-                width={183}
-                height={45}
-                src={Settings.logo}
-                alt="logo"
-                priority
-              />
-            </Link>
-            <ul className="mt-14 w-full space-y-9">
+          <div className="flex flex-col mt-14">
+            <ul className="w-full">
               <li className="border-b">
                 <Link href={"/portfolio"} className="text-navItem">
                   Porfolio
