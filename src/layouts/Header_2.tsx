@@ -24,6 +24,9 @@ export default function Header_2({}: Props) {
         />
       </Link>
       <ul className="hidden items-center justify-between gap-7 md:flex opacity-70">
+        <Link href={"/"} className="text-navItem">
+          Home
+        </Link>
         <Link href={"/portfolio"} className="text-navItem">
           Porfolio
         </Link>

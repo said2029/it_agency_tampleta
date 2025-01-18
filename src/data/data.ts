@@ -10,9 +10,9 @@ import {
 
 const Settings = {
   // add nomber between 1 -2 to chagne home page
-  homePage: 2,
+  homePage: 1,
   // 1 - 2
-  header: 1,
+  header: 2,
   // logo
   logo: "/assets/images/logo/TechFlow.svg",
   // meta
@@ -802,9 +802,6 @@ const contactPageData = {
     className: "h-full w-full",
   },
 };
-
-// footer
-
 const footerData = {
   heroSection: {
     heading: "Ready to Work, Let's Chat",
@@ -936,7 +933,6 @@ const footerData = {
     developerLink: "/",
   },
 };
-
 // list of images
 const Brands = [
   "/assets/images/brandes/brand_1.webp",

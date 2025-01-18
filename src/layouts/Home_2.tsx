@@ -7,13 +7,12 @@ import {
 } from "@/Components/UI/carousel";
 import Image from "next/image";
 import { IoMdArrowDropright } from "react-icons/io";
-
 import Featured_Services from "@/Components/Global/Featured_Services";
 import TeamCard_1 from "@/Components/Cards/TeamCard_1";
 import { parseAndStyleText } from "@/utils/parseAndStyleText";
 import { home } from "@/data/data";
 
-export default function Home_1() {
+export default function Home_2() {
   return (
     <div className="">
       {/* hero */}
@@ -26,7 +25,7 @@ export default function Home_1() {
             {home.hero.description}
           </p>
           <ButtonMain
-            href={home?.hero?.cta?.link||"/"}
+            href={home?.hero?.cta?.link || "/"}
             className="w-fit bg-secandry_gradinet md:mt-7"
             name={home.hero.cta.name}
           />

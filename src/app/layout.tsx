@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
-import "./globals.css";
 import Footer from "@/layouts/footer";
 import NextTopLoader from "nextjs-toploader";
 import Video_module from "@/Components/Video_Preview";
@@ -8,6 +7,7 @@ import Enter from "@/Provider/Enter";
 import { Settings } from "@/data/data";
 import Header_2 from "@/layouts/Header_2";
 import Header_1 from "@/layouts/Header_1";
+import "./globals.css";
 
 // font form goole
 const anaheim = Rubik({
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   title: Settings.title,
   description: Settings.description,
   keywords: Settings.keywords,
-  icons:{
-    icon:Settings.favorit,
-  }
+  icons: {
+    icon: Settings.favorit,
+  },
 };
 
 export default function RootLayout({

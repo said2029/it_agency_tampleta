@@ -1,15 +1,20 @@
-import ButtonMain from "../MianButton";
+import ButtonMain from "../Components/MianButton";
 import Image from "next/image";
 import { IoMdArrowDropright } from "react-icons/io";
-import Featured_Services from "../Global/Featured_Services";
-import Recent_bast_work_2 from "../Recent_bast_work_2";
-import { Carousel, CarouselContent, CarouselItem } from "../UI/carousel";
-import TeamCard_2 from "../Cards/TeamCard_2";
+import Featured_Services from "../Components/Global/Featured_Services";
+import Recent_bast_work_2 from "../Components/Recent_bast_work_2";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "../Components/UI/carousel";
+import TeamCard_2 from "../Components/Cards/TeamCard_2";
 import Link from "next/link";
 import { parseAndStyleText } from "@/utils/parseAndStyleText";
-import { Brands, home } from "@/data/data";
+import { home } from "@/data/data";
+import Brandes_2 from "../Components/brandes_2";
 
-export default function Home_2() {
+export default function Home_1() {
   return (
     <main>
       {/* Hero */}
@@ -80,24 +85,9 @@ export default function Home_2() {
           alt=""
           src={"/assets/images/elemants/elemants (32).png"}
         />
-        <div className="z-30 h-fit w-full overflow-hidden bg-primary py-[15px]">
-          <div className="brand-slider flex h-[68px] w-fit items-center gap-3">
-            {Brands.map((item, index) => (
-              <div
-                key={index}
-                className="grid h-full w-40 place-content-center rounded-lg bg-white p-2"
-              >
-                <Image
-                  className="w-full"
-                  src={item}
-                  width={200}
-                  height={200}
-                  alt="brand"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+
+        <Brandes_2 />
+
         <Image
           className="absolute top-0 z-50"
           width={200}
@@ -355,11 +345,11 @@ export default function Home_2() {
               </div>
               <div className="mt-4 space-y-4 p-2">
                 <div className="flex items-center gap-3 opacity-70">
-                  <div className="absolute top-3 left-2 space-x-2">
+                  <div className="absolute left-2 top-3 space-x-2">
                     {blog.category.map((category, i) => (
                       <span
                         key={category + i}
-                        className="rounded-xl border border-black px-2 py-[1px] bg-white/35 opacity-85 backdrop-blur-3xl"
+                        className="rounded-xl border border-black bg-white/35 px-2 py-[1px] opacity-85 backdrop-blur-3xl"
                       >
                         {category}
                       </span>

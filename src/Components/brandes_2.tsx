@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import React from "react";
 
-export default function Brandes({ className }: { className?: String }) {
+export default function Brandes_2({ className }: { className?: String }) {
   useGSAP(() => {
     const brandSlider = gsap.utils.toArray(".brand-slider");
     if (brandSlider) {
@@ -24,23 +24,23 @@ export default function Brandes({ className }: { className?: String }) {
     }
   });
   return (
-    <div
-      className={
-        "h-[130px] overflow-hidden rounded-md bg-black_50 p-3 " + className
-      }
-    >
-      <div className="brand-slider flex h-full items-center gap-6">
-        {Brands.map((item, i) => (
-          <div
-            key={"brand_" + i}
-            className="grid h-full min-w-[159px] place-content-center rounded-lg bg-white p-2"
-          >
-            <span>
-              <Image width={300} height={200} src={item} alt="brand1" />
-            </span>
-          </div>
-        ))}
-      </div>
+    <div className="z-30 h-fit w-full overflow-hidden bg-primary py-[15px]">
+    <div className="brand-slider flex h-[68px] w-fit items-center gap-3">
+      {Brands.map((item, index) => (
+        <div
+          key={index}
+          className="grid h-full w-40 place-content-center rounded-lg bg-white p-2"
+        >
+          <Image
+            className="w-full"
+            src={item}
+            width={200}
+            height={200}
+            alt="brand"
+          />
+        </div>
+      ))}
     </div>
+  </div>
   );
 }
