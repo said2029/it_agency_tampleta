@@ -6,7 +6,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 
 export default function page() {
   return (
-    <main className="bg-[#74a5ff2d] pb-10">
+    <main className="bg-primary/10 pb-10">
       <Top_Banner
         title={teamDetails.banner.title}
         highlightName={teamDetails.banner.highlightName}

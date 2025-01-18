@@ -68,7 +68,8 @@ export default {
   				'80px',
   				{
   					fontWeight: 600,
-  					lineHeight: '110px'
+  					lineHeight: '80px',
+					letterSpacing:"1.2px"
   				}
   			],
   			h3_normal: '66px',

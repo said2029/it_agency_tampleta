@@ -7,7 +7,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="relative overflow-hidden bg-[#74a5ff2d]">
+    <div className="relative overflow-hidden bg-primary/10">
       <Top_Banner
         {...about.banner}
         className="flex h-[400px] justify-center pt-14"

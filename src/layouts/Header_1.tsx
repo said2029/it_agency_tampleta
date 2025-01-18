@@ -15,7 +15,15 @@ import {
   GrOverview,
   GrQr,
 } from "react-icons/gr";
-import { IoIosArrowDown, IoMdClose, IoMdMenu } from "react-icons/io";
+import { IoIosArrowDown} from "react-icons/io";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/Components/ui/sheet";
+import { Menu } from "lucide-react";
 
 type Props = {};
 
@@ -23,13 +31,16 @@ export default function Header_1({}: Props) {
   return (
     <nav className="relative z-50 flex w-full items-center justify-between gap-3 bg-white px-mobile py-3 shadow-sm md:flex-col md:px-spacing xl:flex-row xl:gap-0">
       <Link href={"/"}>
-        <Image
-          width={183}
-          height={45}
-          src={Settings.logo}
-          alt="logo"
-          priority
-        />
+        <div className="h-10 w-4 overflow-hidden">
+          <Image
+            width={150}
+            height={45}
+            className="h-full w-full object-fill"
+            src={Settings.logo}
+            alt="logo"
+            priority
+          />
+        </div>
       </Link>
       <ul className="hidden items-center justify-between gap-7 md:flex">
         <Tap name="Home" Component={ComponentHome} />
@@ -41,7 +52,7 @@ export default function Header_1({}: Props) {
           Contact
         </Link>
       </ul>
-      <ButtonMain className="hidden xl:flex !text-white" name="Get Started" />
+      <ButtonMain className="hidden !text-white xl:flex" name="Get Started" />
 
       {/* mobile nav */}
       <MobileNav />
@@ -51,38 +62,19 @@ export default function Header_1({}: Props) {
 
 // mobile NavBar
 const MobileNav = () => {
-  const [open, setOpen] = useState(false);
   return (
     <div className="blocks md:hidden">
-      <button onClick={() => setOpen(true)} className="text-black_50">
-        <IoMdMenu size={50} />
-      </button>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            variants={{
-              inital: {
-                x: "100%",
-              },
-              animate: {
-                x: "0",
-              },
-            }}
-            initial="inital"
-            animate={"animate"}
-            exit={"inital"}
-            transition={{
-              duration: 0.3,
-              type: "tween",
-            }}
-            className="fixed left-0 top-0 flex h-[100vh] w-screen flex-col overflow-y-scroll bg-white px-5"
-          >
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute right-4 top-4"
-            >
-              <IoMdClose size={40} />
-            </button>
+      <Sheet>
+        <SheetTrigger>
+          <Menu />
+        </SheetTrigger>
+        <SheetContent className=" overflow-y-scroll">
+          <SheetHeader>
+            <SheetTitle>
+              {Settings.title}
+            </SheetTitle>
+          </SheetHeader>
+          <div className="flex flex-col">
             {/* logo */}
             <Link href={"/"}>
               <Image
@@ -94,7 +86,7 @@ const MobileNav = () => {
                 className="mt-14"
               />
             </Link>
-            <ul className="mt-14 w-full space-y-9">
+            <ul className="w-full space-y-9">
               <Accardon name="Home" Component={ComponentHome} />
               <Accardon name="Company" Component={ComponentCompany} />
               <Accardon name="Porfolio" Component={ComponentPortfilio} />
@@ -106,9 +98,9 @@ const MobileNav = () => {
                 </Link>
               </li>
             </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </SheetContent>
+      </Sheet>
     </div>
   );
 };

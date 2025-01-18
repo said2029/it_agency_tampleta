@@ -39,9 +39,7 @@ export default function Recent_bast_work_2() {
     </section>
   );
 }
-
 // Our Recent Best Works Card
-
 const Works_Card = ({
   active = false,
   data,
@@ -65,20 +63,27 @@ const Works_Card = ({
         className={`relative hidden h-[300px] overflow-hidden rounded-2xl md:block md:h-[500px]`}
       >
         <Image
-          className="absolute inset-0 h-full w-full !min-w-[300px]"
+          className="absolute inset-0 aspect-square h-full !min-w-full object-cover"
           height={300}
-          width={300}
+          width={800}
           alt=""
           src={data?.image}
         />
-        <div className="absolute inset-0 top-0 flex !min-w-[300px] items-end justify-start bg-gradient-to-t from-sky-950 to-transparent text-white">
-          <div className="z-50 flex w-full items-center justify-between p-5">
+        <div
+          className={clsx(
+            "absolute inset-0 top-0 hidden !min-w-[300px] items-end justify-start text-white",
+            {
+              flex: active == true,
+            },
+          )}
+        >
+          <div className="z-50 flex w-full items-center justify-between bg-gradient-to-t from-black to-transparent p-5">
             <div>
               <h1 className="text-h4">{data?.name}</h1>
               <p className="text-paragraph opacity-50">{data?.subName}</p>
             </div>
             <ButtonMain
-              href={home?.section_4?.cta.link||"/"}
+              href={home?.section_4?.cta.link || "/"}
               className="text-nowrap"
               name={home?.section_4?.cta.name}
             />
@@ -91,7 +96,7 @@ const Works_Card = ({
         className={`relative h-[300px] w-full overflow-hidden rounded-2xl pl-1 md:hidden md:h-[539px]`}
       >
         <Image
-          className="absolute inset-0 w-full h-full min-w-"
+          className="min-w- absolute inset-0 h-full w-full"
           height={300}
           width={300}
           alt=""
@@ -100,12 +105,11 @@ const Works_Card = ({
         <div className="absolute inset-0 top-0 flex items-end justify-start bg-gradient-to-t from-sky-950 to-transparent text-white">
           <div className="flex w-full items-center justify-between p-5">
             <div>
-              <h1 className="text-h4">{data?.name}</h1>
+              <h1 className="text-h5 leading-8">{data?.name}</h1>
               <p className="text-paragraph opacity-50">{data?.subName}</p>
             </div>
             <ButtonMain
-              href={home?.section_4?.cta?.link||"/"}
-              className=""
+              href={home?.section_4?.cta?.link || "/"}
               name={home.section_4.cta.name}
             />
           </div>

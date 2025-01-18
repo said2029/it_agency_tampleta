@@ -1,6 +1,6 @@
 import Featured_Services from "@/Components/Global/Featured_Services";
 import Top_Banner from "@/Components/Top_Banner";
-import { Button } from "@/Components/UI/Button";
+import { Button } from "@/Components/ui/Button";
 import { servicesData } from "@/data/data";
 import Image from "next/image";
 import React from "react";
@@ -9,7 +9,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 export default function page() {
   const { banner, hero, whyUs } = servicesData;
   return (
-    <main className="relative overflow-hidden bg-[#74a5ff2d] pb-28">
+    <main className="relative overflow-hidden bg-primary/10 pb-28">
       <Top_Banner {...banner} />
       <div className="mt-60 md:mt-top px-mobile md:px-spacing_2">
         <div className="relative flex max-w-screen-lg flex-col items-center justify-center md:flex-row">

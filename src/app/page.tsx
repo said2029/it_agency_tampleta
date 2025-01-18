@@ -6,5 +6,5 @@ import React from "react";
 export default function page({ searchParams }: { searchParams: any }) {
   const SearchParams = searchParams;
   const page = SearchParams?.page ? +SearchParams?.page : 1;
-  return <>{Settings.homePage == 1 || page == 1 ? <Home_1 /> : <Home_2 />}</>;
+  return <>{Settings.homePage == 1 && page == 1 ? <Home_1 /> : <Home_2 />}</>;
 }

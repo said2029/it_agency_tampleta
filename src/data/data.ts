@@ -12,18 +12,17 @@ const Settings = {
   // add nomber between 1 -2 to chagne home page
   homePage: 1,
   // 1 - 2
-  header: 2,
+  header: 1,
   // logo
-  logo: "/assets/images/logo/TechFlow.svg",
+  logo: "/assets/images/logo/logo.png",
   // meta
-  title: "TechFlow",
-  description: "TechFlow is a leading IT solutions provider.",
-  favorit:"/assets/images/logo/TechFlow.svg",
+  title: "CoreTech | Empowering Businesses with Cutting-Edge IT Solutions",
+  description: "Empowering Businesses with Cutting-Edge IT Solutions",
+  favorit: "/assets/images/logo/logo2.png",
   // keywords
   keywords: ["TechFlow", "IT Solutions", "Techco"],
-  
 };
-
+// both page 1 and 2
 const home = {
   hero: {
     title: "Empowering {{Businesses}} with Cutting-Edge IT Solutions.",
@@ -134,7 +133,7 @@ const home = {
     ],
     cta: { name: "More Services", link: "/services" },
   },
-  //   Crafting Success With Project
+  // Crafting Success With Project
   section_4: {
     title: "Our Recent Best Works",
     subTitle: "{{Crafting}} Success With Project",
@@ -144,27 +143,28 @@ const home = {
     cards: [
       {
         name: "Dashboard Design",
-        image: "/assets/images/img/hero_Image.jpg",
+        image: "/assets/images/img/portfolio_item_image_2.webp",
         subName: "Dashboard Design",
       },
       {
-        name: "Dashboard Design",
-        image: "/assets/images/img/hero_Image.jpg",
-        subName: "Dashboard Design",
+        name: "Mobile App Design",
+        image: "/assets/images/img/portfolio_item_image_1.webp",
+        subName: "App Design",
+      },
+      {
+        name: "Technology Solution",
+        image: "/assets/images/img/portfolio_item_image_3.webp",
+        subName: "3D Design",
+      },
+
+      {
+        name: "Mobile App Design",
+        image: "/assets/images/img/portfolio_item_image_1.webp",
+        subName: "App Design",
       },
       {
         name: "Dashboard Design",
-        image: "/assets/images/img/hero_Image.jpg",
-        subName: "Dashboard Design",
-      },
-      {
-        name: "Dashboard Design",
-        image: "/assets/images/img/hero_Image.jpg",
-        subName: "Dashboard Design",
-      },
-      {
-        name: "Dashboard Design",
-        image: "/assets/images/img/hero_Image.jpg",
+        image: "/assets/images/img/portfolio_item_image_2.webp",
         subName: "Dashboard Design",
       },
     ],
@@ -261,14 +261,14 @@ const home = {
     ],
     cta: { name: "Explore More", link: "/team_member" },
   },
-  //   Latest Articles Postss
+  //  Latest Articles Postss
   section_7: {
     subTitle: "{{Blog}} Updates",
     title: "Latest Articles Posts",
     blogs: [
       {
         comments: "35",
-        image: "/assets/images/img/portfolioImage.png",
+        image: "/assets/images/img/post_02-600x350.jpg",
         title: "The Benefits of IT Consulting Services",
         description:
           "IT consulting services can help businesses improve their IT strategies, streamline their operations, and increase their efficiency. Here are some of the benefits of IT consulting services.",
@@ -277,7 +277,7 @@ const home = {
       },
       {
         comments: "35",
-        image: "/assets/images/img/portfolioImage.png",
+        image: "/assets/images/img/portfolio_item_image_8-800x600.webp",
         title: "The Benefits of IT Consulting Services",
         description:
           "IT consulting services can help businesses improve their IT strategies, streamline their operations, and increase their efficiency. Here are some of the benefits of IT consulting services.",
@@ -286,7 +286,7 @@ const home = {
       },
       {
         comments: "35",
-        image: "/assets/images/img/portfolioImage.png",
+        image: "/assets/images/img/portfolio_item_image_2.webp",
         title: "The Benefits of IT Consulting Services",
         description:
           "IT consulting services can help businesses improve their IT strategies, streamline their operations, and increase their efficiency. Here are some of the benefits of IT consulting services.",
@@ -296,6 +296,8 @@ const home = {
     ],
     cta: "read more",
   },
+
+
 };
 // About Page
 const about = {
@@ -455,7 +457,46 @@ const price = {
     ],
   },
 };
-// portfoli detald page
+// portfoli page
+const portfolio = {
+  banner: {
+    title: "Our Portfolio",
+    highlightName: "Portfolio",
+    subTitle: "Our",
+  },
+  categorys: [
+    { name: "SEE ALL", active: true },
+    { name: "Technology", active: false },
+    { name: "Analysis", active: false },
+    { name: "Helpdesk", active: false },
+    { name: "Marketing", active: false },
+  ],
+  portfolios: [
+    {
+      img: "/assets/images/img/portfolio_item_image_6-800x600.webp",
+      category: "Helpdesk",
+      title:
+        "Explore Our IT Solutions Portfolio for Public Sector Organizations",
+    },
+    {
+      img: "/assets/images/img/portfolio_item_image_8-800x600.webp",
+      category: "Technology",
+      title:
+        "Revolutionizing IT Strategies A Closer Look at Our Dynamic IT Solutions",
+    },
+    {
+      img: "/assets/images/img/portfolio_item_image_9-800x600.webp",
+      category: "Helpdesk",
+      title: "Cloud Migration and Integration Project IT Solutions Portfolio",
+    },
+    {
+      img: "/assets/images/img/portfolio_item_image_11-800x600.webp",
+      category: "Marketing",
+      title: "Unlocking Potential Explore Our Comprehensive IT Portfolio",
+    },
+  ],
+};
+// portfoli Detaile page
 const portfolioData = {
   banner: {
     title:
@@ -464,10 +505,10 @@ const portfolioData = {
     subTitle: "Our",
   },
   mainImage: {
-    src: "/assets/images/img/portfolioImage.png",
+    src: "/assets/images/img/portfolio_item_image_9-800x600.webp",
     alt: "",
-    width: 600,
-    height: 600,
+    width: 1000,
+    height: 800,
   },
   mainContent: {
     networkInfrastructure: {
@@ -507,10 +548,7 @@ const portfolioData = {
     ],
     similarProjects: {
       title: "Our Similar Projects",
-      projects: [
-        { component: "CardPortfolio" },
-        { component: "CardPortfolio" },
-      ],
+      projects: portfolio.portfolios.slice(0, 2),
     },
   },
 };
@@ -561,7 +599,7 @@ const servicesData = {
     bottomImage: "/assets/images/elemants/elemants (14).png",
   },
 };
-// servicesData Page detals
+// servicesData Page details
 const servicesDataDetals = {
   banner: {
     title:
@@ -625,8 +663,7 @@ const servicesDataDetals = {
     ],
   },
 };
-
-// blog detals page
+// blog detalis page
 const blogPostDetals = {
   banner: {
     title: "Leading the Digital Age with Groundbreaking IT Technologies",
@@ -956,6 +993,7 @@ export {
   Brands,
   about,
   price,
+  portfolio,
   portfolioData,
   servicesData,
   servicesDataDetals,

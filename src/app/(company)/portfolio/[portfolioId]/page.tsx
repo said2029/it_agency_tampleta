@@ -8,7 +8,7 @@ import { portfolioData } from "@/data/data";
 export default function page() {
   const { banner, mainImage, mainContent } = portfolioData;
   return (
-    <article className="bg-[#74a5ff2d] pb-10">
+    <article className="bg-primary/10 pb-10">
       <Top_Banner
         title={banner.title}
         highlightName={banner.highlightName}
@@ -25,7 +25,7 @@ export default function page() {
           />
         </div>
 
-        <div className="mt-6 space-y-6 opacity-75">
+        <div className="mt-6 space-y-6">
           <div className="space-y-3">
             <h2 className="text-h6 md:text-h5">
               {mainContent.networkInfrastructure.title}
@@ -82,11 +82,11 @@ export default function page() {
             </div>
           ))}
 
-          <div className="space-y-2 ">
+          <div className="space-y-2">
             <h2 className="text-h5">{mainContent.similarProjects.title}</h2>
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 !opacity-100">
-              {mainContent.similarProjects.projects.map((project, index) => (
-                <CardPortfolio key={index} />
+            <div className="grid grid-cols-1 gap-3 !opacity-100 md:grid-cols-2">
+              {mainContent.similarProjects.projects.map((pro, index) => (
+                <CardPortfolio {...pro} key={index} />
               ))}
             </div>
           </div>

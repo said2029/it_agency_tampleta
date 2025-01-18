@@ -4,7 +4,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/Components/UI/carousel";
+} from "@/Components/ui/carousel";
 import Image from "next/image";
 import { IoMdArrowDropright } from "react-icons/io";
 import Featured_Services from "@/Components/Global/Featured_Services";
@@ -14,7 +14,7 @@ import { home } from "@/data/data";
 
 export default function Home_2() {
   return (
-    <div className="">
+    <div >
       {/* hero */}
       <div className="hero-section relative grid h-[923px] place-content-center overflow-hidden bg-primary bg-[url(/assets/images/img/hero_Image.jpg)] text-center text-white">
         <div className="z-30 flex w-full flex-col items-center justify-center gap-[27px]">
@@ -140,8 +140,8 @@ export default function Home_2() {
                   key={index + "Success_With_Project"}
                   className="relative h-[300px] overflow-hidden rounded-2xl pl-1 md:h-[539px] md:basis-1/2"
                 >
-                  <div className="absolute inset-0 top-0 flex items-end justify-start bg-gradient-to-t from-sky-950 to-transparent text-white">
-                    <div className="flex w-full items-center justify-between p-5">
+                  <div className="absolute inset-0 top-0 flex items-end justify-start  text-white">
+                    <div className="flex w-full items-center justify-between p-5 bg-gradient-to-t from-black to-transparent">
                       <div>
                         <h1 className="text-h4">{item.name}</h1>
                         <p className="text-paragraph opacity-50">

@@ -7,7 +7,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "../Components/UI/carousel";
+} from "../Components/ui/carousel";
 import TeamCard_2 from "../Components/Cards/TeamCard_2";
 import Link from "next/link";
 import { parseAndStyleText } from "@/utils/parseAndStyleText";
@@ -20,7 +20,7 @@ export default function Home_1() {
       {/* Hero */}
       <section className="mt-60 grid grid-cols-1 px-mobile md:mt-top md:grid-cols-3 md:px-spacing">
         <div className="col-span-2 space-y-3">
-          <h1 className="text-h3 leading-tight md:text-h1">
+          <h1 className="text-h5 leading-tight md:text-h1">
             {parseAndStyleText(home.hero.title, "text-secandry_primary")}
           </h1>
 
@@ -185,7 +185,7 @@ export default function Home_1() {
         <div className="bg-primary px-mobile pb-2 md:px-spacing">
           <div
             style={{ clipPath: "polygon(0 0, 100% 0, 98% 100%, 2% 100%)" }}
-            className="top-0 h-12 w-full bg-white"
+            className="top-0 hidden h-12 w-full bg-white md:block"
           ></div>
           <Featured_Services className="text-white md:mt-10 lg:px-spacing 2xl:px-spacing_2" />
         </div>
@@ -334,28 +334,31 @@ export default function Home_1() {
               key={i + "blogs latest"}
               className="relative w-full rounded-xl bg-white pb-3 shadow-xl"
             >
-              <div className="w-full">
+              <div
+                className="max-h-[300px] md:min-h-[300px] w-full overflow-hidden rounded-t-lg"
+              >
                 <Image
-                  className="w-full"
+                  className="h-full w-full object-cover"
                   width={400}
                   height={400}
                   alt={blog.title}
                   src={blog.image}
                 />
               </div>
+
               <div className="mt-4 space-y-4 p-2">
-                <div className="flex items-center gap-3 opacity-70">
+                <div className="flex items-center gap-3">
                   <div className="absolute left-2 top-3 space-x-2">
                     {blog.category.map((category, i) => (
                       <span
                         key={category + i}
-                        className="rounded-xl border border-black bg-white/35 px-2 py-[1px] opacity-85 backdrop-blur-3xl"
+                        className="rounded-xl border border-black bg-white px-2 py-[1px] backdrop-blur-3xl"
                       >
                         {category}
                       </span>
                     ))}
                   </div>
-                  <p className="flex">
+                  <p className="flex opacity-75">
                     <span>
                       <Image
                         width={23}
@@ -366,7 +369,7 @@ export default function Home_1() {
                     </span>
                     {blog.date}
                   </p>
-                  <p className="flex">
+                  <p className="flex opacity-75">
                     <span>
                       <Image
                         width={23}
@@ -378,7 +381,7 @@ export default function Home_1() {
                     {blog.comments}
                   </p>
                 </div>
-                <h3 className="text-start text-h6">{blog.title}</h3>
+                <h3 className="text-start text-h6 opacity-75">{blog.title}</h3>
                 <div className="flex items-center gap-3">
                   <Link
                     className="transition-all hover:scale-125"

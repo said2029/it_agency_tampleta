@@ -1,13 +1,17 @@
 "use client";
 import ButtonMain from "@/Components/MianButton";
-import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { IoMdClose, IoMdMenu } from "react-icons/io";
-import {motion} from "framer-motion";
 import { useState } from "react";
 import { Settings } from "@/data/data";
-
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/Components/ui/sheet";
+import { Menu } from "lucide-react";
 
 type Props = {};
 
@@ -23,7 +27,7 @@ export default function Header_2({}: Props) {
           priority
         />
       </Link>
-      <ul className="hidden items-center justify-between gap-7 md:flex opacity-70">
+      <ul className="hidden items-center justify-between gap-7 opacity-70 md:flex">
         <Link href={"/"} className="text-navItem">
           Home
         </Link>
@@ -37,7 +41,7 @@ export default function Header_2({}: Props) {
           Blogs
         </Link>
         <Link href={"/team_member"} className="text-navItem">
-        Team
+          Team
         </Link>
         <Link href={"/contact"} className="text-navItem">
           Contact
@@ -56,36 +60,15 @@ const MobileNav = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="blocks md:hidden">
-      <button onClick={() => setOpen(true)} className="text-black_50">
-        <IoMdMenu size={50} />
-      </button>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            variants={{
-              inital: {
-                x: "100%",
-              },
-              animate: {
-                x: "0",
-              },
-            }}
-            initial="inital"
-            animate={"animate"}
-            exit={"inital"}
-            transition={{
-              duration: 0.3,
-              type: "tween",
-            }}
-            className="fixed left-0 top-0 flex h-[100vh] w-screen flex-col overflow-y-scroll bg-white px-5"
-          >
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute right-4 top-4"
-            >
-              <IoMdClose size={40} />
-            </button>
-            {/* logo */}
+      <Sheet>
+        <SheetTrigger><Menu size={30}/></SheetTrigger>
+        <SheetContent>
+          <SheetHeader>
+            <SheetTitle>
+              {Settings.title}
+            </SheetTitle>
+          </SheetHeader>
+          <div className="flex flex-col overflow-y-scroll">
             <Link href={"/"}>
               <Image
                 width={183}
@@ -93,29 +76,27 @@ const MobileNav = () => {
                 src={Settings.logo}
                 alt="logo"
                 priority
-                className="mt-14"
               />
             </Link>
             <ul className="mt-14 w-full space-y-9">
-
               <li className="border-b">
                 <Link href={"/portfolio"} className="text-navItem">
-                Porfolio
+                  Porfolio
                 </Link>
               </li>
               <li className="border-b">
                 <Link href={"/services"} className="text-navItem">
-                Services
+                  Services
                 </Link>
               </li>
               <li className="border-b">
                 <Link href={"/blog"} className="text-navItem">
-                Blogs
+                  Blogs
                 </Link>
               </li>
               <li className="border-b">
                 <Link href={"/team_member"} className="text-navItem">
-                Team
+                  Team
                 </Link>
               </li>
               <li className="border-b">
@@ -124,9 +105,9 @@ const MobileNav = () => {
                 </Link>
               </li>
             </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </SheetContent>
+      </Sheet>
     </div>
   );
 };

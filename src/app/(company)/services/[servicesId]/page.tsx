@@ -4,7 +4,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/Components/UI/accordion";
+} from "@/Components/ui/accordion";
 import { servicesDataDetals } from "@/data/data";
 import Image from "next/image";
 import React from "react";
@@ -14,7 +14,7 @@ export default function page() {
   const { banner, mainImage, content, serviceProcess, outcomes } =
     servicesDataDetals;
   return (
-    <article className="bg-[#74a5ff2d] pb-10">
+    <article className="bg-primary/10 pb-10">
       <Top_Banner {...banner} />
       <section className="mt-60 px-mobile md:mt-top md:px-spacing [&_p]:!text-lg">
         <div className="aspect-video w-full overflow-hidden rounded-2xl md:h-[634px]">

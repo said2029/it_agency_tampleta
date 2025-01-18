@@ -2,16 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function CardPortfolio() {
+interface CardPortfolioProps {
+  img: string;
+  category: string;
+  title: string;
+}
+
+export default function CardPortfolio({
+  img,
+  category,
+  title,
+}: CardPortfolioProps) {
   return (
-    <Link href={"/portfolio/dsfihe"} className="bg-white p-3 opacity-100">
-      <div className="w-full h-[200px] md:h-[400px]">
+    <Link href={"/portfolio/dsfihe"} className="bg-white p-3 opacity-100 cursor-pointer transition-all hover:-translate-y-5 rounded-2xl">
+      <div className="h-[200px] w-full md:h-[400px]">
         <Image
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
           width={400}
           height={400}
           alt="portfolioImage"
-          src={"/assets/images/img/portfolioImage.png"}
+          src={img}
         />
       </div>
       <div className="mt-2 space-y-2">
@@ -22,11 +32,9 @@ export default function CardPortfolio() {
             alt="portfolioIcon"
             src={"/assets/Icons/portfolioIcon.svg"}
           />{" "}
-          Technology
+          {category}
         </p>
-        <h3 className="text-2xl font-semibold opacity-90">
-          Driving Digital Transformation Explore the Depth of Our IT Projects
-        </h3>
+        <h3 className="text-2xl font-semibold opacity-90 text-black">{title}</h3>
       </div>
     </Link>
   );

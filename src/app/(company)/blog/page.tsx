@@ -14,7 +14,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/Components/UI/carousel";
+} from "@/Components/ui/carousel";
 import { SiGoogledisplayandvideo360 } from "react-icons/si";
 import { video_Preview } from "@/Components/Video_Preview";
 import SidbarBlog from "@/Components/SidbarBlog";
