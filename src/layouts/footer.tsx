@@ -4,7 +4,7 @@ import Link from "next/link";
 import ButtonMain from "@/Components/MianButton";
 import { footerData } from "@/data/data";
 
-export default function Footer() {
+export default function footer() {
   return (
     <footer className="relative bg-primary_gradinet text-white">
       {/* Hero Section */}

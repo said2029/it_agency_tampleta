@@ -2,11 +2,11 @@
 import React, { createContext, ReactNode, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export const video_Preview = createContext({});
+export const video_preview = createContext({});
 export default function Video_Preview({ children }: { children: ReactNode }) {
   const [data, setData] = useState({ open: false, video: "", iframe: true });
   return (
-    <video_Preview.Provider value={{ data, setData }}>
+    <video_preview.Provider value={{ data, setData }}>
       {children}
 
       <AnimatePresence>
@@ -40,6 +40,6 @@ export default function Video_Preview({ children }: { children: ReactNode }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </video_Preview.Provider>
+    </video_preview.Provider>
   );
 }

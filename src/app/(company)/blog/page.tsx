@@ -15,11 +15,11 @@ import {
   CarouselPrevious,
 } from "@/Components/UI/carousel";
 import { SiGoogledisplayandvideo360 } from "react-icons/si";
-import { video_Preview } from "@/Components/Video_Preview";
+import { video_preview } from "@/Components/Video_Preview";
 import SidbarBlog from "@/Components/SidbarBlog";
 
 export default function page() {
-  const { setData }:any = useContext(video_Preview);
+  const { setData }: any = useContext(video_preview);
   return (
     <main className="bg-primary/10 pb-top">
       <section className="relative grid h-72 w-full place-content-center">
@@ -37,11 +37,11 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section className="relative mt-60 md:mt-top grid grid-cols-1 md:grid-cols-3 gap-10 px-mobile md:px-spacing">
-        <div className="md:col-span-2 space-y-6 rounded-xl">
+      <section className="relative mt-60 grid grid-cols-1 gap-10 px-mobile md:mt-top md:grid-cols-3 md:px-spacing">
+        <div className="space-y-6 rounded-xl md:col-span-2">
           {/* blog Card Image*/}
           <div className="w-full rounded-xl bg-white p-8">
-            <div className="h-60 md:h-96 w-full overflow-hidden rounded-xl transition-all hover:scale-105">
+            <div className="h-60 w-full overflow-hidden rounded-xl transition-all hover:scale-105 md:h-96">
               <Image
                 className="h-full w-full object-cover"
                 width={400}
@@ -86,7 +86,9 @@ export default function page() {
             <div className="mt-10">
               <Link
                 className="flex w-fit items-center gap-3 rounded-full bg-primary_gradinet px-8 py-3 text-xl font-bold uppercase text-white shadow-xl [&_svg]:hover:-translate-y-1 [&_svg]:hover:translate-x-1"
-                href={"/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"}
+                href={
+                  "/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"
+                }
               >
                 <span>read more</span>
                 <FaLocationArrow className="transition-all" />
@@ -96,7 +98,7 @@ export default function page() {
           {/* end blog Card */}
           {/* blog Card slide Image*/}
           <div className="w-full rounded-xl bg-white p-8">
-            <div className="h-60 md:h-96 w-full overflow-hidden rounded-xl transition-all [&_.button-carousel]:hover:flex">
+            <div className="h-60 w-full overflow-hidden rounded-xl transition-all md:h-96 [&_.button-carousel]:hover:flex">
               <Carousel
                 opts={{
                   skipSnaps: true,
@@ -126,7 +128,7 @@ export default function page() {
                 <CarouselPrevious className="button-carousel absolute left-6 hidden size-14 border-none bg-primary_gradinet text-white !opacity-95" />
               </Carousel>
             </div>
-            <div className="mt-4 flex items-center gap-7 flex-wrap">
+            <div className="mt-4 flex flex-wrap items-center gap-7">
               <p className="flex items-center gap-3 text-[16px]">
                 <span className="text-primary">
                   <FaRegUser size={16} />
@@ -162,7 +164,9 @@ export default function page() {
             <div className="mt-10">
               <Link
                 className="flex w-fit items-center gap-3 rounded-full bg-primary_gradinet px-8 py-3 text-xl font-bold uppercase text-white shadow-xl [&_svg]:hover:-translate-y-1 [&_svg]:hover:translate-x-1"
-                href={"/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"}
+                href={
+                  "/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"
+                }
               >
                 <span>read more</span>
                 <FaLocationArrow className="transition-all" />
@@ -172,7 +176,7 @@ export default function page() {
           {/* end blog Card */}
           {/* blog Card video*/}
           <div className="w-full rounded-xl bg-white p-8">
-            <div className="relative h-60 md:h-96 w-full overflow-hidden rounded-xl">
+            <div className="relative h-60 w-full overflow-hidden rounded-xl md:h-96">
               <Image
                 className="-z-50 h-full w-full object-cover transition-all hover:scale-105"
                 width={400}
@@ -188,7 +192,12 @@ export default function page() {
                       open: boolean;
                       video: string;
                       iframe: boolean;
-                    }) => ({ ...pri, open: true,video:"https://www.youtube.com/embed/pAeEAfPglWI",iframe:true }),
+                    }) => ({
+                      ...pri,
+                      open: true,
+                      video: "https://www.youtube.com/embed/pAeEAfPglWI",
+                      iframe: true,
+                    }),
                   )
                 }
                 className="absolute bottom-1/2 left-1/2 right-1/2 top-1/2 z-[200] grid size-28 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-primary"
@@ -196,7 +205,7 @@ export default function page() {
                 <SiGoogledisplayandvideo360 size={45} className="text-white" />
               </button>
             </div>
-            <div className="mt-4 flex items-center gap-7 flex-wrap">
+            <div className="mt-4 flex flex-wrap items-center gap-7">
               <p className="flex items-center gap-3 text-[16px]">
                 <span className="text-primary">
                   <FaRegUser size={16} />
@@ -232,7 +241,9 @@ export default function page() {
             <div className="mt-10">
               <Link
                 className="flex w-fit items-center gap-3 rounded-full bg-primary_gradinet px-8 py-3 text-xl font-bold uppercase text-white shadow-xl [&_svg]:hover:-translate-y-1 [&_svg]:hover:translate-x-1"
-                href={"/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"}
+                href={
+                  "/blog/Leading_the_Digital_Age_with_Groundbreaking_IT_Technologies"
+                }
               >
                 <span>read more</span>
                 <FaLocationArrow className="transition-all" />
@@ -242,9 +253,7 @@ export default function page() {
           {/* end blog Card */}
         </div>
         {/* sidbar */}
-        <SidbarBlog/>
-
-
+        <SidbarBlog />
       </section>
       {/* pagination */}
       <section className="mt-top grid place-content-center">

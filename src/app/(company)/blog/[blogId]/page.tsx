@@ -20,11 +20,11 @@ const post = {
     "Forecasting Future Trends",
     "Driving Innovation Strategies",
     "Exploring Industry Practices",
-    "Empowering Transformation",
+    "Empowering Transformation"
   ],
 };
 
-export default function page() {
+export default function Page() {
   const { banner, post, pagination } = blogPostDetails;
   return (
     <main className="bg-primary/10 pb-top">

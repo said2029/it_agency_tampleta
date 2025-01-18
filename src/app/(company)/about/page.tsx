@@ -12,8 +12,8 @@ export default function page() {
         {...about.banner}
         className="md:flex md:h-[400px] md:justify-center md:pt-14"
       />
-      <section className="px-mobile md:px-spacing 2xl:px-spacing_2 lg:-translate-y-40">
-        <div className="hidden grid-cols-1 gap-10 md:grid-cols-3 lg:grid ">
+      <section className="px-mobile md:px-spacing lg:-translate-y-40 2xl:px-spacing_2">
+        <div className="hidden grid-cols-1 gap-10 md:grid-cols-3 lg:grid">
           <div className="col-span-2 h-[506px] overflow-hidden rounded-xl shadow-xl">
             <Image
               className="h-full w-full object-cover"
@@ -47,7 +47,7 @@ export default function page() {
           <p className="max-w-xl text-paragraph_b">{about.description}</p>
         </div>
 
-        <div className="relative mt-60 grid grid-cols-1 md:grid-cols-3 gap-3 lg:h-[400px]">
+        <div className="relative mt-60 grid grid-cols-1 gap-3 md:grid-cols-3 lg:h-[400px]">
           {about.cards.map((item) => (
             <div key={item.title} className="h-full rounded-xl bg-white p-2">
               <Image width={300} height={300} alt="" src={item.image} />
