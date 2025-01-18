@@ -6,7 +6,6 @@ import { FaRegUser } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa6";
 import { MdOutlineDateRange } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa6";
-import { CiSearch } from "react-icons/ci";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import {
   Carousel,
