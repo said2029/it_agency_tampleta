@@ -22,7 +22,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/Components/ui/sheet";
+} from "@/Components/UI/sheet";
 import { Menu } from "lucide-react";
 
 type Props = {};

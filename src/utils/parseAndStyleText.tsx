@@ -2,7 +2,6 @@ const parseAndStyleText = (text: string, style?: string) => {
   // Split text by {{ and }}
   const segments = text.split(/({{.*?}})/g);
   return segments.map((segment, index) => {
-    // Check if segment is wrapped in {{}}
     if (segment.startsWith("{{") && segment.endsWith("}}")) {
       // Remove {{ and }} and get inner content
       const content = segment.slice(2, -2);

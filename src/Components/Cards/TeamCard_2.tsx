@@ -22,7 +22,7 @@ export default function TeamCard_2({
           className="h-full w-full object-cover transition-all"
           width={300}
           height={300}
-          alt=""
+          alt="jone"
           src={data?.image}
         />
         <Link

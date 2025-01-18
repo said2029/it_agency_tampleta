@@ -4,7 +4,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/Components/ui/carousel";
+} from "@/Components/UI/carousel";
 import Image from "next/image";
 import { IoMdArrowDropright } from "react-icons/io";
 import Featured_Services from "@/Components/Global/Featured_Services";

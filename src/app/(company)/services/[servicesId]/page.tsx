@@ -4,7 +4,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/Components/ui/accordion";
+} from "@/Components/UI/accordion";
 import { servicesDataDetals } from "@/data/data";
 import Image from "next/image";
 import React from "react";

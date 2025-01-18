@@ -13,7 +13,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/Components/ui/carousel";
+} from "@/Components/UI/carousel";
 import { SiGoogledisplayandvideo360 } from "react-icons/si";
 import { video_Preview } from "@/Components/Video_Preview";
 import SidbarBlog from "@/Components/SidbarBlog";

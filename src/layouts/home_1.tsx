@@ -7,7 +7,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "../Components/ui/carousel";
+} from "../Components/UI/carousel";
 import TeamCard_2 from "../Components/Cards/TeamCard_2";
 import Link from "next/link";
 import { parseAndStyleText } from "@/utils/parseAndStyleText";

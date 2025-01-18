@@ -1,4 +1,3 @@
-import { s } from "framer-motion/client";
 import type { Config } from "tailwindcss";
 
 export default {

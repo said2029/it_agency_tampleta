@@ -7,7 +7,7 @@ import { home } from "@/data/data";
 
 export default function Brand_Work_With({
   ShowStars = true,
-  className,
+  className="",
 }: {
   ShowStars?: boolean;
   className?: string;
@@ -18,7 +18,7 @@ export default function Brand_Work_With({
         <h2 className="text-center">
           <span className="rounded-full bg-secandry_primary px-1 text-paragraph_b text-white">
             Brand
-          </span>{" "}
+          </span>
           Work With
         </h2>
         <Brandes className="z-50 mt-10" />

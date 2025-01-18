@@ -1,6 +1,6 @@
 import Featured_Services from "@/Components/Global/Featured_Services";
 import Top_Banner from "@/Components/Top_Banner";
-import { Button } from "@/Components/ui/Button";
+import { Button } from "@/Components/UI/Button";
 import { servicesData } from "@/data/data";
 import Image from "next/image";
 import React from "react";

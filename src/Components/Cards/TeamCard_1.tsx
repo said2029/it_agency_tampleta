@@ -9,8 +9,8 @@ export default function TeamCard_1({className,data}:{className?:string,data:any}
       <Image
         className="absolute inset-0 h-full w-full object-cover"
         width={300}
+        alt="jone"
         height={300}
-        alt=""
         src={"/assets/images/img/Rectangle 11.png"}
       />
       <div className="absolute bottom-0 left-0 bg-primary_gradinet p-3 text-start text-white">

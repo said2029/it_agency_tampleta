@@ -1,5 +1,5 @@
 import Top_Banner from "@/Components/Top_Banner";
-import { Button } from "@/Components/ui/Button";
+import { Button } from "@/Components/UI/Button";
 import Image from "next/image";
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
