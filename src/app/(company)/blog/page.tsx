@@ -19,6 +19,7 @@ import { video_preview } from "@/Components/Video_Preview";
 import SidbarBlog from "@/Components/SidbarBlog";
 
 export default function page() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { setData }: any = useContext(video_preview);
   return (
     <main className="bg-primary/10 pb-top">

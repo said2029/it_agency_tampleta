@@ -1,8 +1,8 @@
 "use client";
+import React from 'react';
 import ButtonMain from "@/Components/MianButton";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { Settings } from "@/data/data";
 import {
   Sheet,
@@ -13,9 +13,7 @@ import {
 } from "@/Components/UI/sheet";
 import { Menu } from "lucide-react";
 
-type Props = {};
-
-export default function Header_2({}: Props) {
+export default function Header_2() {
   return (
     <nav className="relative z-50 flex w-full items-center justify-between gap-3 bg-white px-mobile py-3 shadow-sm md:flex-col md:px-spacing xl:flex-row xl:gap-0">
       <Link href={"/"}>
@@ -60,7 +58,6 @@ export default function Header_2({}: Props) {
 
 // // mobile NavBar
 const MobileNav = () => {
-  const [open, setOpen] = useState(false);
   return (
     <div className="blocks md:hidden">
       <Sheet>

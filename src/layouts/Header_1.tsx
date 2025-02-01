@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import ButtonMain from "@/Components/MianButton";
 import { Settings } from "@/data/data";
 import { AnimatePresence, motion } from "framer-motion";
@@ -15,7 +16,7 @@ import {
   GrOverview,
   GrQr,
 } from "react-icons/gr";
-import { IoIosArrowDown} from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import {
   Sheet,
   SheetContent,
@@ -25,9 +26,7 @@ import {
 } from "@/Components/UI/sheet";
 import { Menu } from "lucide-react";
 
-type Props = {};
-
-export default function Header_1({}: Props) {
+export default function Header_1() {
   return (
     <nav className="relative z-50 flex w-full items-center justify-between gap-3 bg-white px-mobile py-3 shadow-sm md:flex-col md:px-spacing xl:flex-row xl:gap-0">
       <Link href={"/"}>
@@ -68,13 +67,11 @@ const MobileNav = () => {
         <SheetTrigger>
           <Menu />
         </SheetTrigger>
-        <SheetContent className=" overflow-y-scroll">
+        <SheetContent className="overflow-y-scroll">
           <SheetHeader>
-            <SheetTitle>
-              {Settings.title}
-            </SheetTitle>
+            <SheetTitle>{Settings.title}</SheetTitle>
           </SheetHeader>
-          <div className="flex flex-col mt-14">
+          <div className="mt-14 flex flex-col">
             <ul className="w-full">
               <Accardon name="Home" Component={ComponentHome} />
               <Accardon name="Company" Component={ComponentCompany} />
@@ -100,8 +97,8 @@ const Tap = ({
   inCenter = true,
 }: {
   name: string;
-  Component: any;
-  inCenter?: Boolean;
+  Component: () => React.JSX.Element;
+  inCenter?: boolean;
 }) => {
   const [hover, setHover] = useState(false);
   return (
@@ -153,7 +150,13 @@ const Tap = ({
   );
 };
 // accardon for mobile navBar
-const Accardon = ({ name, Component }: { name: string; Component: any }) => {
+const Accardon = ({
+  name,
+  Component,
+}: {
+  name: string;
+  Component: () => React.JSX.Element;
+}) => {
   const [open, setOpen] = useState(false);
   return (
     <li onClick={() => setOpen(!open)} className="border-b">

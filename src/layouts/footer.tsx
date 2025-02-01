@@ -1,3 +1,4 @@
+import React from 'react';
 import { BiMailSend } from "react-icons/bi";
 import { VscSend } from "react-icons/vsc";
 import Link from "next/link";

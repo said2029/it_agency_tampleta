@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import Footer from "@/layouts/footer";

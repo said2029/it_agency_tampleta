@@ -5,24 +5,7 @@ import { FaRegComments, FaRegUser } from "react-icons/fa";
 import { MdKeyboardDoubleArrowRight, MdOutlineDateRange } from "react-icons/md";
 import SidbarBlog from "@/Components/SidbarBlog";
 import { blogPostDetails } from "@/data/data";
-const post = {
-  title: "Leading the Digital Age with Groundbreaking IT Technologies",
-  author: "admin",
-  date: "June 8, 2024",
-  tags: ["App Dev", "Data", "Solution"],
-  quote: {
-    text: "In the rapidly evolving world of technology, staying ahead is not just an advantage—it's a necessity. Embracing the latest IT solutions and trends like AI, edge computing, and 5G isn't merely about keeping up with the competition; it's about setting the pace, driving innovation",
-    author: "Robert Vibes",
-  },
-  listItems: [
-    "Unveiling Emerging Technologies",
-    "Navigating Complex Challenges",
-    "Forecasting Future Trends",
-    "Driving Innovation Strategies",
-    "Exploring Industry Practices",
-    "Empowering Transformation"
-  ],
-};
+
 
 export default function Page() {
   const { banner, post, pagination } = blogPostDetails;

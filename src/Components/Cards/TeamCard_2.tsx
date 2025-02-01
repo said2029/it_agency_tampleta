@@ -1,14 +1,16 @@
 import { cn } from "@/lib/utils";
+import { TeamCardDataType } from "@/utils/type";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
 
 export default function TeamCard_2({
   className,
   data,
 }: {
   className?: string;
-  data: any;
+  data: TeamCardDataType;
 }) {
   return (
     <div
@@ -65,14 +67,13 @@ export default function TeamCard_2({
         </Link>
       </div>
 
-      
       <div className="bottom-0 left-0 p-3 text-center text-black">
         <h5 className="text-xl">{data.name}</h5>
         <p className="text-paragraph opacity-70">{data.subName}</p>
       </div>
       <div className="right-2 top-2 flex gap-2">
         {data?.contact?.instagram && (
-          <Link href={data?.contact?.instagram ||"/"}>
+          <Link href={data?.contact?.instagram || "/"}>
             <svg
               width="29"
               height="28"
@@ -89,7 +90,7 @@ export default function TeamCard_2({
           </Link>
         )}
         {data?.contact?.twitter && (
-          <Link href={data?.contact?.twitter||"/"}>
+          <Link href={data?.contact?.twitter || "/"}>
             <svg
               width="29"
               height="28"
@@ -113,7 +114,7 @@ export default function TeamCard_2({
           </Link>
         )}
         {data?.contact?.linked && (
-          <Link href={data?.contact?.linked||"/"}>
+          <Link href={data?.contact?.linked || "/"}>
             <svg
               width="29"
               height="28"
@@ -130,7 +131,7 @@ export default function TeamCard_2({
           </Link>
         )}
         {data?.contact?.facebook && (
-          <Link href={data?.contact?.facebook||"/"}>
+          <Link href={data?.contact?.facebook || "/"}>
             <svg
               width="29"
               height="28"

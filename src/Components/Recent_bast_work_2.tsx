@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import ButtonMain from "./MianButton";
-import clsx from "clsx";
 import { motion } from "framer-motion";
 import { parseAndStyleText } from "@/utils/parseAndStyleText";
 import { home } from "@/data/data";

@@ -1,3 +1,4 @@
+import React from "react";
 import ButtonMain from "../Components/MianButton";
 import Image from "next/image";
 import { IoMdArrowDropright } from "react-icons/io";
@@ -229,6 +230,7 @@ export default function Home_1() {
           {/* card */}
           {home.section_5.card.map((item) => (
             <div
+              key={item.client.name}
               style={{
                 backgroundImage: `url(${item.imageBack})`,
               }}

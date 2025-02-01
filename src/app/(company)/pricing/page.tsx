@@ -97,7 +97,7 @@ export default function page() {
         </div>
 
         <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2 md:px-spacing 2xl:px-spacing_2">
-          {price.section_1.plans.map((item, index) => (
+          {price.section_1.plans.map((item) => (
             <div
               key={item.title}
               className="space-y-10 rounded-2xl bg-white p-7"
@@ -118,7 +118,7 @@ export default function page() {
                       </h1>
                     </div>
                     <p>
-                      You'll Save{" "}
+                      You&apos;ll Save{" "}
                       {selectPlanTime == "month"
                         ? item.save.month
                         : item.save.year}{" "}

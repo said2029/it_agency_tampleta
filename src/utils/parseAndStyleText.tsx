@@ -1,3 +1,4 @@
+import React from 'react';
 const parseAndStyleText = (text: string, style?: string) => {
   // Split text by {{ and }}
   const segments = text.split(/({{.*?}})/g);

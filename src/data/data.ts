@@ -16,11 +16,11 @@ const Settings = {
   // logo
   logo: "/assets/images/logo/logo.png",
   // meta
-  title: "CoreTech | Empowering Businesses with Cutting-Edge IT Solutions",
+  title: "TechFocus | Empowering Businesses with Cutting-Edge IT Solutions",
   description: "Empowering Businesses with Cutting-Edge IT Solutions",
-  favorit: "/assets/images/logo/logo2.png",
+  favorit: "/assets/images/logo/favorit.png",
   // keywords
-  keywords: ["TechFlow", "IT Solutions", "Techco"],
+  keywords: ["Tech Focus", "IT Solutions", "TechFocus"],
 };
 // both page 1 and 2
 const home = {
@@ -110,7 +110,7 @@ const home = {
         title: "Data Tracking and Security",
         tags: ["Consultation", "Strategy"],
         color: ["from-[#5F1FBE]", "to-[#617DB4]"],
-        image: "/assets/images/elemants/elemants (18).png",
+        image: "/assets/images/elemants/elemants (9).png",
       },
       {
         title: "Website Development",
@@ -122,13 +122,13 @@ const home = {
         title: "Website Development",
         tags: ["Consultation", "Strategy"],
         color: ["from-[#4258B1]", "to-[#6A8E52]"],
-        image: "/assets/images/elemants/elemants (1).png",
+        image: "/assets/images/elemants/elemants (10).png",
       },
       {
         title: "Website Development",
         tags: ["Consultation", "Strategy"],
         color: ["from-[#BA8EB1]", "to-[#815D7E]"],
-        image: "/assets/images/elemants/elemants (11).png",
+        image: "/assets/images/elemants/elemants (10).png",
       },
     ],
     cta: { name: "More Services", link: "/services" },
@@ -189,7 +189,7 @@ const home = {
       {
         client: {
           img: "/assets/images/img/Ellipse_10.png",
-          name: "John Doe",
+          name: "John Doe 2",
           rate: 4,
         },
         imageBack: "/assets/images/img/Rectangle_37.png",
@@ -673,7 +673,7 @@ const blogPostDetals = {
   },
   post: {
     mainImage: "/assets/images/img/Rectangle_37.png",
-    author: "John Doe", // Replace with actual author
+    author: "John Doe 3", // Replace with actual author
     date: "January 2, 2025", // Replace with actual date
     Comments: 3,
     content: {

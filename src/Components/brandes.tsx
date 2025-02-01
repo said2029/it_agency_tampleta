@@ -5,10 +5,11 @@ import gsap from "gsap";
 import Image from "next/image";
 import React from "react";
 
-export default function Brandes({ className }: { className?: String }) {
+export default function Brandes({ className }: { className?: string }) {
   useGSAP(() => {
     const brandSlider = gsap.utils.toArray(".brand-slider");
     if (brandSlider) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       brandSlider.forEach((brand: any) => {
         const tl = gsap.timeline({ repeat: -1 });
         tl.to(brand, {

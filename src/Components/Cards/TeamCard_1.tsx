@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
+import { TeamCardDataType } from "@/utils/type";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function TeamCard_1({className,data}:{className?:string,data:any}) {
+export default function TeamCard_1({className,data}:{className?:string,data:TeamCardDataType}) {
   return (
     <div className={cn("relative h-[468px] overflow-hidden rounded-xl",className)}>
       <Image

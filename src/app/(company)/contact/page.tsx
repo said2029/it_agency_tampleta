@@ -19,9 +19,9 @@ export default function page() {
               className="rounded-2xl bg-white p-8 text-center shadow-sm"
             >
               <div className="mb-4 flex items-center justify-center">
-                <div className="rounded-full bg-blue-100 p-3">
+                <span className="rounded-full bg-blue-100 p-3">
                   <info.icon className="h-8 w-8 text-blue-600" />
-                </div>
+                </span>
               </div>
               <h3 className="mb-2 mt-3 text-xl font-semibold">{info.title}</h3>
               {info.details.map((detail, idx) => (
